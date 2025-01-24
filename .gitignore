@@ -1,0 +1,21 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# GDExtension
+
+/project/bin
+
+# Scons
+*.os
+*.o
+.sconsign.dblite
+
+*.tmp
+
+# macOS
+.DS_Store
+
+### Xcode ###
+## User settings
+xcuserdata/
