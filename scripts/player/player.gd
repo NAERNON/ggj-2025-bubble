@@ -77,13 +77,16 @@ func _physics_process(delta : float) -> void :
 
 	var _as_collided : bool = move_and_slide()
 
+	if Input.is_action_just_pressed("turret_mod") :
+		_can_move = false
+
+	elif Input.is_action_just_released("turret_mod") :
+		_can_move = true
+
 	if _process_inputs :
-		print("A")
 		# Check for deplacements inputs in terms of player states (walking, falling, gliding)
 		if _can_move :
-			print("B")
 			if _is_walking :
-				print("C")
 				if not (velocity * Vector3(1, 0, 1)).is_zero_approx() :
 					var to_look : Vector3 = global_position
 					to_look.x -= velocity.x
@@ -94,7 +97,6 @@ func _physics_process(delta : float) -> void :
 				velocity = _desired_velocity
 
 			elif _is_falling :
-				print("D")
 				_desired_velocity.y -= G_FORCE*delta
 
 				velocity = _desired_velocity

@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bv7whg7inf2nk"]
+[gd_scene load_steps=12 format=3 uid="uid://bv7whg7inf2nk"]
 
 [ext_resource type="Shader" uid="uid://ba2mnfre4vlob" path="res://shaders/bubble.gdshader" id="1_75irp"]
 [ext_resource type="Script" uid="uid://dvmg2va0lomf5" path="res://scripts/bubble/bubble.gd" id="1_u7q8j"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_u7q8j"]
+resource_local_to_scene = true
 radial_segments = 128
 rings = 64
 
@@ -45,15 +46,29 @@ shader_parameter/distortionView = 0.055
 shader_parameter/speedView = 0.035
 shader_parameter/noiseViewX = SubResource("NoiseTexture2D_ukwfb")
 shader_parameter/noiseViewY = SubResource("NoiseTexture2D_xktvc")
-shader_parameter/tintColor = Color(0.430907, 0.454815, 0.678002, 1)
+shader_parameter/tintColor = Color(0.20808, 0.214335, 0.354566, 1)
 shader_parameter/fesnelAmount = null
 shader_parameter/distortionVertex = 0.03
 shader_parameter/speedVertex = 0.1
 shader_parameter/noiseVertex = SubResource("NoiseTexture2D_k7ne2")
 
-[node name="Bubble" type="Node3D"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_u7q8j"]
+resource_local_to_scene = true
+
+[node name="Bubble" type="RigidBody3D" node_paths=PackedStringArray("mesh", "collision")]
+collision_layer = 16
+collision_mask = 52
+mass = 0.001
+gravity_scale = 0.01
+linear_damp = 1.0
 script = ExtResource("1_u7q8j")
+max_size = 2.0
+mesh = NodePath("MeshInstance3D")
+collision = NodePath("CollisionShape3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_u7q8j")
 surface_material_override/0 = SubResource("ShaderMaterial_l2e8e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_u7q8j")

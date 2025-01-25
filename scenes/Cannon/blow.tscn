@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyh7iqjkch80v"]
+
+[ext_resource type="Script" uid="uid://b8o72tcxf38al" path="res://scripts/cannon/blow.gd" id="1_bfn7c"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yyg2v"]
+
+[node name="Blow" type="RigidBody3D" node_paths=PackedStringArray("life_time", "collision")]
+collision_layer = 32
+collision_mask = 4
+mass = 0.001
+gravity_scale = 0.0
+script = ExtResource("1_bfn7c")
+life_time = NodePath("LifeTime")
+collision = NodePath("Collision")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_yyg2v")
+
+[node name="LifeTime" type="Timer" parent="."]
+one_shot = true
+autostart = true

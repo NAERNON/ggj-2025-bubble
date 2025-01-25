@@ -1,28 +1,32 @@
-[gd_scene load_steps=14 format=3 uid="uid://dtptkxg3nl7bh"]
+[gd_scene load_steps=18 format=3 uid="uid://dtptkxg3nl7bh"]
 
 [ext_resource type="Script" uid="uid://bnd7j868d1elk" path="res://scripts/main.gd" id="1_4q130"]
 [ext_resource type="PackedScene" uid="uid://fb4nyujt4pf2" path="res://scenes/player/player.tscn" id="1_s4h7g"]
 [ext_resource type="PackedScene" uid="uid://d4h7j54lv6lgx" path="res://scenes/player/focus_camera.tscn" id="2_5l0vc"]
+[ext_resource type="WwiseRTPC" uid="uid://11g27d1d2utt" path="res://Wwise/resources/Game Parameter/{3635BBE0-258A-4869-BC57-A8C6FF1E95E1}.tres" id="2_ya4ey"]
 [ext_resource type="Script" uid="uid://ckalhvgp371fh" path="res://scripts/environment/lights_and_time.gd" id="3_5l0vc"]
 [ext_resource type="PackedScene" uid="uid://bnlr3v06brxgt" path="res://scenes/environment/rain.tscn" id="3_rwwc7"]
 [ext_resource type="Shader" uid="uid://douy2w78apjqu" path="res://shaders/sky.gdshader" id="4_51pqh"]
-[ext_resource type="PackedScene" uid="uid://bv7whg7inf2nk" path="res://scenes/Bubble/bubble.tscn" id="7_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://bx6b3c6r31kdt" path="res://scenes/Cannon/cannon.tscn" id="4_tipki"]
+[ext_resource type="WwiseEvent" uid="uid://bj5e0vv2iyobr" path="res://Wwise/resources/Event/{7E5B2808-0E1E-48F1-AF04-75DB67DB3FB0}.tres" id="9_85g3d"]
+[ext_resource type="WwiseBank" uid="uid://li2mqveifryh" path="res://Wwise/resources/SoundBank/{169FCE51-14B2-45EC-9957-AAEA844C4D42}.tres" id="9_choun"]
+[ext_resource type="PackedScene" uid="uid://be8dgl4p8odl1" path="res://scenes/Items/trash.tscn" id="11_ya4ey"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s4h7g"]
-size = Vector3(100, 2.39053, 100)
+size = Vector3(1000, 0.1, 1000)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_51pqh"]
 albedo_color = Color(0.249679, 0.436638, 0.276358, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_s4h7g"]
-size = Vector2(100, 100)
+size = Vector2(1000, 1000)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4q130"]
 shader = ExtResource("4_51pqh")
-shader_parameter/day_top_color = Color(0.1, 0.6, 1, 1)
-shader_parameter/day_bottom_color = Color(0.623529, 0.768627, 0.890196, 1)
-shader_parameter/sunset_top_color = Color(0.623529, 0.819608, 0.729412, 1)
-shader_parameter/sunset_bottom_color = Color(0.85098, 0.619608, 0.639216, 1)
+shader_parameter/day_top_color = Color(0.741109, 0.540503, 0.32189, 1)
+shader_parameter/day_bottom_color = Color(0.740309, 0.763433, 0.653968, 1)
+shader_parameter/sunset_top_color = Color(0.955813, 0.713345, 0.452026, 1)
+shader_parameter/sunset_bottom_color = Color(0.906009, 0.60119, 0.52554, 1)
 shader_parameter/night_top_color = Color(0.0156863, 0.00784314, 0, 1)
 shader_parameter/night_bottom_color = Color(0.0784314, 0.0627451, 0.0588235, 1)
 shader_parameter/horizon_color = Color(0, 0.7, 0.8, 1)
@@ -35,8 +39,8 @@ shader_parameter/moon_color = Color(1, 0.95, 0.7, 1)
 shader_parameter/moon_size = 0.035
 shader_parameter/moon_blur = 0.05
 shader_parameter/clouds_edge_color = Color(0.25098, 0.25098, 0.25098, 1)
-shader_parameter/clouds_top_color = Color(1, 1, 1, 1)
-shader_parameter/clouds_middle_color = Color(0.854902, 0.866667, 0.87451, 1)
+shader_parameter/clouds_top_color = Color(0.530388, 0.426813, 0.300388, 1)
+shader_parameter/clouds_middle_color = Color(0.918838, 0.858381, 0.741066, 1)
 shader_parameter/clouds_bottom_color = Color(0.560784, 0.568627, 0.552941, 1)
 shader_parameter/clouds_speed = 2.0
 shader_parameter/clouds_direction = 0.2
@@ -55,28 +59,45 @@ sky_material = SubResource("ShaderMaterial_4q130")
 background_mode = 2
 sky = SubResource("Sky_rwwc7")
 ambient_light_source = 3
+glow_enabled = true
+glow_blend_mode = 1
+fog_aerial_perspective = 0.1
+fog_height_density = -0.1
 
 [node name="Main" type="Node" node_paths=PackedStringArray("environment", "_rain")]
 script = ExtResource("1_4q130")
 environment = NodePath("WorldEnvironment")
 _rain = NodePath("Player/Rain")
-_weather_time_trans = 20.0
-_weather_duration_random = Vector2(10, 10)
+_weather_time_trans = 15.0
+_sunny_duration_random = Vector2(120, 180)
+_rainy_duration_random = Vector2(30, 60)
+rtpc_weather = ExtResource("2_ya4ey")
 
 [node name="Player" parent="." node_paths=PackedStringArray("_main_camera") instance=ExtResource("1_s4h7g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.74029, 0)
 _main_camera = NodePath("../FocusCamera")
+_walking_acceleration = 30.0
+_walking_decceleration = 50.0
+_run_speed = 25.0
+_walk_speed = 15.0
 
 [node name="Rain" parent="Player" instance=ExtResource("3_rwwc7")]
 
+[node name="Cannon" parent="Player" node_paths=PackedStringArray("focus_camera") instance=ExtResource("4_tipki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.488393)
+blow_width = 0.2
+focus_camera = NodePath("../../FocusCamera")
+
 [node name="FocusCamera" parent="." node_paths=PackedStringArray("_focus") instance=ExtResource("2_5l0vc")]
 _focus = NodePath("../Player")
+_max_distance = 4.0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-collision_layer = 3
+collision_layer = 7
+collision_mask = 56
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.30254, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
 shape = SubResource("BoxShape3D_s4h7g")
 
 [node name="Ground" type="MeshInstance3D" parent="StaticBody3D"]
@@ -88,7 +109,7 @@ skeleton = NodePath("../..")
 script = ExtResource("3_5l0vc")
 _sun = NodePath("Sun")
 _moon = NodePath("Moon")
-_minute_duration = 51.0
+_minute_duration = 121.0
 
 [node name="Sun" type="DirectionalLight3D" parent="LightAndTime"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 25.698, 73)
@@ -102,7 +123,20 @@ layers = 3
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_isen5")
 
-[node name="Bubble" parent="." instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2783, 1.77017)
+[node name="AkBank" type="AkBank" parent="."]
+bank = ExtResource("9_choun")
+load_on = 1
+unload_on = 3
 
-[node name="ReflectionProbe" type="ReflectionProbe" parent="."]
+[node name="AkListener3D" type="AkListener3D" parent="."]
+is_spatial = true
+
+[node name="AmbientSound" type="AkEvent3D" parent="."]
+event = ExtResource("9_85g3d")
+trigger_on = 1
+stop_on = 3
+
+[node name="Trash" parent="." instance=ExtResource("11_ya4ey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.88975, 4.297)
+
+[connection signal="bubble_released" from="Player/Cannon" to="." method="_on_cannon_bubble_released"]

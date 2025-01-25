@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Bubble"
-run/main_scene="uid://bg84teoooyrgp"
+run/main_scene="uid://dtptkxg3nl7bh"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -68,12 +68,17 @@ movement_run={
 }
 bubble_mod={
 "deadzone": 0.2,
-"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":4,"axis_value":1.0,"script":null)
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":9,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
-blow_mod={
+blow_cannon={
 "deadzone": 0.2,
 "events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":5,"axis_value":1.0,"script":null)
+]
+}
+turret_mod={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":4,"axis_value":1.0,"script":null)
 ]
 }
 
@@ -81,11 +86,15 @@ blow_mod={
 
 3d_physics/layer_1="ObstacleForPlayer"
 3d_physics/layer_2="ObstacleForCamera"
-3d_physics/layer_3="Player"
+3d_physics/layer_3="ObstacleForBubble"
+3d_physics/layer_4="Player"
+3d_physics/layer_5="Bubble"
+3d_physics/layer_6="Blow"
+3d_physics/layer_7="Trash"
 
 [wwise]
 
-common_user_settings/root_output_path="res:// arts/sounds/SoundBanksGGJ2025"
+common_user_settings/root_output_path="res://arts/sounds/SoundBanksGGJ2025"
 project_settings/windows_platform_info="res://Wwise/resources/Windows.tres"
 project_settings/mac_platform_info="res://Wwise/resources/Mac.tres"
 project_settings/linux_platform_info="res://Wwise/resources/Linux.tres"
