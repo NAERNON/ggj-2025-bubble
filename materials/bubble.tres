@@ -1,0 +1,48 @@
+[gd_resource type="ShaderMaterial" load_steps=8 format=3 uid="uid://4eyixlimxfxg"]
+
+[ext_resource type="Shader" path="res://shaders/bubble.gdshader" id="1_cardq"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_l5cg0"]
+frequency = 0.001
+fractal_octaves = 3
+fractal_lacunarity = 3.32
+fractal_gain = 0.53
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_k7ne2"]
+seamless = true
+noise = SubResource("FastNoiseLite_l5cg0")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_gnxxs"]
+frequency = 0.0027
+fractal_octaves = 3
+fractal_lacunarity = 1.79
+fractal_gain = 1.43
+fractal_weighted_strength = 0.04
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ukwfb"]
+seamless = true
+noise = SubResource("FastNoiseLite_gnxxs")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_kxfs8"]
+seed = 1
+frequency = 0.004
+fractal_octaves = 3
+fractal_gain = 1.73
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_xktvc"]
+seamless = true
+noise = SubResource("FastNoiseLite_kxfs8")
+
+[resource]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("1_cardq")
+shader_parameter/distortionView = 0.055
+shader_parameter/speedView = 0.035
+shader_parameter/tintColor = Color(0.20808, 0.214335, 0.354566, 1)
+shader_parameter/fesnelAmount = null
+shader_parameter/distortionVertex = 0.03
+shader_parameter/speedVertex = 0.1
+shader_parameter/noiseViewX = SubResource("NoiseTexture2D_ukwfb")
+shader_parameter/noiseViewY = SubResource("NoiseTexture2D_xktvc")
+shader_parameter/noiseVertex = SubResource("NoiseTexture2D_k7ne2")

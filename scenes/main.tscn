@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dtptkxg3nl7bh"]
+[gd_scene load_steps=17 format=3 uid="uid://dtptkxg3nl7bh"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_4q130"]
 [ext_resource type="PackedScene" uid="uid://fb4nyujt4pf2" path="res://scenes/player/player.tscn" id="1_s4h7g"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" path="res://scripts/environment/lights_and_time.gd" id="3_5l0vc"]
 [ext_resource type="PackedScene" uid="uid://bnlr3v06brxgt" path="res://scenes/environment/rain.tscn" id="3_rwwc7"]
 [ext_resource type="Shader" path="res://shaders/sky.gdshader" id="4_51pqh"]
-[ext_resource type="PackedScene" uid="uid://bx6b3c6r31kdt" path="res://scenes/Cannon/cannon.tscn" id="4_tipki"]
 [ext_resource type="WwiseEvent" uid="uid://bj5e0vv2iyobr" path="res://Wwise/resources/Event/{7E5B2808-0E1E-48F1-AF04-75DB67DB3FB0}.tres" id="9_85g3d"]
 [ext_resource type="WwiseBank" uid="uid://li2mqveifryh" path="res://Wwise/resources/SoundBank/{169FCE51-14B2-45EC-9957-AAEA844C4D42}.tres" id="9_choun"]
 [ext_resource type="PackedScene" uid="uid://be8dgl4p8odl1" path="res://scenes/Items/trash.tscn" id="11_ya4ey"]
@@ -83,10 +82,6 @@ _walk_speed = 15.0
 
 [node name="Rain" parent="Player" instance=ExtResource("3_rwwc7")]
 
-[node name="Cannon" parent="Player" node_paths=PackedStringArray("focus_camera") instance=ExtResource("4_tipki")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498624)
-focus_camera = NodePath("../../FocusCamera")
-
 [node name="FocusCamera" parent="." node_paths=PackedStringArray("_focus") instance=ExtResource("2_5l0vc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.77462, -3.56596)
 _focus = NodePath("../Player")
@@ -138,5 +133,3 @@ stop_on = 3
 
 [node name="Trash" parent="." instance=ExtResource("11_ya4ey")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.88975, 4.297)
-
-[connection signal="bubble_released" from="Player/Cannon" to="." method="_on_cannon_bubble_released"]

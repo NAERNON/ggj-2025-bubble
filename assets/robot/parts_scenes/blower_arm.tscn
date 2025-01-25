@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ccn0m0uajcg6r"]
+[gd_scene load_steps=9 format=3 uid="uid://ccn0m0uajcg6r"]
 
 [ext_resource type="PackedScene" uid="uid://dq887xgfd61bx" path="res://assets/robot/meshes/blower_arm.gltf" id="1_r741s"]
 [ext_resource type="Material" uid="uid://cydd75o26ip5e" path="res://assets/robot/materials/rb_blower_arm_flexible_part.tres" id="2_l0wm8"]
@@ -7,6 +7,7 @@
 [ext_resource type="Material" uid="uid://bogxyqcjrrj6i" path="res://assets/robot/materials/rb_reticule.tres" id="4_fy7s7"]
 [ext_resource type="Material" uid="uid://c5qs77k0r5mp" path="res://assets/robot/materials/rb_reticule_support.tres" id="5_ggu43"]
 [ext_resource type="Material" uid="uid://ynpmthy5vnm8" path="res://assets/robot/materials/rb_washingup_tube.tres" id="5_pyfpi"]
+[ext_resource type="Material" uid="uid://4eyixlimxfxg" path="res://materials/bubble.tres" id="6_w3vvy"]
 
 [node name="blower_arm" instance=ExtResource("1_r741s")]
 
@@ -24,6 +25,9 @@ surface_material_override/0 = ExtResource("2_l0wm8")
 
 [node name="reticule" parent="Armature/Skeleton3D" index="3"]
 surface_material_override/0 = ExtResource("4_fy7s7")
+
+[node name="reticule_soap" parent="Armature/Skeleton3D" index="4"]
+surface_material_override/0 = ExtResource("6_w3vvy")
 
 [node name="reticule_support" parent="Armature/Skeleton3D" index="5"]
 surface_material_override/0 = ExtResource("5_ggu43")

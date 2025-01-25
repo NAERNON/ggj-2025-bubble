@@ -45,6 +45,9 @@ func _ready() -> void :
 	_timer_trans = 0
 	_is_weather_trans = false
 
+	var cannon : Cannon = get_node("Player/Robot/cannon_anchor/cannon_end/Cannon")
+	cannon.bubble_released.connect(_on_cannon_bubble_released)
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta : float) -> void :
 	if _is_weather_trans :

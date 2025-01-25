@@ -3,6 +3,8 @@ class_name Player extends CharacterBody3D
 const G_FORCE : float = 9.8
 
 #################################### ATTRIBUTES ####################################
+@export var cannon_scene : PackedScene
+
 @export var robot : Robot
 
 @export_group("Camera")
@@ -48,6 +50,10 @@ func _ready() -> void :
 	_can_move = true
 	_is_just_falling = true
 
+	var cannon : Cannon = cannon_scene.instantiate()
+	cannon.set_attributes(_main_camera, robot)
+
+	robot.cannon_end.add_child(cannon)
 
 func _process(_delta : float) -> void :
 	pass
@@ -95,6 +101,7 @@ func _physics_process(delta : float) -> void :
 		_desired_velocity.x = 0
 		_desired_velocity.z = 0
 
+	_update_robot_head()
 
 #################################### INPUTS MOVEMENT DEALING METHODS #####################################
 # All of this methods check for inputs in regards with the current player state (walking, falling, gliding, etc.)
@@ -150,6 +157,12 @@ func _walking_inputs(delta : float) -> void :
 
 	robot.left_wheel_speed = _desired_velocity.length() * ratio_speed_wheel
 	robot.right_wheel_speed = _desired_velocity.length() * ratio_speed_wheel
+
+func _update_robot_head() -> void :
+	var euler_angles : Vector3 = _main_camera.global_basis.get_euler() - global_basis.get_euler()
+	var head_rotation : Vector2 = Vector2(euler_angles.x, euler_angles.y)
+	robot.head_rotation = head_rotation
+
 
 #################################### PUBLIC METHODS #####################################
 
