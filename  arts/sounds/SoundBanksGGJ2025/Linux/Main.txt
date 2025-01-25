@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2097335752	PlayWalk			\Default Work Unit\PlayWalk	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	512033818	PlayerWalk	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\AA\{AA636243-F601-488F-9470-2229B61A7382}.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerWalk		28840
+

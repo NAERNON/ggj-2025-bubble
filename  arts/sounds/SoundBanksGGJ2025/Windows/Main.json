@@ -1,0 +1,47 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3161908922",
+    "Type": "User",
+    "GUID": "{169FCE51-14B2-45EC-9957-AAEA844C4D42}",
+    "Language": "SFX",
+    "Hash": "{E1F8EDE0-8EDE-92F3-8A97-2536AE859ABC}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
+    "ShortName": "Main",
+    "Path": "Main.bnk",
+    "Media": [
+     {
+      "Id": "512033818",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FEETHmn_Barefoot ConcreteGritty-JumpLand 01 Add_AKB00M_Footstep.wav",
+      "CachePath": "AA/{AA636243-F601-488F-9470-2229B61A7382}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2097335752",
+      "Name": "PlayWalk",
+      "ObjectPath": "\\Events\\Default Work Unit\\PlayWalk",
+      "GUID": "{2F93F944-6985-4071-B856-1A9D6D16B12C}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.29941666",
+      "DurationMax": "0.29941666",
+      "MediaRefs": [
+       {
+        "Id": "512033818"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{AC8C81BF-3BFE-6D5D-E26B-948BC160FA9F}"
+ }
+}

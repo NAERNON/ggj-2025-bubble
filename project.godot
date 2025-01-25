@@ -11,9 +11,71 @@ config_version=5
 [application]
 
 config/name="Bubble"
-config/features=PackedStringArray("4.3", "Forward Plus")
+run/main_scene="uid://bg84teoooyrgp"
+config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
+
+[input]
+
+movement_up={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":1,"axis_value":-1.0,"script":null)
+]
+}
+movement_down={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":1,"axis_value":1.0,"script":null)
+]
+}
+movement_left={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":0,"axis_value":-1.0,"script":null)
+]
+}
+movement_right={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":0,"axis_value":1.0,"script":null)
+]
+}
+camera_up={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":3,"axis_value":-1.0,"script":null)
+]
+}
+camera_down={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":3,"axis_value":1.0,"script":null)
+]
+}
+camera_left={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":2,"axis_value":-1.0,"script":null)
+]
+}
+camera_right={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":2,"axis_value":1.0,"script":null)
+]
+}
+movement_run={
+"deadzone": 0.2,
+"events": [Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
+
+[layer_names]
+
+3d_physics/layer_1="ObstacleForPlayer"
+3d_physics/layer_2="ObstacleForCamera"
+3d_physics/layer_3="Player"
+
+[wwise]
+
+common_user_settings/root_output_path="res:// arts/sounds/SoundBanksGGJ2025"
+project_settings/windows_platform_info="res://Wwise/resources/Windows.tres"
+project_settings/mac_platform_info="res://Wwise/resources/Mac.tres"
+project_settings/linux_platform_info="res://Wwise/resources/Linux.tres"

@@ -1,0 +1,102 @@
+[gd_scene load_steps=13 format=3 uid="uid://bg84teoooyrgp"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_4q130"]
+[ext_resource type="PackedScene" uid="uid://fb4nyujt4pf2" path="res://scenes/player/player.tscn" id="1_s4h7g"]
+[ext_resource type="PackedScene" uid="uid://d4h7j54lv6lgx" path="res://scenes/player/focus_camera.tscn" id="2_5l0vc"]
+[ext_resource type="Script" uid="uid://ckalhvgp371fh" path="res://scripts/environment/lights_and_time.gd" id="3_5l0vc"]
+[ext_resource type="PackedScene" uid="uid://bnlr3v06brxgt" path="res://scenes/environment/rain.tscn" id="3_rwwc7"]
+[ext_resource type="Shader" uid="uid://douy2w78apjqu" path="res://shaders/sky.gdshader" id="4_51pqh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s4h7g"]
+size = Vector3(100, 2.39053, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_51pqh"]
+albedo_color = Color(0.249679, 0.436638, 0.276358, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_s4h7g"]
+size = Vector2(100, 100)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4q130"]
+shader = ExtResource("4_51pqh")
+shader_parameter/day_top_color = Color(0.1, 0.6, 1, 1)
+shader_parameter/day_bottom_color = Color(0.623529, 0.768627, 0.890196, 1)
+shader_parameter/sunset_top_color = Color(0.623529, 0.819608, 0.729412, 1)
+shader_parameter/sunset_bottom_color = Color(0.85098, 0.619608, 0.639216, 1)
+shader_parameter/night_top_color = Color(0.0156863, 0.00784314, 0, 1)
+shader_parameter/night_bottom_color = Color(0.0784314, 0.0627451, 0.0588235, 1)
+shader_parameter/horizon_color = Color(0, 0.7, 0.8, 1)
+shader_parameter/horizon_blur = 0.23
+shader_parameter/sun_color = Color(10, 8, 1, 1)
+shader_parameter/sun_sunset_color = Color(10, 0, 0, 1)
+shader_parameter/sun_size = 0.2
+shader_parameter/sun_blur = 10.0
+shader_parameter/moon_color = Color(1, 0.95, 0.7, 1)
+shader_parameter/moon_size = 0.035
+shader_parameter/moon_blur = 0.05
+shader_parameter/clouds_edge_color = Color(0.25098, 0.25098, 0.25098, 1)
+shader_parameter/clouds_top_color = Color(1, 1, 1, 1)
+shader_parameter/clouds_middle_color = Color(0.854902, 0.866667, 0.87451, 1)
+shader_parameter/clouds_bottom_color = Color(0.560784, 0.568627, 0.552941, 1)
+shader_parameter/clouds_speed = 2.0
+shader_parameter/clouds_direction = 0.2
+shader_parameter/clouds_scale = 4.0
+shader_parameter/clouds_cutoff = 0.34
+shader_parameter/clouds_fuzziness = 0.41
+shader_parameter/clouds_weight = 0.0
+shader_parameter/clouds_blur = 0.25
+shader_parameter/stars_speed = 1.0
+shader_parameter/overwritten_time = 0.0
+
+[sub_resource type="Sky" id="Sky_rwwc7"]
+sky_material = SubResource("ShaderMaterial_4q130")
+
+[sub_resource type="Environment" id="Environment_isen5"]
+background_mode = 2
+sky = SubResource("Sky_rwwc7")
+ambient_light_source = 3
+
+[node name="Main" type="Node" node_paths=PackedStringArray("environment", "_rain")]
+script = ExtResource("1_4q130")
+environment = NodePath("WorldEnvironment")
+_rain = NodePath("Player/Rain")
+_weather_time_trans = 20.0
+_weather_duration_random = Vector2(10, 10)
+
+[node name="Player" parent="." node_paths=PackedStringArray("_main_camera") instance=ExtResource("1_s4h7g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.74029, 0)
+_main_camera = NodePath("../FocusCamera")
+
+[node name="Rain" parent="Player" instance=ExtResource("3_rwwc7")]
+
+[node name="FocusCamera" parent="." node_paths=PackedStringArray("_focus") instance=ExtResource("2_5l0vc")]
+_focus = NodePath("../Player")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.30254, 0)
+shape = SubResource("BoxShape3D_s4h7g")
+
+[node name="Ground" type="MeshInstance3D" parent="StaticBody3D"]
+material_override = SubResource("StandardMaterial3D_51pqh")
+mesh = SubResource("PlaneMesh_s4h7g")
+skeleton = NodePath("../..")
+
+[node name="LightAndTime" type="Node" parent="." node_paths=PackedStringArray("_sun", "_moon")]
+script = ExtResource("3_5l0vc")
+_sun = NodePath("Sun")
+_moon = NodePath("Moon")
+_minute_duration = 51.0
+
+[node name="Sun" type="DirectionalLight3D" parent="LightAndTime"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 25.698, 73)
+layers = 3
+shadow_enabled = true
+
+[node name="Moon" type="DirectionalLight3D" parent="LightAndTime"]
+transform = Transform3D(1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 18.022, 0)
+layers = 3
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_isen5")
