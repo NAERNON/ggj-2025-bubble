@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://6fg2vv2lc46i"]
+[gd_scene load_steps=16 format=3 uid="uid://6fg2vv2lc46i"]
 
 [ext_resource type="Script" path="res://assets/robot/robot.gd" id="1_vf81t"]
 [ext_resource type="PackedScene" uid="uid://dllycys0cfchb" path="res://assets/robot/parts_scenes/wheel_back.tscn" id="2_d88bt"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://trp0c0rcjuuj" path="res://assets/robot/parts_scenes/washingup_liq_support.tscn" id="9_1n1tq"]
 [ext_resource type="PackedScene" uid="uid://chowed7bdm0vh" path="res://assets/robot/parts_scenes/back_blower.tscn" id="10_yg2j3"]
 [ext_resource type="PackedScene" uid="uid://rfu4h8u2pwgk" path="res://assets/robot/parts_scenes/washingup_liq.tscn" id="11_3nyd3"]
+[ext_resource type="PackedScene" uid="uid://ccn0m0uajcg6r" path="res://assets/robot/parts_scenes/blower_arm.tscn" id="12_dbtvt"]
 
 [node name="Robot" type="Node3D" node_paths=PackedStringArray("head", "left_small_wheel_1", "left_small_wheel_2", "left_big_wheel", "right_small_wheel_1", "right_small_wheel_2", "right_big_wheel", "left_headset", "right_headset")]
 script = ExtResource("1_vf81t")
@@ -70,6 +71,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 [node name="back_blower" parent="." instance=ExtResource("10_yg2j3")]
 
 [node name="washingup_liq" parent="." instance=ExtResource("11_3nyd3")]
+
+[node name="blower_arm" parent="." instance=ExtResource("12_dbtvt")]
 
 [node name="robot_head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.345, 0)
