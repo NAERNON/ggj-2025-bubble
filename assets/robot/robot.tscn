@@ -1,8 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://6fg2vv2lc46i"]
+[gd_scene load_steps=17 format=3 uid="uid://6fg2vv2lc46i"]
 
 [ext_resource type="Script" path="res://assets/robot/robot.gd" id="1_vf81t"]
 [ext_resource type="PackedScene" uid="uid://dllycys0cfchb" path="res://assets/robot/parts_scenes/wheel_back.tscn" id="2_d88bt"]
-[ext_resource type="PackedScene" uid="uid://ddmlmowmsdgfn" path="res://assets/robot/meshes/final.gltf" id="2_pa3a1"]
 [ext_resource type="PackedScene" uid="uid://bhtwywyklels2" path="res://assets/robot/parts_scenes/wheel_big.tscn" id="3_odyl7"]
 [ext_resource type="PackedScene" uid="uid://ja6lpjh1rdgb" path="res://assets/robot/parts_scenes/wheel_small.tscn" id="3_tymt4"]
 [ext_resource type="PackedScene" uid="uid://c2701cuj6ih3a" path="res://assets/robot/parts_scenes/body_grill.tscn" id="6_hhpia"]
@@ -25,14 +24,14 @@ _data = {
 }
 point_count = 39
 
-[node name="Robot" type="Node3D" node_paths=PackedStringArray("head", "blower_arm", "left_small_wheel_1", "left_small_wheel_2", "left_big_wheel", "right_small_wheel_1", "right_small_wheel_2", "right_big_wheel", "left_headset", "right_headset", "left_caterpillar", "right_caterpillar")]
+[node name="Robot" type="Node3D" node_paths=PackedStringArray("head", "blower_arm", "cannon_anchor", "cannon_end", "left_small_wheel_1", "left_small_wheel_2", "left_big_wheel", "right_small_wheel_1", "right_small_wheel_2", "right_big_wheel", "left_headset", "right_headset", "left_caterpillar", "right_caterpillar")]
 script = ExtResource("1_vf81t")
-left_wheel_speed = 2.42
-right_wheel_speed = 0.9
 reticule_speed = 20.0
 headset_speed = 10.0
 head = NodePath("robot_head")
 blower_arm = NodePath("blower_arm")
+cannon_anchor = NodePath("cannon_anchor")
+cannon_end = NodePath("cannon_anchor/cannon_end")
 left_small_wheel_1 = NodePath("wheels/wheel_small_left_1")
 left_small_wheel_2 = NodePath("wheels/wheel_small_left_2")
 left_big_wheel = NodePath("wheels/wheel_big_left")
@@ -117,12 +116,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.317, 0.01, 0)
 curve = SubResource("Curve3D_s7t54")
 script = ExtResource("15_jpbc5")
 
-[node name="_final" parent="." instance=ExtResource("2_pa3a1")]
-visible = false
+[node name="cannon_anchor" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.451152, 0.993305, 0.246056)
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.82466, 0, 0.565629, 0, 1, 0, -0.565629, 0, 0.82466, 2.1217, 1.08844, 2.74457)
-fov = 37.9
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.80599, -0.318749, 0.498778, 0, 0.842631, 0.538491, -0.591929, -0.434019, 0.679152, 0, 1.85229, 0)
+[node name="cannon_end" type="Node3D" parent="cannon_anchor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.47257)
