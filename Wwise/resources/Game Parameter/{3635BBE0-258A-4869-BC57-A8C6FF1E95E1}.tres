@@ -1,0 +1,7 @@
+[gd_resource type="WwiseRTPC" format=3 uid="uid://11g27d1d2utt"]
+
+[resource]
+name = "Weather"
+id = 317282339
+guid = "{3635BBE0-258A-4869-BC57-A8C6FF1E95E1}"
+dummy = true

@@ -1,0 +1,55 @@
+[gd_scene load_steps=11 format=3 uid="uid://cyh7iqjkch80v"]
+
+[ext_resource type="Script" uid="uid://b8o72tcxf38al" path="res://scripts/cannon/blow.gd" id="1_bfn7c"]
+[ext_resource type="Shader" uid="uid://ba2mnfre4vlob" path="res://shaders/bubble.gdshader" id="2_nn6h7"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_12x7x"]
+
+[sub_resource type="Gradient" id="Gradient_3o3ig"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_q1mjr"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_5hpu1"]
+seamless = true
+color_ramp = SubResource("Gradient_3o3ig")
+noise = SubResource("FastNoiseLite_q1mjr")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_o2jl2"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ds1ox"]
+noise = SubResource("FastNoiseLite_o2jl2")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nerku"]
+render_priority = 0
+shader = ExtResource("2_nn6h7")
+shader_parameter/distortionView = 0.01
+shader_parameter/speedView = 0.205
+shader_parameter/noiseViewX = SubResource("NoiseTexture2D_5hpu1")
+shader_parameter/noiseViewY = SubResource("NoiseTexture2D_ds1ox")
+shader_parameter/tintColor = Color(0, 0, 0, 1)
+shader_parameter/fesnelAmount = null
+shader_parameter/distortionVertex = 0.03
+shader_parameter/speedVertex = 0.1
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yyg2v"]
+
+[node name="Blow" type="RigidBody3D" node_paths=PackedStringArray("life_time", "collision")]
+collision_layer = 32
+collision_mask = 4
+mass = 0.001
+gravity_scale = 0.0
+script = ExtResource("1_bfn7c")
+life_time = NodePath("LifeTime")
+collision = NodePath("Collision")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transparency = 0.5
+mesh = SubResource("SphereMesh_12x7x")
+surface_material_override/0 = SubResource("ShaderMaterial_nerku")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_yyg2v")
+
+[node name="LifeTime" type="Timer" parent="."]
+one_shot = true
+autostart = true

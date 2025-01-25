@@ -1,0 +1,38 @@
+{
+ "PlatformInfo": {
+  "Platform": {
+   "Name": "Mac",
+   "BasePlatform": "Mac",
+   "Generator": "2024.1.1.8691"
+  },
+  "RootPaths": {
+   "ProjectRoot": "../../../Documents/WwiseProjects/GGJ_2025_Bubble",
+   "SourceFilesRoot": "../../../Documents/WwiseProjects/GGJ_2025_Bubble/.cache",
+   "SoundBanksRoot": ".",
+   "ExternalSourcesInputFile": "",
+   "ExternalSourcesOutputRoot": "../../../Documents/WwiseProjects/GGJ_2025_Bubble/GeneratedSoundBanks/Mac"
+  },
+  "DefaultAlign": "16",
+  "Settings": {
+   "AutoSoundBankDefinition": "true",
+   "CopyLooseStreamedMediaFiles": "true",
+   "SubFoldersForGeneratedFiles": "false",
+   "RemoveUnusedGeneratedFiles": "true",
+   "SourceControlGeneratedFiles": "true",
+   "GenerateHeaderFile": "true",
+   "GenerateContentTxtFile": "true",
+   "GenerateMetadataXML": "false",
+   "GenerateMetadataJSON": "true",
+   "GenerateAllBanksMetadata": "false",
+   "GeneratePerBankMetadata": "true",
+   "UseSoundBankNames": "true",
+   "AllowExceedingMaxSize": "false",
+   "MaxAttenuationInfo": "true",
+   "EstimatedDurationInfo": "true",
+   "PrintObjectGuid": "true",
+   "PrintObjectPath": "true",
+   "PrintObjectColor": "true"
+  },
+  "FileHash": "{7C4E63B8-2BC5-7709-1954-40CEDB0DC712}"
+ }
+}

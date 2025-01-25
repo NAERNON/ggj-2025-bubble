@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=3 uid="uid://fb4nyujt4pf2"]
+
+[ext_resource type="Script" uid="uid://dfsm0gfqkdgbj" path="res://scripts/player/player.gd" id="1_8afob"]
+[ext_resource type="Script" uid="uid://0oe8dkefimjn" path="res://scripts/camera/sub_viewport_alpha.gd" id="2_gmlin"]
+[ext_resource type="Shader" uid="uid://vw7wlxdsxm0u" path="res://shaders/transparent.gdshader" id="2_lvxji"]
+[ext_resource type="Script" uid="uid://wrxyxk4b7rny" path="res://scripts/camera/alpha_camera.gd" id="3_lvxji"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_lvxji"]
+viewport_path = NodePath("AlphaViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lvxji"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("2_lvxji")
+shader_parameter/alpha_viewport = SubResource("ViewportTexture_lvxji")
+shader_parameter/albedo = Color(0.37194, 0.208926, 0.100912, 1)
+shader_parameter/alpha = 0.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8afob"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_p47bc"]
+viewport_path = NodePath("AlphaViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p47bc"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("2_lvxji")
+shader_parameter/alpha_viewport = SubResource("ViewportTexture_p47bc")
+shader_parameter/albedo = Color(0.235495, 0.194302, 0.108942, 1)
+shader_parameter/alpha = 0.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_gmlin"]
+top_radius = 0.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8afob"]
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("_alpha_camera", "_alpha_viewport", "_body", "_nose", "_shadow_mesh")]
+collision_layer = 8
+floor_max_angle = 1.0472
+floor_snap_length = 1.0
+script = ExtResource("1_8afob")
+_alpha_camera = NodePath("AlphaViewport/AlphaCamera")
+_alpha_viewport = NodePath("AlphaViewport")
+_body = NodePath("RenderMesh/Body")
+_nose = NodePath("RenderMesh/Nose")
+_shadow_mesh = NodePath("ShadowMesh")
+
+[node name="RenderMesh" type="Node3D" parent="."]
+
+[node name="Body" type="MeshInstance3D" parent="RenderMesh"]
+layers = 2
+material_override = SubResource("ShaderMaterial_lvxji")
+mesh = SubResource("CapsuleMesh_8afob")
+skeleton = NodePath("../..")
+
+[node name="Nose" type="MeshInstance3D" parent="RenderMesh"]
+transform = Transform3D(2.86603e-16, -6.55671e-09, -0.15, -0.15, -6.55671e-09, 0, -6.55671e-09, 0.15, -6.55671e-09, 0, 0.5, 0.632)
+layers = 2
+material_override = SubResource("ShaderMaterial_p47bc")
+mesh = SubResource("CylinderMesh_gmlin")
+skeleton = NodePath("../..")
+
+[node name="ShadowMesh" type="Node3D" parent="."]
+visible = false
+
+[node name="Body" type="MeshInstance3D" parent="ShadowMesh"]
+cast_shadow = 3
+mesh = SubResource("CapsuleMesh_8afob")
+skeleton = NodePath("../..")
+
+[node name="Nose" type="MeshInstance3D" parent="ShadowMesh"]
+transform = Transform3D(-6.55671e-09, 0.15, 0, -0.15, -6.55671e-09, 0, 0, 0, 0.15, 0.632, 0.5, 0)
+cast_shadow = 3
+mesh = SubResource("CylinderMesh_gmlin")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_8afob")
+
+[node name="AlphaViewport" type="SubViewport" parent="."]
+script = ExtResource("2_gmlin")
+
+[node name="AlphaCamera" type="Camera3D" parent="AlphaViewport"]
+transform = Transform3D(-0.999903, 0.0139622, 8.74228e-08, 0.0139622, 0.999903, 0, -8.74143e-08, 1.22061e-09, -1, -0.322, 0, -3.886)
+cull_mask = 1048573
+script = ExtResource("3_lvxji")

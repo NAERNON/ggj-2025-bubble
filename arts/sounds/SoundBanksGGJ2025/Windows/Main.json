@@ -1,0 +1,74 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3161908922",
+    "Type": "User",
+    "GUID": "{169FCE51-14B2-45EC-9957-AAEA844C4D42}",
+    "Language": "SFX",
+    "Hash": "{8798D2CC-FF64-4407-AF00-824736EC8EAD}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
+    "ShortName": "Main",
+    "Path": "Main.bnk",
+    "Media": [
+     {
+      "Id": "486208026",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "WorldSun.wav",
+      "CachePath": "BA/{BAABA024-F6DC-CEDF-FECD-97887FB53DB0}.wem"
+     },
+     {
+      "Id": "667213390",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "WorldRain.wav",
+      "CachePath": "74/{746479C5-4F24-63BF-510A-77230CEEBDE9}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1014814365",
+      "Name": "WorldStart",
+      "ObjectPath": "\\Events\\Default Work Unit\\WorldStart",
+      "GUID": "{7E5B2808-0E1E-48F1-AF04-75DB67DB3FB0}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "486208026"
+       },
+       {
+        "Id": "667213390"
+       }
+      ]
+     },
+     {
+      "Id": "4121426335",
+      "Name": "WorldStop",
+      "ObjectPath": "\\Events\\Default Work Unit\\WorldStop",
+      "GUID": "{7AAEB9B5-3DC8-4182-A9F1-7AAFCEBE1AC5}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "317282339",
+      "Name": "Weather",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Weather",
+      "GUID": "{3635BBE0-258A-4869-BC57-A8C6FF1E95E1}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{547F6355-D121-AE43-9513-DAA53B2CA907}"
+ }
+}

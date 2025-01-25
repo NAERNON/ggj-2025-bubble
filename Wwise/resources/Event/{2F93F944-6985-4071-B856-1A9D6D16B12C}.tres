@@ -1,0 +1,8 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://dntxiagcgvbr8"]
+
+[resource]
+is_in_user_defined_sound_bank = true
+name = "PlayWalk"
+id = 2097335752
+guid = "{2F93F944-6985-4071-B856-1A9D6D16B12C}"
+dummy = true

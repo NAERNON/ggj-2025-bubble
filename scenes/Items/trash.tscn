@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://be8dgl4p8odl1"]
+
+[ext_resource type="Script" uid="uid://c6hy13eenh0ms" path="res://scripts/items/trash.gd" id="1_bhibs"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xpqiv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bhibs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sl2li"]
+
+[node name="Trash" type="RigidBody3D" node_paths=PackedStringArray("bubble_detector", "bubble_comparison")]
+collision_layer = 65
+mass = 5.0
+gravity_scale = 2.24
+script = ExtResource("1_bhibs")
+bubble_detector = NodePath("BubbleDetector")
+bubble_comparison = NodePath("")
+
+[node name="Mesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_xpqiv")
+
+[node name="Collision" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_bhibs")
+
+[node name="BubbleDetector" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BubbleDetector"]
+shape = SubResource("BoxShape3D_sl2li")

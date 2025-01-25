@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bx6b3c6r31kdt"]
+
+[ext_resource type="Script" uid="uid://ckkhq2aykxdwa" path="res://scripts/cannon/cannon.gd" id="1_chpxo"]
+[ext_resource type="PackedScene" uid="uid://cyh7iqjkch80v" path="res://scenes/Cannon/blow.tscn" id="2_2opt3"]
+[ext_resource type="PackedScene" uid="uid://bv7whg7inf2nk" path="res://scenes/Bubble/bubble.tscn" id="2_e7yyt"]
+
+[node name="Cannon" type="Node3D" node_paths=PackedStringArray("blow_timer")]
+script = ExtResource("1_chpxo")
+blow_timer = NodePath("BlowTimer")
+bubble_scene = ExtResource("2_e7yyt")
+blow_scene = ExtResource("2_2opt3")
+
+[node name="BlowTimer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.1
+one_shot = true

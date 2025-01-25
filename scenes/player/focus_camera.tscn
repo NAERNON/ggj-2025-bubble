@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4h7j54lv6lgx"]
+
+[ext_resource type="Script" uid="uid://c11uifbp3ckok" path="res://scripts/camera/focus_camera.gd" id="1_pjfxm"]
+
+[node name="FocusCamera" type="Camera3D" node_paths=PackedStringArray("_check_obstacle")]
+script = ExtResource("1_pjfxm")
+_check_obstacle = NodePath("ShapeCast3D")
+_focus_radius = 0.0
+_focus_centering = 0.0
+_max_vertical_angle = 50.0
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="."]
+top_level = true

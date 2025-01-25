@@ -1,0 +1,11 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1014814365	WorldStart			\Default Work Unit\WorldStart	
+	4121426335	WorldStop			\Default Work Unit\WorldStop	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	317282339	Weather			\Default Work Unit\Weather	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	486208026	WorldSun	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\BA\{BAABA024-F6DC-CEDF-FECD-97887FB53DB0}.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\WorldWeather\WorldSun		6144096
+	667213390	WorldRain	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\74\{746479C5-4F24-63BF-510A-77230CEEBDE9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\WorldWeather\WorldRain		6144096
+
