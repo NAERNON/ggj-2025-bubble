@@ -12,7 +12,8 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5
 			]
 		}
 	],
@@ -36,6 +37,10 @@
 		{
 			"mesh":4,
 			"name":"antenna"
+		},
+		{
+			"mesh":5,
+			"name":"eyes"
 		}
 	],
 	"meshes":[
@@ -101,6 +106,19 @@
 						"TEXCOORD_0":18
 					},
 					"indices":19
+				}
+			]
+		},
+		{
+			"name":"Plane.025",
+			"primitives":[
+				{
+					"attributes":{
+						"POSITION":20,
+						"NORMAL":21,
+						"TEXCOORD_0":22
+					},
+					"indices":23
 				}
 			]
 		}
@@ -275,6 +293,40 @@
 			"componentType":5123,
 			"count":324,
 			"type":"SCALAR"
+		},
+		{
+			"bufferView":20,
+			"componentType":5126,
+			"count":72,
+			"max":[
+				0.12800003588199615,
+				1.472999930381775,
+				0.25191786885261536
+			],
+			"min":[
+				-0.12800003588199615,
+				1.3769999742507935,
+				0.24899999797344208
+			],
+			"type":"VEC3"
+		},
+		{
+			"bufferView":21,
+			"componentType":5126,
+			"count":72,
+			"type":"VEC3"
+		},
+		{
+			"bufferView":22,
+			"componentType":5126,
+			"count":72,
+			"type":"VEC2"
+		},
+		{
+			"bufferView":23,
+			"componentType":5123,
+			"count":348,
+			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
@@ -397,11 +449,35 @@
 			"byteLength":648,
 			"byteOffset":36580,
 			"target":34963
+		},
+		{
+			"buffer":0,
+			"byteLength":864,
+			"byteOffset":37228,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":864,
+			"byteOffset":38092,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":576,
+			"byteOffset":38956,
+			"target":34962
+		},
+		{
+			"buffer":0,
+			"byteLength":696,
+			"byteOffset":39532,
+			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":37228,
+			"byteLength":40228,
 			"uri":"head.bin"
 		}
 	]

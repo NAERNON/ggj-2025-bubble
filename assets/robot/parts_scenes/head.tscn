@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1k524ghhxxf5"]
+[gd_scene load_steps=8 format=3 uid="uid://d1k524ghhxxf5"]
 
 [ext_resource type="PackedScene" uid="uid://difblux70uwib" path="res://assets/robot/meshes/head.gltf" id="1_b5nvx"]
 [ext_resource type="Material" uid="uid://cxnohk64fgdvl" path="res://assets/robot/materials/rb_body.tres" id="2_de1wu"]
@@ -6,6 +6,7 @@
 [ext_resource type="Material" uid="uid://ca5udvy5tga01" path="res://assets/robot/materials/rb_antenna_top.tres" id="4_b1huq"]
 [ext_resource type="Material" uid="uid://de03v0gyyygcg" path="res://assets/robot/materials/rb_headset_top.tres" id="4_eqqp4"]
 [ext_resource type="Material" uid="uid://b3v16b3fgdkrp" path="res://assets/robot/materials/rb_antenna.tres" id="5_vix88"]
+[ext_resource type="Material" uid="uid://7uup6tis3xp1" path="res://assets/robot/materials/rb_eye.tres" id="7_aljiw"]
 
 [node name="head" instance=ExtResource("1_b5nvx")]
 
@@ -23,3 +24,6 @@ surface_material_override/0 = ExtResource("4_b1huq")
 
 [node name="antenna" parent="." index="4"]
 surface_material_override/0 = ExtResource("5_vix88")
+
+[node name="eyes" parent="." index="5"]
+surface_material_override/0 = ExtResource("7_aljiw")
