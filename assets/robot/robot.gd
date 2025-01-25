@@ -32,7 +32,11 @@ var _blower_armature: Skeleton3D
 @export var left_headset: Node3D
 @export var right_headset: Node3D
 
-var _big_wheel_rot_factor: float = 0.5
+@export var left_caterpillar: CaterpillarTrack
+@export var right_caterpillar: CaterpillarTrack
+
+var _big_wheel_rot_factor: float = 0.75
+var _caterpillar_factor: float = 0.07
 
 func _ready() -> void:
     _blower_armature = blower_arm.get_node(^"./Armature/Skeleton3D")
@@ -51,6 +55,9 @@ func _rotate_wheels(delta: float) -> void:
     right_small_wheel_1.rotate_x(delta * right_wheel_speed)
     right_small_wheel_2.rotate_x(delta * right_wheel_speed)
     right_big_wheel.rotate_x(delta * right_wheel_speed * _big_wheel_rot_factor)
+    
+    left_caterpillar.advance_by(delta * left_wheel_speed * _caterpillar_factor)
+    right_caterpillar.advance_by(delta * right_wheel_speed * _caterpillar_factor)
     
 func _rotate_head(delta: float) -> void:
     head.rotation.x = clampf(head_rotation.x, -0.5, 0.72)

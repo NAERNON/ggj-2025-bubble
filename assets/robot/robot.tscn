@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://6fg2vv2lc46i"]
+[gd_scene load_steps=18 format=3 uid="uid://6fg2vv2lc46i"]
 
 [ext_resource type="Script" path="res://assets/robot/robot.gd" id="1_vf81t"]
 [ext_resource type="PackedScene" uid="uid://dllycys0cfchb" path="res://assets/robot/parts_scenes/wheel_back.tscn" id="2_d88bt"]
@@ -15,10 +15,19 @@
 [ext_resource type="PackedScene" uid="uid://chowed7bdm0vh" path="res://assets/robot/parts_scenes/back_blower.tscn" id="10_yg2j3"]
 [ext_resource type="PackedScene" uid="uid://rfu4h8u2pwgk" path="res://assets/robot/parts_scenes/washingup_liq.tscn" id="11_3nyd3"]
 [ext_resource type="PackedScene" uid="uid://ccn0m0uajcg6r" path="res://assets/robot/parts_scenes/blower_arm.tscn" id="12_dbtvt"]
+[ext_resource type="Script" path="res://assets/robot/caterpillar_track.gd" id="15_jpbc5"]
 
-[node name="Robot" type="Node3D" node_paths=PackedStringArray("head", "blower_arm", "left_small_wheel_1", "left_small_wheel_2", "left_big_wheel", "right_small_wheel_1", "right_small_wheel_2", "right_big_wheel", "left_headset", "right_headset")]
+[sub_resource type="Curve3D" id="Curve3D_s7t54"]
+bake_interval = 100.0
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.0593725, 0, 0, 0, 0, 0, 0, 0, 0, -0.114367, 0, 0, 0, 0, 0, 0, 0, 0, -0.172568, 0, 0, 0, 0, 0, 0, 0, 0, -0.24, 0, 0, 0, 0, 0, 0, 0, 0, -0.29, 0, 0, 0, 0, 0, 0, 0, 0, -0.35, 0, 0, 0, 0, 0, 0, 0, 0.0177289, -0.44091, 0, 0, 0, 0, 0, 0, 0, 0.0579597, -0.497772, 0, 0, 0, 0, 0, 0, 0, 0.117283, -0.535275, 0, 0, 0, 0, 0, 0, 0, 0.186835, -0.542776, 0, 0, 0, 0, 0, 0, 0, 0.251613, -0.53323, 0, 0, 0, 0, 0, 0, 0, 0.306164, -0.508, 0, 0, 0, 0, 0, 0, 0, 0.351168, -0.476634, 0, 0, 0, 0, 0, 0, 0, 0.415552, -0.427107, 0, 0, 0, 0, 0, 0, 0, 0.476426, -0.380282, 0, 0, 0, 0, 0, 0, 0, 0.537321, -0.333439, 0, 0, 0, 0, 0, 0, 0, 0.584371, -0.302073, 0, 0, 0, 0, 0, 0, 0, 0.619733, -0.247465, 0, 0, 0, 0, 0, 0, 0, 0.629717, -0.177576, 0, 0, 0, 0, 0, 0, 0, 0.609036, -0.113392, 0, 0, 0, 0, 0, 0, 0, 0.572665, -0.0556262, 0, 0, 0, 0, 0, 0, 0, 0.525914, 0.018025, 0, 0, 0, 0, 0, 0, 0, 0.475375, 0.0952104, 0, 0, 0, 0, 0, 0, 0, 0.431592, 0.163091, 0, 0, 0, 0, 0, 0, 0, 0.389419, 0.228475, 0, 0, 0, 0, 0, 0, 2.98023e-08, 0.344979, 0.297375, 0, 0, 0, 0, 0, 0, 0, 0.296673, 0.372268, 0, 0, 0, 0, 0, 0, 0, 0.256023, 0.430033, 0, 0, 0, 0, 0, 0, 0, 0.204676, 0.479241, 0, 0, 0, 0, 0, 0, 0, 0.134073, 0.48566, 0, 0, 0, 0, 0, 0, 0, 0.0663235, 0.459986, 0, 0, 0, 0, 0, 0, 0, 0.0199684, 0.408639, 0, 0, 0, 0, 0, 0, 0, 0, 0.338, 0, 0, 0, 0, 0, 0, 0, 0, 0.276705, 0, 0, 0, 0, 0, 0, 0, 0, 0.20111, 0, 0, 0, 0, 0, 0, -2.98023e-08, 0, 0.12273, 0, 0, 0, 0, 0, 0, -2.98023e-08, 0, 0.063206, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 39
+
+[node name="Robot" type="Node3D" node_paths=PackedStringArray("head", "blower_arm", "left_small_wheel_1", "left_small_wheel_2", "left_big_wheel", "right_small_wheel_1", "right_small_wheel_2", "right_big_wheel", "left_headset", "right_headset", "left_caterpillar", "right_caterpillar")]
 script = ExtResource("1_vf81t")
-left_wheel_speed = 0.36
+left_wheel_speed = 2.42
 right_wheel_speed = 0.9
 reticule_speed = 20.0
 headset_speed = 10.0
@@ -32,6 +41,8 @@ right_small_wheel_2 = NodePath("wheels/wheel_small_right_2")
 right_big_wheel = NodePath("wheels/wheel_big_right")
 left_headset = NodePath("robot_head/headset_anchor_left")
 right_headset = NodePath("robot_head/headset_anchor_right")
+left_caterpillar = NodePath("caterpillar_track_left")
+right_caterpillar = NodePath("caterpillar_track_right")
 
 [node name="wheels" type="Node3D" parent="."]
 
@@ -95,6 +106,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.156)
 
 [node name="head" parent="robot_head" instance=ExtResource("8_cpxu5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.34534, 0)
+
+[node name="caterpillar_track_left" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.317498, 0.01, 0)
+curve = SubResource("Curve3D_s7t54")
+script = ExtResource("15_jpbc5")
+
+[node name="caterpillar_track_right" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.317, 0.01, 0)
+curve = SubResource("Curve3D_s7t54")
+script = ExtResource("15_jpbc5")
 
 [node name="_final" parent="." instance=ExtResource("2_pa3a1")]
 visible = false
