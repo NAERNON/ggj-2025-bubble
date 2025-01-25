@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://fehl7allxu6l"]
+
+[ext_resource type="PackedScene" uid="uid://c6ptybnrsxwtf" path="res://assets/robot/meshes/caterpillar.gltf" id="1_7t156"]
+[ext_resource type="Material" uid="uid://cka821shisfea" path="res://assets/robot/materials/rb_caterpillar.tres" id="2_jeim7"]
+
+[node name="caterpillar" instance=ExtResource("1_7t156")]
+
+[node name="caterpillar" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_jeim7")

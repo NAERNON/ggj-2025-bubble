@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cka821shisfea"]
+
+[ext_resource type="Texture2D" uid="uid://d2yub1yi16cit" path="res://assets/robot/textures/caterpillar_NRM.png" id="1_4j5u1"]
+
+[resource]
+albedo_color = Color(0.521484, 0.521484, 0.521484, 1)
+normal_enabled = true
+normal_texture = ExtResource("1_4j5u1")

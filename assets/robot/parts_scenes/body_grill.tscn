@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2701cuj6ih3a"]
+
+[ext_resource type="PackedScene" uid="uid://dy2buu1hlmle" path="res://assets/robot/meshes/body_grill.gltf" id="1_7rtt6"]
+[ext_resource type="Material" uid="uid://4mhv86arfq04" path="res://assets/robot/materials/rb_body_grill.tres" id="2_0bdbg"]
+
+[node name="body_grill" instance=ExtResource("1_7rtt6")]
+
+[node name="body_grill" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_0bdbg")

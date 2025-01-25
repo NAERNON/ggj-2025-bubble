@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhtwywyklels2"]
+
+[ext_resource type="PackedScene" uid="uid://cmujymtghp" path="res://assets/robot/meshes/wheel_big.gltf" id="1_2g6uo"]
+[ext_resource type="Material" uid="uid://b80pd8rg14o0n" path="res://assets/robot/materials/rb_wheel.tres" id="2_yobft"]
+
+[node name="wheel_big" instance=ExtResource("1_2g6uo")]
+
+[node name="big_whe" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_yobft")
