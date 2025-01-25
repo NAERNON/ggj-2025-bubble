@@ -4,3 +4,4 @@
 albedo_color = Color(0.552734, 0.335275, 0.0346449, 1)
 metallic = 0.34
 roughness = 0.39
+rim_enabled = true
