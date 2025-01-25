@@ -1,0 +1,134 @@
+[gd_scene load_steps=20 format=3 uid="uid://8vcdtmgfdh8q"]
+
+[ext_resource type="Script" uid="uid://debkm4xlwe3l8" path="res://scripts/cannon/blowing_effect.gd" id="1_bs31e"]
+
+[sub_resource type="Curve" id="Curve_oqi0o"]
+_limits = [-10.0, 10.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.1, 5), 0.0, 0.0, 0, 0, Vector2(0.2, -5), 0.0, 0.0, 0, 0, Vector2(0.3, 5), 0.0, 0.0, 0, 0]
+point_count = 4
+metadata/_snap_enabled = true
+
+[sub_resource type="Curve" id="Curve_3sxi8"]
+_limits = [-10.0, 10.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.1, 0), 0.0, 0.0, 0, 0, Vector2(0.15, 5), 0.0, 0.0, 0, 0, Vector2(0.25, -5), 0.0, 0.0, 0, 0, Vector2(0.35, 0), 0.0, 0.0, 0, 0, Vector2(0.439024, 3.46154), 0.0, 0.0, 0, 0, Vector2(0.552846, -1.46154), 0.0, 0.0, 0, 0, Vector2(0.646341, 2.53846), 0.0, 0.0, 0, 0, Vector2(0.813008, 0.0769234), 0.0, 0.0, 0, 0]
+point_count = 9
+
+[sub_resource type="Curve" id="Curve_h8o7g"]
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_ulygd"]
+curve_x = SubResource("Curve_oqi0o")
+curve_y = SubResource("Curve_3sxi8")
+curve_z = SubResource("Curve_h8o7g")
+
+[sub_resource type="Curve" id="Curve_crllp"]
+_data = [Vector2(0, 0.208791), 0.0, 0.0, 0, 0, Vector2(0.49187, 0.923077), 0.0, 0.0, 0, 0, Vector2(1, 0.307692), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_wpde4"]
+curve = SubResource("Curve_crllp")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_nk4hc"]
+resource_local_to_scene = true
+emission_shape_offset = Vector3(1, 0, 0)
+emission_shape_scale = Vector3(2, 0.5, 0.5)
+directional_velocity_min = 1.0
+directional_velocity_max = 1.0
+directional_velocity_curve = SubResource("CurveXYZTexture_ulygd")
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_wpde4")
+turbulence_enabled = true
+turbulence_noise_strength = 10.05
+turbulence_noise_scale = 4.985
+
+[sub_resource type="Curve" id="Curve_4rr48"]
+_limits = [0.0, 0.12, 0.0, 1.0]
+_data = [Vector2(0.00443459, 0.00832019), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r6kdt"]
+vertex_color_use_as_albedo = true
+disable_receive_shadows = true
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+use_particle_trails = true
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_tss7q"]
+material = SubResource("StandardMaterial3D_r6kdt")
+section_length = 0.15
+curve = SubResource("Curve_4rr48")
+
+[sub_resource type="Curve" id="Curve_7chuo"]
+_limits = [0.0, 10.0, 0.0, 1.0]
+_data = [Vector2(0, 3), 0.0, 0.0, 0, 0]
+point_count = 1
+metadata/_snap_enabled = true
+
+[sub_resource type="Curve" id="Curve_bs31e"]
+
+[sub_resource type="Curve" id="Curve_cedif"]
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_yafrj"]
+curve_x = SubResource("Curve_7chuo")
+curve_y = SubResource("Curve_bs31e")
+curve_z = SubResource("Curve_cedif")
+
+[sub_resource type="Curve" id="Curve_bvk2s"]
+_data = [Vector2(0, 0.021978), 0.0, 0.0, 0, 0, Vector2(0.501292, 0.497585), 0.0, 0.0, 0, 0, Vector2(1, 0.010989), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_mowyi"]
+curve = SubResource("Curve_bvk2s")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fe7wg"]
+emission_shape_offset = Vector3(1, 0, 0)
+emission_shape_scale = Vector3(2, 0.5, 0.5)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+directional_velocity_min = 0.999984
+directional_velocity_max = 0.999984
+directional_velocity_curve = SubResource("CurveXYZTexture_yafrj")
+gravity = Vector3(0, 0, 0)
+scale_min = 0.1
+scale_curve = SubResource("CurveTexture_mowyi")
+turbulence_enabled = true
+turbulence_noise_strength = 20.0
+turbulence_noise_speed_random = 1.49
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_bnpcc"]
+material = SubResource("StandardMaterial3D_r6kdt")
+sections = 2
+section_length = 0.15
+curve = SubResource("Curve_4rr48")
+
+[node name="BlowingEffect" type="Node3D" node_paths=PackedStringArray("looping_wind", "default_wind")]
+script = ExtResource("1_bs31e")
+looping_wind = NodePath("GPUParticles3D")
+default_wind = NodePath("GPUParticles3D2")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+cast_shadow = 0
+amount = 5
+amount_ratio = 0.5
+lifetime = 2.0
+visibility_aabb = AABB(-1, -5, -5, 20, 10, 10)
+local_coords = true
+trail_enabled = true
+process_material = SubResource("ParticleProcessMaterial_nk4hc")
+draw_pass_1 = SubResource("TubeTrailMesh_tss7q")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+top_level = true
+cast_shadow = 0
+amount = 20
+amount_ratio = 0.5
+lifetime = 2.0
+visibility_aabb = AABB(-0.5, -0.5, -0.5, 1, 1, 1)
+local_coords = true
+trail_enabled = true
+trail_lifetime = 0.66
+process_material = SubResource("ParticleProcessMaterial_fe7wg")
+draw_pass_1 = SubResource("TubeTrailMesh_bnpcc")

@@ -84,8 +84,7 @@ _walk_speed = 15.0
 [node name="Rain" parent="Player" instance=ExtResource("3_rwwc7")]
 
 [node name="Cannon" parent="Player" node_paths=PackedStringArray("focus_camera") instance=ExtResource("4_tipki")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.488393)
-blow_width = 0.2
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498624)
 focus_camera = NodePath("../../FocusCamera")
 
 [node name="FocusCamera" parent="." node_paths=PackedStringArray("_focus") instance=ExtResource("2_5l0vc")]

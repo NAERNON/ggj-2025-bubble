@@ -40,6 +40,7 @@ seamless = true
 noise = SubResource("FastNoiseLite_kxfs8")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_l2e8e"]
+resource_local_to_scene = true
 render_priority = 0
 shader = ExtResource("1_75irp")
 shader_parameter/distortionView = 0.055
