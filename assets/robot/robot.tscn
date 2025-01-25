@@ -65,6 +65,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 [node name="wheel_bar" parent="." instance=ExtResource("6_kl6y8")]
 
 [node name="neck" parent="." instance=ExtResource("8_sivks")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0872498, 0)
 
 [node name="washingup_liq_support" parent="." instance=ExtResource("9_1n1tq")]
 
