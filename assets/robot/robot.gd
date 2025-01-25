@@ -5,12 +5,17 @@ extends Node3D
 
 @export_group("Meshes")
 
+@export var head: Node3D
+
 @export var left_small_wheel_1: Node3D
 @export var left_small_wheel_2: Node3D
 @export var left_big_wheel: Node3D
 @export var right_small_wheel_1: Node3D
 @export var right_small_wheel_2: Node3D
 @export var right_big_wheel: Node3D
+
+@export var left_headset: Node3D
+@export var right_headset: Node3D
 
 var _big_wheel_rot_factor: float = 0.5
 
@@ -24,3 +29,6 @@ func _rotate_wheels(delta: float) -> void:
     right_small_wheel_1.rotate_x(delta * right_wheel_speed)
     right_small_wheel_2.rotate_x(delta * right_wheel_speed)
     right_big_wheel.rotate_x(delta * right_wheel_speed * _big_wheel_rot_factor)
+
+func set_head_rotation(rot: Vector3) -> void:
+    head.rotation = rot

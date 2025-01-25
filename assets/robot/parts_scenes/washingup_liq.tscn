@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://rfu4h8u2pwgk"]
+
+[ext_resource type="PackedScene" uid="uid://dfdbh8ju1ywm2" path="res://assets/robot/meshes/washingup_liq.gltf" id="1_jkhdh"]
+[ext_resource type="Material" uid="uid://b5owfl6seuqsc" path="res://assets/robot/materials/rb_washingup_liq_bottle.tres" id="2_g6fcm"]
+[ext_resource type="Material" uid="uid://bet0j6p0xep4n" path="res://assets/robot/materials/rb_washingup_liq_bottle_top.tres" id="3_ygthy"]
+[ext_resource type="Material" uid="uid://ct8t2gvej1k4l" path="res://assets/robot/materials/rb_washingup_liq.tres" id="4_klnsj"]
+
+[node name="washingup_liq" instance=ExtResource("1_jkhdh")]
+
+[node name="bottle" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_g6fcm")
+
+[node name="top" parent="." index="1"]
+surface_material_override/0 = ExtResource("3_ygthy")
+
+[node name="liq" parent="." index="2"]
+surface_material_override/0 = ExtResource("4_klnsj")

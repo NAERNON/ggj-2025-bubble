@@ -15,7 +15,7 @@
 	"nodes":[
 		{
 			"mesh":0,
-			"name":"body",
+			"name":"washingup_liq_support",
 			"translation":[
 				0,
 				-0.10000000149011612,
@@ -25,7 +25,7 @@
 	],
 	"meshes":[
 		{
-			"name":"Plane.007",
+			"name":"Plane.023",
 			"primitives":[
 				{
 					"attributes":{
@@ -42,68 +42,68 @@
 		{
 			"bufferView":0,
 			"componentType":5126,
-			"count":1423,
+			"count":310,
 			"max":[
-				0.326225608587265,
-				0.519244372844696,
-				0.28047722578048706
+				0.2071978896856308,
+				0.7107661962509155,
+				-0.2790025770664215
 			],
 			"min":[
-				-0.326225608587265,
-				-0.38754308223724365,
-				-0.34820297360420227
+				-0.2071978896856308,
+				0.5007897615432739,
+				-0.8535544872283936
 			],
 			"type":"VEC3"
 		},
 		{
 			"bufferView":1,
 			"componentType":5126,
-			"count":1423,
+			"count":310,
 			"type":"VEC3"
 		},
 		{
 			"bufferView":2,
 			"componentType":5126,
-			"count":1423,
+			"count":310,
 			"type":"VEC2"
 		},
 		{
 			"bufferView":3,
 			"componentType":5123,
-			"count":4236,
+			"count":564,
 			"type":"SCALAR"
 		}
 	],
 	"bufferViews":[
 		{
 			"buffer":0,
-			"byteLength":17076,
+			"byteLength":3720,
 			"byteOffset":0,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":17076,
-			"byteOffset":17076,
+			"byteLength":3720,
+			"byteOffset":3720,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":11384,
-			"byteOffset":34152,
+			"byteLength":2480,
+			"byteOffset":7440,
 			"target":34962
 		},
 		{
 			"buffer":0,
-			"byteLength":8472,
-			"byteOffset":45536,
+			"byteLength":1128,
+			"byteOffset":9920,
 			"target":34963
 		}
 	],
 	"buffers":[
 		{
-			"byteLength":54008,
-			"uri":"body.bin"
+			"byteLength":11048,
+			"uri":"washingup_liq_support.bin"
 		}
 	]
 }

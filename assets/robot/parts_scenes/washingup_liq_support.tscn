@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://trp0c0rcjuuj"]
+
+[ext_resource type="PackedScene" uid="uid://chugwcvqenhkr" path="res://assets/robot/meshes/washingup_liq_support.gltf" id="1_lv4ix"]
+[ext_resource type="Material" uid="uid://bbbonxabg3iov" path="res://assets/robot/materials/rb_washingup_liq_support.tres" id="2_bvo83"]
+
+[node name="washingup_liq_support" instance=ExtResource("1_lv4ix")]
+
+[node name="washingup_liq_support" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_bvo83")

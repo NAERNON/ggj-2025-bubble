@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://chowed7bdm0vh"]
+
+[ext_resource type="PackedScene" uid="uid://bbtb674jjeg32" path="res://assets/robot/meshes/back_blower.gltf" id="1_jxbfw"]
+[ext_resource type="Material" uid="uid://wrj5f10mt2g0" path="res://assets/robot/materials/rb_back_blower.tres" id="2_yyhks"]
+[ext_resource type="Material" uid="uid://l6p4i34iaol2" path="res://assets/robot/materials/rb_back_blower_end.tres" id="3_05ylg"]
+[ext_resource type="Material" uid="uid://b04l62kvmopaj" path="res://assets/robot/materials/rb_back_blower_rings.tres" id="3_xayrv"]
+
+[node name="back_blower" instance=ExtResource("1_jxbfw")]
+
+[node name="back" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_yyhks")
+
+[node name="rings" parent="." index="1"]
+surface_material_override/0 = ExtResource("3_xayrv")
+
+[node name="triangles" parent="." index="2"]
+surface_material_override/0 = ExtResource("3_xayrv")
+
+[node name="end" parent="." index="3"]
+surface_material_override/0 = ExtResource("3_05ylg")

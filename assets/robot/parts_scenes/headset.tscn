@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfi7waf7ltv7e"]
+
+[ext_resource type="PackedScene" uid="uid://b6hf0i7hnk0d3" path="res://assets/robot/meshes/headset.gltf" id="1_l7juy"]
+[ext_resource type="Material" uid="uid://bdd2rlsqkfi0w" path="res://assets/robot/materials/rb_headset_in.tres" id="2_yyyvx"]
+[ext_resource type="Material" uid="uid://0r13gl0bbo1e" path="res://assets/robot/materials/rb_headset_out.tres" id="3_kkt0t"]
+
+[node name="headset" instance=ExtResource("1_l7juy")]
+
+[node name="headset_in" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_yyyvx")
+
+[node name="headset_out" parent="." index="1"]
+surface_material_override/0 = ExtResource("3_kkt0t")

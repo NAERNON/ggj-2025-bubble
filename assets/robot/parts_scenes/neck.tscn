@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn730v6cv63i1"]
+
+[ext_resource type="PackedScene" uid="uid://dy6bwrfewmpt6" path="res://assets/robot/meshes/neck.gltf" id="1_7qxf6"]
+[ext_resource type="Material" uid="uid://b80pd8rg14o0n" path="res://assets/robot/materials/rb_wheel.tres" id="2_15n18"]
+
+[node name="neck" instance=ExtResource("1_7qxf6")]
+
+[node name="neck" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_15n18")
