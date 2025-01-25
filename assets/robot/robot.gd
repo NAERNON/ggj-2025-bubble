@@ -1,3 +1,4 @@
+@tool
 extends Node3D
 
 @export var left_wheel_speed: float = 0.0
@@ -8,6 +9,8 @@ extends Node3D
 @export var is_reticule_active: bool = false
 @export var reticule_speed: float = 1.0
 var _reticule_angle: float = PI
+
+@export var blow_arm_rotation: Vector2
 
 @export_group("Meshes")
 
@@ -35,6 +38,7 @@ func _process(delta: float) -> void:
     _rotate_wheels(delta)
     _rotate_head(delta)
     _rotate_reticule(delta)
+    _rotate_blow_arm(delta)
 
 func _rotate_wheels(delta: float) -> void:
     left_small_wheel_1.rotate_x(delta * left_wheel_speed)
@@ -53,4 +57,11 @@ func _rotate_reticule(delta: float) -> void:
     var dest_angle: float = 0 if is_reticule_active else PI
     _reticule_angle = move_toward(_reticule_angle, dest_angle, delta * reticule_speed)
     var r: Quaternion = Quaternion(Vector3.UP, _reticule_angle)
+    _blower_armature.set_bone_pose_rotation(i, r)
+    
+func _rotate_blow_arm(delta: float) -> void:
+    var i: int = _blower_armature.find_bone("Leaf")
+    var rot_x = blow_arm_rotation.x
+    var rot_y = blow_arm_rotation.y
+    var r: Quaternion = Quaternion.from_euler(Vector3(rot_x, 0, rot_y))
     _blower_armature.set_bone_pose_rotation(i, r)
