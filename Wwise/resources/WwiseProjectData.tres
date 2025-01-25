@@ -1,30 +1,30 @@
 [gd_resource type="WwiseProjectData" load_steps=15 format=3 uid="uid://cocri3sgmo1np"]
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_hkusy"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_o8b81"]
 path = "\\SoundBanks\\Default Work Unit\\Main"
 type = 7
 name = "Main"
 guid = "{169FCE51-14B2-45EC-9957-AAEA844C4D42}"
 id = 3161908922
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_b7c5i"]
-children = [SubResource("WwiseTreeObject_hkusy")]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_p1akm"]
+children = [SubResource("WwiseTreeObject_o8b81")]
 name = "Default Work Unit"
 id = 125608783
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_ht0hi"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_bonr6"]
 path = "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus"
 type = 2
 name = "Master Audio Bus"
 guid = "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
 id = 3803692087
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_je3xx"]
-children = [SubResource("WwiseTreeObject_ht0hi")]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_17vgq"]
+children = [SubResource("WwiseTreeObject_bonr6")]
 name = "Default Work Unit"
 id = 125608783
 
-[sub_resource type="WwiseTreeObjectEvent" id="WwiseTreeObjectEvent_5dshn"]
+[sub_resource type="WwiseTreeObjectEvent" id="WwiseTreeObjectEvent_ppdww"]
 max_duration = 0.0
 min_duration = 0.0
 path = "\\Events\\Default Work Unit\\WorldStart"
@@ -33,7 +33,7 @@ name = "WorldStart"
 guid = "{7E5B2808-0E1E-48F1-AF04-75DB67DB3FB0}"
 id = 1014814365
 
-[sub_resource type="WwiseTreeObjectEvent" id="WwiseTreeObjectEvent_oslc2"]
+[sub_resource type="WwiseTreeObjectEvent" id="WwiseTreeObjectEvent_ls7lq"]
 max_duration = 0.0
 min_duration = 0.0
 path = "\\Events\\Default Work Unit\\WorldStop"
@@ -42,60 +42,60 @@ name = "WorldStop"
 guid = "{7AAEB9B5-3DC8-4182-A9F1-7AAFCEBE1AC5}"
 id = 4121426335
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_dbvtb"]
-children = [SubResource("WwiseTreeObjectEvent_5dshn"), SubResource("WwiseTreeObjectEvent_oslc2")]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_ut51g"]
+children = [SubResource("WwiseTreeObjectEvent_ppdww"), SubResource("WwiseTreeObjectEvent_ls7lq")]
 name = "Default Work Unit"
 id = 125608783
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_smouc"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_jfasb"]
 path = "\\Game Parameters\\Default Work Unit\\Weather"
 type = 13
 name = "Weather"
 guid = "{3635BBE0-258A-4869-BC57-A8C6FF1E95E1}"
 id = 317282339
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_rtih2"]
-children = [SubResource("WwiseTreeObject_smouc")]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_w408c"]
+children = [SubResource("WwiseTreeObject_jfasb")]
 name = "Default Work Unit"
 id = 125608783
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_53w1t"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_rh5rr"]
 path = "\\Switches\\Default Work Unit\\RobotState\\Loop"
 type = 10
 name = "Loop"
 guid = "{24640D21-6E87-43E1-AC29-839819BB03A5}"
 id = 691006007
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_yduub"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_ksdwa"]
 path = "\\Switches\\Default Work Unit\\RobotState\\Start"
 type = 10
 name = "Start"
 guid = "{DFE59996-51D3-498E-9F47-265BD46487DF}"
 id = 1281810935
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_3w0ae"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_epp4s"]
 path = "\\Switches\\Default Work Unit\\RobotState\\Stop"
 type = 10
 name = "Stop"
 guid = "{A2CB13D8-AF6F-4037-86DC-C34835CB2005}"
 id = 788884573
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_3blbq"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_lcht1"]
 path = "\\Switches\\Default Work Unit\\RobotState"
-children = [SubResource("WwiseTreeObject_53w1t"), SubResource("WwiseTreeObject_yduub"), SubResource("WwiseTreeObject_3w0ae")]
+children = [SubResource("WwiseTreeObject_rh5rr"), SubResource("WwiseTreeObject_ksdwa"), SubResource("WwiseTreeObject_epp4s")]
 type = 11
 name = "RobotState"
 guid = "{6F8A011D-2B22-4751-8C59-403B66F0D654}"
 id = 522057570
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_at1tn"]
-children = [SubResource("WwiseTreeObject_3blbq")]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_ia5d2"]
+children = [SubResource("WwiseTreeObject_lcht1")]
 name = "Default Work Unit"
 id = 125608783
 
 [resource]
-bus_root = [SubResource("WwiseTreeObject_je3xx")]
-bank_root = [SubResource("WwiseTreeObject_b7c5i")]
-event_root = [SubResource("WwiseTreeObject_dbvtb")]
-game_parameter_root = [SubResource("WwiseTreeObject_rtih2")]
-switch_root = [SubResource("WwiseTreeObject_at1tn")]
+bus_root = [SubResource("WwiseTreeObject_17vgq")]
+bank_root = [SubResource("WwiseTreeObject_p1akm")]
+event_root = [SubResource("WwiseTreeObject_ut51g")]
+game_parameter_root = [SubResource("WwiseTreeObject_w408c")]
+switch_root = [SubResource("WwiseTreeObject_ia5d2")]

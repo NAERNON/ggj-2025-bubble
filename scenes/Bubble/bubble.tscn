@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://bv7whg7inf2nk"]
 
-[ext_resource type="Shader" uid="uid://ba2mnfre4vlob" path="res://shaders/bubble.gdshader" id="1_75irp"]
-[ext_resource type="Script" uid="uid://dvmg2va0lomf5" path="res://scripts/bubble/bubble.gd" id="1_u7q8j"]
+[ext_resource type="Shader" path="res://shaders/bubble.gdshader" id="1_75irp"]
+[ext_resource type="Script" path="res://scripts/bubble/bubble.gd" id="1_u7q8j"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_u7q8j"]
 resource_local_to_scene = true
@@ -45,12 +45,12 @@ render_priority = 0
 shader = ExtResource("1_75irp")
 shader_parameter/distortionView = 0.055
 shader_parameter/speedView = 0.035
-shader_parameter/noiseViewX = SubResource("NoiseTexture2D_ukwfb")
-shader_parameter/noiseViewY = SubResource("NoiseTexture2D_xktvc")
 shader_parameter/tintColor = Color(0.20808, 0.214335, 0.354566, 1)
 shader_parameter/fesnelAmount = null
 shader_parameter/distortionVertex = 0.03
 shader_parameter/speedVertex = 0.1
+shader_parameter/noiseViewX = SubResource("NoiseTexture2D_ukwfb")
+shader_parameter/noiseViewY = SubResource("NoiseTexture2D_xktvc")
 shader_parameter/noiseVertex = SubResource("NoiseTexture2D_k7ne2")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_u7q8j"]

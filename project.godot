@@ -11,13 +11,22 @@ config_version=5
 [application]
 
 config/name="Bubble"
-run/main_scene="uid://dtptkxg3nl7bh"
+run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
+
+[display]
+
+window/size/viewport_width=1728
+window/size/viewport_height=972
+
+[filesystem]
+
+import/blender/enabled=false
 
 [input]
 

@@ -1,12 +1,12 @@
 [gd_scene load_steps=18 format=3 uid="uid://dtptkxg3nl7bh"]
 
-[ext_resource type="Script" uid="uid://bnd7j868d1elk" path="res://scripts/main.gd" id="1_4q130"]
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_4q130"]
 [ext_resource type="PackedScene" uid="uid://fb4nyujt4pf2" path="res://scenes/player/player.tscn" id="1_s4h7g"]
 [ext_resource type="PackedScene" uid="uid://d4h7j54lv6lgx" path="res://scenes/player/focus_camera.tscn" id="2_5l0vc"]
 [ext_resource type="WwiseRTPC" uid="uid://11g27d1d2utt" path="res://Wwise/resources/Game Parameter/{3635BBE0-258A-4869-BC57-A8C6FF1E95E1}.tres" id="2_ya4ey"]
-[ext_resource type="Script" uid="uid://ckalhvgp371fh" path="res://scripts/environment/lights_and_time.gd" id="3_5l0vc"]
+[ext_resource type="Script" path="res://scripts/environment/lights_and_time.gd" id="3_5l0vc"]
 [ext_resource type="PackedScene" uid="uid://bnlr3v06brxgt" path="res://scenes/environment/rain.tscn" id="3_rwwc7"]
-[ext_resource type="Shader" uid="uid://douy2w78apjqu" path="res://shaders/sky.gdshader" id="4_51pqh"]
+[ext_resource type="Shader" path="res://shaders/sky.gdshader" id="4_51pqh"]
 [ext_resource type="PackedScene" uid="uid://bx6b3c6r31kdt" path="res://scenes/Cannon/cannon.tscn" id="4_tipki"]
 [ext_resource type="WwiseEvent" uid="uid://bj5e0vv2iyobr" path="res://Wwise/resources/Event/{7E5B2808-0E1E-48F1-AF04-75DB67DB3FB0}.tres" id="9_85g3d"]
 [ext_resource type="WwiseBank" uid="uid://li2mqveifryh" path="res://Wwise/resources/SoundBank/{169FCE51-14B2-45EC-9957-AAEA844C4D42}.tres" id="9_choun"]
@@ -88,6 +88,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.498624)
 focus_camera = NodePath("../../FocusCamera")
 
 [node name="FocusCamera" parent="." node_paths=PackedStringArray("_focus") instance=ExtResource("2_5l0vc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.77462, -3.56596)
 _focus = NodePath("../Player")
 _max_distance = 4.0
 

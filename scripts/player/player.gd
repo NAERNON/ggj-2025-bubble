@@ -3,11 +3,10 @@ class_name Player extends CharacterBody3D
 const G_FORCE : float = 9.8
 
 #################################### ATTRIBUTES ####################################
+@export var robot : Robot
 
 @export_group("Camera")
 @export var _main_camera    : Node3D
-@export var _alpha_camera   : AlphaCamera
-@export var _alpha_viewport : SubViewportAlpha
 
 var _desired_velocity      : Vector3
 
@@ -19,15 +18,10 @@ var _desired_velocity      : Vector3
 @export_range(0, 100, 1)   var _run_speed             : float = 40
 @export_range(0, 100, 1)   var _walk_speed            : float = 25
 
+@export_range(0, 10, 0.1) var ratio_speed_wheel : float = 1.0
+
 
 # Player 3D model (mesh, hitbox, etc...)
-@export_group("Player Nodes")
-@export_subgroup("Meshes")
-@export var _body        : MeshInstance3D
-var _body_material       : ShaderMaterial
-@export var _nose        : MeshInstance3D
-var _nose_material       : ShaderMaterial
-@export var _shadow_mesh : Node3D
 
 # Inputs and deplacements parameters
 var _can_move              : bool
@@ -43,9 +37,6 @@ var _is_walking          : bool
 #################################### PRIVATE METHODS ####################################
 
 func _ready() -> void :
-	_alpha_camera.set_camera_to_follow(_main_camera);
-	_alpha_camera.visible = false
-	_alpha_viewport.deactivate()
 
 	# Number of time player try to climb a slope before stopping
 	max_slides = 3
@@ -53,10 +44,6 @@ func _ready() -> void :
 	_frames_without_inputs = 100
 	_previous_inputs       = Vector3(0, 0, 0)
 	_process_inputs        = true
-
-	_body_material       = _body.get_active_material(0) as ShaderMaterial
-	_nose_material       = _nose.get_active_material(0) as ShaderMaterial
-	_shadow_mesh.visible = false
 
 	_can_move = true
 	_is_just_falling = true
@@ -161,39 +148,13 @@ func _walking_inputs(delta : float) -> void :
 	_desired_velocity.z = move_toward(velocity.z, to_velocity.z, max_speed_change)
 	_desired_velocity.y = to_velocity.y
 
+	robot.left_wheel_speed = _desired_velocity.length() * ratio_speed_wheel
+	robot.right_wheel_speed = _desired_velocity.length() * ratio_speed_wheel
+
 #################################### PUBLIC METHODS #####################################
 
 func process_input(pi : bool) -> void :
 	_process_inputs = pi
-
-
-func set_transparency(trans_val : float) -> void :
-
-	if trans_val > 0.0 :
-		if trans_val == 1.0 :
-			_alpha_viewport.deactivate()
-			_alpha_camera.visible = false
-			_shadow_mesh.visible = false
-			_body.transparency = 1.0
-			_nose.transparency = 1.0
-			return
-
-		_alpha_viewport.activate()
-		_alpha_camera.visible = true
-		_shadow_mesh.visible = true
-		_body_material.set_shader_parameter("alpha", trans_val)
-		_nose_material.set_shader_parameter("alpha", trans_val)
-		_body.transparency = 0.0
-		_nose.transparency = 0.0
-
-	else :
-		_alpha_viewport.deactivate()
-		_alpha_camera.visible = false
-		_shadow_mesh.visible = false
-		_body_material.set_shader_parameter("alpha", 0.0)
-		_nose_material.set_shader_parameter("alpha", 0.0)
-		_body.transparency = 0.0
-		_nose.transparency = 0.0
 
 func stop_movement() -> void :
 	velocity.x = 0

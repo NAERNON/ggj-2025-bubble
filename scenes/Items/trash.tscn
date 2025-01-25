@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://be8dgl4p8odl1"]
 
-[ext_resource type="Script" uid="uid://c6hy13eenh0ms" path="res://scripts/items/trash.gd" id="1_bhibs"]
+[ext_resource type="Script" path="res://scripts/items/trash.gd" id="1_bhibs"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_xpqiv"]
 
@@ -8,13 +8,12 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sl2li"]
 
-[node name="Trash" type="RigidBody3D" node_paths=PackedStringArray("bubble_detector", "bubble_comparison")]
+[node name="Trash" type="RigidBody3D" node_paths=PackedStringArray("bubble_detector")]
 collision_layer = 65
 mass = 5.0
 gravity_scale = 2.24
 script = ExtResource("1_bhibs")
 bubble_detector = NodePath("BubbleDetector")
-bubble_comparison = NodePath("")
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_xpqiv")
