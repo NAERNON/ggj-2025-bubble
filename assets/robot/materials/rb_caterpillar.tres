@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://d2yub1yi16cit" path="res://assets/robot/textures/caterpillar_NRM.png" id="1_4j5u1"]
 
 [resource]
-albedo_color = Color(0.521484, 0.521484, 0.521484, 1)
+albedo_color = Color(0.44, 0.44, 0.44, 1)
+metallic = 0.62
+roughness = 0.21
 normal_enabled = true
 normal_texture = ExtResource("1_4j5u1")
