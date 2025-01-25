@@ -3,5 +3,5 @@
 [resource]
 render_priority = 1
 transparency = 1
-albedo_color = Color(1, 0.995584, 0.40643, 0.956863)
+albedo_color = Color(1, 0.683688, 0.276289, 0.956863)
 roughness = 0.16
