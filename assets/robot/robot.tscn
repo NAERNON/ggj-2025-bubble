@@ -26,8 +26,6 @@ point_count = 39
 
 [node name="Robot" type="Node3D" node_paths=PackedStringArray("head", "blower_arm", "cannon_anchor", "cannon_end", "left_small_wheel_1", "left_small_wheel_2", "left_big_wheel", "right_small_wheel_1", "right_small_wheel_2", "right_big_wheel", "left_headset", "right_headset", "left_caterpillar", "right_caterpillar")]
 script = ExtResource("1_vf81t")
-left_wheel_speed = 2.42
-right_wheel_speed = 0.9
 reticule_speed = 20.0
 headset_speed = 10.0
 head = NodePath("robot_head")

@@ -1,4 +1,4 @@
-extends Node3D
+class_name Robot extends Node3D
 
 @export var left_wheel_speed: float = 0.0
 @export var right_wheel_speed: float = 0.0
@@ -82,7 +82,8 @@ func _rotate_blow_arm(delta: float) -> void:
     var i: int = _blower_armature.find_bone("Leaf")
     var rot_x = blow_arm_rotation.x
     var rot_y = blow_arm_rotation.y
-    var rot_euler: Vector3 = Vector3(rot_x, 0, rot_y)
-    var r: Quaternion = Quaternion.from_euler(rot_euler)
+    var r: Quaternion = Quaternion.from_euler(Vector3(rot_x, 0, rot_y))
     _blower_armature.set_bone_pose_rotation(i, r)
-    cannon_anchor.rotation = rot_euler
+    var q: Quaternion = Quaternion.from_euler(Vector3(rot_x, 0, 0))
+    q *= Quaternion.from_euler(Vector3(0, -rot_y, 0))
+    cannon_anchor.quaternion = q
