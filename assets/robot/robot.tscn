@@ -21,6 +21,7 @@ script = ExtResource("1_vf81t")
 left_wheel_speed = 0.36
 right_wheel_speed = 0.9
 reticule_speed = 20.0
+headset_speed = 10.0
 head = NodePath("robot_head")
 blower_arm = NodePath("blower_arm")
 left_small_wheel_1 = NodePath("wheels/wheel_small_left_1")
