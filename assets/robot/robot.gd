@@ -20,6 +20,8 @@ var _headset_angle: float = 0
 @export var head: Node3D
 
 @export var blower_arm: Node3D
+@export var cannon_anchor: Node3D
+@export var cannon_end: Node3D
 var _blower_armature: Skeleton3D
 
 @export var left_small_wheel_1: Node3D
@@ -80,5 +82,7 @@ func _rotate_blow_arm(delta: float) -> void:
     var i: int = _blower_armature.find_bone("Leaf")
     var rot_x = blow_arm_rotation.x
     var rot_y = blow_arm_rotation.y
-    var r: Quaternion = Quaternion.from_euler(Vector3(rot_x, 0, rot_y))
+    var rot_euler: Vector3 = Vector3(rot_x, 0, rot_y)
+    var r: Quaternion = Quaternion.from_euler(rot_euler)
     _blower_armature.set_bone_pose_rotation(i, r)
+    cannon_anchor.rotation = rot_euler
