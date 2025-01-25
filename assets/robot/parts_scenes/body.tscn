@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://058dkldvc5hl"]
+
+[ext_resource type="PackedScene" uid="uid://dpyhun82tyr5l" path="res://assets/robot/meshes/body.gltf" id="1_oeck1"]
+[ext_resource type="Material" uid="uid://cxnohk64fgdvl" path="res://assets/robot/materials/rb_body.tres" id="2_boqsf"]
+
+[node name="body2" instance=ExtResource("1_oeck1")]
+
+[node name="body" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_boqsf")

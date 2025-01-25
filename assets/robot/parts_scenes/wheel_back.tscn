@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dllycys0cfchb"]
+
+[ext_resource type="PackedScene" uid="uid://bnpjnl0i6pc0r" path="res://assets/robot/meshes/wheel_back.gltf" id="1_p7vi0"]
+[ext_resource type="Material" uid="uid://b80pd8rg14o0n" path="res://assets/robot/materials/rb_wheel.tres" id="2_7eovd"]
+
+[node name="wheel_back" instance=ExtResource("1_p7vi0")]
+
+[node name="whe_back" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_7eovd")
