@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{8EF304F8-3D0F-3081-5F66-4CBE4EA03E6D}",
+    "Hash": "{B980E4A9-78BB-4FAB-B425-034A334C1201}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -112,12 +112,6 @@
       "GUID": "{5A80CCD9-CA87-4C84-B3BD-BA92BD8FFD7D}",
       "States": [
        {
-        "Id": "748895195",
-        "Name": "None",
-        "ObjectPath": "\\States\\Default Work Unit\\Casque\\None",
-        "GUID": "{AB9C63B5-DBC2-476C-AF3B-A71E507B3C86}"
-       },
-       {
         "Id": "930712164",
         "Name": "Off",
         "ObjectPath": "\\States\\Default Work Unit\\Casque\\Off",
@@ -169,6 +163,6 @@
     ]
    }
   ],
-  "FileHash": "{399BF2FD-E224-7456-2BBB-FFF44AA5AC7D}"
+  "FileHash": "{032E07F6-7A54-32EB-2860-A0905E5E91C5}"
  }
 }

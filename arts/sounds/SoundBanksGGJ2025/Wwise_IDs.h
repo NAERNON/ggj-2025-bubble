@@ -34,7 +34,6 @@ namespace AK
 
             namespace STATE
             {
-                static const AkUniqueID NONE = 748895195U;
                 static const AkUniqueID OFF = 930712164U;
                 static const AkUniqueID ON = 1651971902U;
             } // namespace STATE

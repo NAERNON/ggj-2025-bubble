@@ -90,8 +90,10 @@ radius = 4.20512
 [sub_resource type="BoxShape3D" id="BoxShape3D_f6g3t"]
 size = Vector3(0.511719, 1, 1.75488)
 
-[node name="Final" type="Node3D" node_paths=PackedStringArray("environment", "_rain")]
+[node name="Final" type="Node3D" node_paths=PackedStringArray("main_camera", "player", "environment", "_rain")]
 script = ExtResource("1_jr1nr")
+main_camera = NodePath("FocusCamera")
+player = NodePath("Player")
 environment = NodePath("WorldEnvironment")
 _rain = NodePath("Rain")
 _weather_time_trans = 15.0

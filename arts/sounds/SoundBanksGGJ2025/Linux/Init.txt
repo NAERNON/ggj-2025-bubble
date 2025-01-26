@@ -3,7 +3,6 @@ State Group	ID	Name			Wwise Object Path	Notes
 	681545574	Reticule			\Default Work Unit\Reticule	
 
 State	ID	Name	State Group			Notes
-	748895195	None	Casque			
 	930712164	Off	Casque			
 	1651971902	On	Casque			
 	748895195	None	Reticule			

@@ -11,7 +11,7 @@ var _reticule_angle: float = PI
 
 @export var blow_arm_rotation: Vector2
 
-@export var is_headset_active: bool = true
+@export var is_headset_active: bool = false
 @export var headset_speed: float = 1.0
 var _headset_angle: float = 0
 

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{169FCE51-14B2-45EC-9957-AAEA844C4D42}",
     "Language": "SFX",
-    "Hash": "{0230DA7A-395D-9ED3-5198-AAC7D6918B62}",
+    "Hash": "{C3BE47F6-F8B5-F1B0-5CC0-925FBADA5FAE}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -29,7 +29,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "6.wav",
-      "CachePath": "7D/{7DAC79A9-C06F-84D1-0B73-144160D9F056}.wem"
+      "CachePath": "E5/{E5180F9F-37B2-1EF3-A185-F1FCB9D470C7}.wem"
      },
      {
       "Id": "52652606",
@@ -45,7 +45,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "2.wav",
-      "CachePath": "42/{4216712C-ABAE-10D2-7BD4-E35804742D9A}.wem"
+      "CachePath": "15/{15FEC9FD-A530-D96E-C310-2E0B60A3A023}.wem"
      },
      {
       "Id": "104302389",
@@ -53,7 +53,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "7.wav",
-      "CachePath": "D4/{D4CB9A36-D803-B83A-8724-34C9CF60A8ED}.wem"
+      "CachePath": "C0/{C0F3128B-24E0-99AA-0078-134FB6D1331D}.wem"
      },
      {
       "Id": "112580764",
@@ -69,7 +69,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "8.wav",
-      "CachePath": "BE/{BECF3731-A8A3-29B4-66DA-7C039581AC39}.wem"
+      "CachePath": "21/{213FD083-27D8-46EE-7A92-FE3D137233D8}.wem"
      },
      {
       "Id": "146203362",
@@ -77,7 +77,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "9.wav",
-      "CachePath": "58/{58062B90-6CFF-1667-72C9-831202E8FF5C}.wem"
+      "CachePath": "88/{88869C55-9E68-2AAA-15FA-46B7F21BBAC9}.wem"
      },
      {
       "Id": "251965241",
@@ -101,7 +101,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "4.wav",
-      "CachePath": "47/{47BE79CE-8FE8-6842-EB29-7912BDE48827}.wem"
+      "CachePath": "05/{0578F73F-5F87-FD20-BCF2-1F48C16D52DC}.wem"
      },
      {
       "Id": "352589035",
@@ -109,7 +109,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "3.wav",
-      "CachePath": "66/{661F3B92-73D1-5A07-C80A-223E38EEB3D2}.wem"
+      "CachePath": "31/{315349D5-8CCC-C94C-90F9-9810BBA60362}.wem"
      },
      {
       "Id": "355401909",
@@ -125,7 +125,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "New folder\\Untitled2.wav",
-      "CachePath": "E1/{E1D005BE-CA19-0C3B-8C20-7E9C8403BF75}.wem"
+      "CachePath": "6A/{6A2B6262-FA0E-8087-C1D1-F5A230CD8C04}.wem"
      },
      {
       "Id": "379627300",
@@ -133,7 +133,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Freeze 4-ElevenLabs_2025-01-26T10_19_15_Alice_pre_s50_sb75_se0_b_m2 [2025-01-26 112557]-2.wav",
-      "CachePath": "70/{70B1FC03-213D-D702-5C5E-4EEBA640F342}.wem"
+      "CachePath": "E7/{E75B6D94-5578-8E35-61E1-DD3C673355EC}.wem"
      },
      {
       "Id": "387444681",
@@ -149,7 +149,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "New folder\\Untitled5.wav",
-      "CachePath": "DC/{DC279DC5-DB91-8F8C-D051-D6E927E856CD}.wem"
+      "CachePath": "CA/{CA464407-5EF8-8306-02B8-0BA773F144EC}.wem"
      },
      {
       "Id": "415369635",
@@ -157,7 +157,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "New folder\\Untitled8.wav",
-      "CachePath": "4B/{4BF1D430-D961-46F3-CD62-CF8D67ED2241}.wem"
+      "CachePath": "4B/{4B3A47E7-C6DD-2751-CFD9-3DE024191DCD}.wem"
      },
      {
       "Id": "440001273",
@@ -181,7 +181,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "New folder\\Untitled6.wav",
-      "CachePath": "AF/{AF18F546-EFCF-4D85-BB73-1154944F006A}.wem"
+      "CachePath": "0C/{0CD8F0EE-85E7-6D20-4A76-8972E10421EE}.wem"
      },
      {
       "Id": "486208026",
@@ -237,7 +237,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "1.wav",
-      "CachePath": "AB/{AB661641-3860-49EC-09F0-C96BFAA5679E}.wem"
+      "CachePath": "6D/{6D92595B-6582-FB5E-5383-009C3DCC767D}.wem"
      },
      {
       "Id": "792540006",
@@ -253,7 +253,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Balloon Inflate 30 Strain by Gniffelbaf Id-82159.wav",
-      "CachePath": "E2/{E2539821-4770-5D37-8B56-DEFB27E19F1A}.wem"
+      "CachePath": "6F/{6F3A6956-6BCA-0275-2A6B-B7DED6BFAE94}.wem"
      },
      {
       "Id": "935093064",
@@ -269,7 +269,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "10.wav",
-      "CachePath": "E0/{E0F6734F-19FB-5D8A-8BE9-AE2AB6735A34}.wem"
+      "CachePath": "9B/{9BDB9AFC-A1E4-9D00-62AF-C3563395D7FD}.wem"
      },
      {
       "Id": "959276678",
@@ -301,7 +301,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "New folder\\Untitled4.wav",
-      "CachePath": "CF/{CF960598-2E58-0B48-E471-5A23EEABBF3B}.wem"
+      "CachePath": "D7/{D7EC30DF-6BAF-6794-96A8-CE67AEE6FC08}.wem"
      },
      {
       "Id": "1020396926",
@@ -309,7 +309,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "New folder\\Untitled.wav",
-      "CachePath": "75/{7596680A-E526-A75E-7618-C536B35906C5}.wem"
+      "CachePath": "04/{04531B1F-6AA3-16E0-2AD6-52C03775034C}.wem"
      },
      {
       "Id": "1031213473",
@@ -317,7 +317,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "New folder\\Untitled3.wav",
-      "CachePath": "46/{463913F2-461E-E434-E843-77B1CCA12E33}.wem"
+      "CachePath": "FE/{FE2B4F48-3434-BEAD-C5B5-ADDCC9FCD3C5}.wem"
      },
      {
       "Id": "1039928084",
@@ -325,7 +325,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "New folder\\Untitled7.wav",
-      "CachePath": "FA/{FA5A4BA0-7338-070E-7F21-D680D4EB7792}.wem"
+      "CachePath": "5B/{5BC54557-A12C-7F69-537A-E52A071355F5}.wem"
      },
      {
       "Id": "1043918219",
@@ -341,7 +341,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "11.wav",
-      "CachePath": "F2/{F29DC1EE-FB47-5EB0-6DDD-5B629879597D}.wem"
+      "CachePath": "43/{43F37BCF-6DCE-724C-4027-7D4D4F703388}.wem"
      },
      {
       "Id": "1061071671",
@@ -358,6 +358,7 @@
       "Name": "BubbleCreate",
       "ObjectPath": "\\Events\\Default Work Unit\\Bubble\\BubbleCreate",
       "GUID": "{954D78DE-41FE-4A81-AA5D-7D9F6EF420A8}",
+      "MaxAttenuation": "105",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -373,6 +374,7 @@
       "Name": "BubbleExplode",
       "ObjectPath": "\\Events\\Default Work Unit\\Bubble\\BubbleExplode",
       "GUID": "{0401B4C4-3EBC-43A7-8548-56A868649A27}",
+      "MaxAttenuation": "105",
       "DurationType": "OneShot",
       "DurationMin": "0.12629484",
       "DurationMax": "0.17860785",
@@ -387,6 +389,7 @@
       "Name": "Bubbleinflate",
       "ObjectPath": "\\Events\\Default Work Unit\\Bubble\\Bubbleinflate",
       "GUID": "{DB77522F-BFE0-42D1-977F-D0FFC08EAEEF}",
+      "MaxAttenuation": "105",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -399,6 +402,7 @@
       "Name": "BubbleNoExplode",
       "ObjectPath": "\\Events\\Default Work Unit\\Bubble\\BubbleNoExplode",
       "GUID": "{5524C480-5596-43DF-9832-2AF1739022CA}",
+      "MaxAttenuation": "105",
       "DurationType": "OneShot",
       "DurationMin": "0.22132336",
       "DurationMax": "0.27884996",
@@ -413,6 +417,7 @@
       "Name": "BubbleTakeObject",
       "ObjectPath": "\\Events\\Default Work Unit\\Bubble\\BubbleTakeObject",
       "GUID": "{FE8D22B0-D256-4AE5-9BC3-DA6B8C8E20D6}",
+      "MaxAttenuation": "105",
       "DurationType": "OneShot",
       "DurationMin": "0.19752622",
       "DurationMax": "0.59460354",
@@ -589,11 +594,11 @@
       ],
       "ActionSetState": [
        {
-        "GroupId": "616433019",
+        "GroupId": "681545574",
         "Id": "930712164",
         "Name": "Off",
-        "ObjectPath": "\\States\\Default Work Unit\\Casque\\Off",
-        "GUID": "{E3214486-D1F4-48E9-934A-30E7C13EA972}"
+        "ObjectPath": "\\States\\Default Work Unit\\Reticule\\Off",
+        "GUID": "{8D7D8D38-B400-4DC0-973B-84FFB13DB870}"
        }
       ]
      },
@@ -642,12 +647,6 @@
       "GUID": "{5A80CCD9-CA87-4C84-B3BD-BA92BD8FFD7D}",
       "States": [
        {
-        "Id": "748895195",
-        "Name": "None",
-        "ObjectPath": "\\States\\Default Work Unit\\Casque\\None",
-        "GUID": "{AB9C63B5-DBC2-476C-AF3B-A71E507B3C86}"
-       },
-       {
         "Id": "930712164",
         "Name": "Off",
         "ObjectPath": "\\States\\Default Work Unit\\Casque\\Off",
@@ -690,6 +689,6 @@
     ]
    }
   ],
-  "FileHash": "{F325C903-2E92-C07A-F385-2E1A76EAEC8B}"
+  "FileHash": "{3EF7E980-DBD9-157E-27AD-8C0390F84131}"
  }
 }
