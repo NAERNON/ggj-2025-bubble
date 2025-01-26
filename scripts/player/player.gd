@@ -47,6 +47,7 @@ var _min_turret_angle : Vector2 = Vector2(-PI/6, -PI/4)
 var _max_turret_angle : Vector2 = Vector2(PI/6, PI/4)
 
 var _turret_speed : float = 3.0
+signal headset_state_changed(state: bool)
 
 #################################### PRIVATE METHODS ####################################
 
@@ -91,6 +92,10 @@ func _physics_process(delta : float) -> void :
 
 	elif Input.is_action_just_released("turret_mod") :
 		_can_move = true
+        
+    if Input.is_action_just_pressed("headset_toggle") :
+        robot.is_headset_active = !robot.is_headset_active
+        headset_state_changed.emit(robot.is_headset_active)
 
 	if _process_inputs :
 		# Check for deplacements inputs in terms of player states (walking, falling, gliding)

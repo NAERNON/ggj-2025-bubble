@@ -120,3 +120,9 @@ func _on_turret_mod_started() :
 func _on_turret_mod_ended() :
 	player.deactivate_turret_camera()
 	main_camera.activate_camera()
+
+func _on_player_headset_state_changed(state: bool) -> void:
+    if state :
+        Wwise.set_state("CASQUE", "ON")
+    else :
+        Wwise.set_state("CASQUE", "OFF")
