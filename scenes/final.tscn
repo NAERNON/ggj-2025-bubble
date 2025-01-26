@@ -271,6 +271,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7556, 0, 11.6737)
 [node name="pile_c19" parent="trashes" instance=ExtResource("7_xvtxh")]
 transform = Transform3D(2.1, 0, 0, 0, 2.1, 0, 0, 0, 2.1, -14.7556, -2.38359, -0.271306)
 
+[node name="pile_c38" parent="trashes" instance=ExtResource("7_xvtxh")]
+transform = Transform3D(-1.73166, 0, 1.188, 0, 2.1, 0, -1.188, 0, -1.73166, -14.5375, -2.38359, -6.36707)
+
 [node name="pile_c20" parent="trashes" instance=ExtResource("7_xvtxh")]
 transform = Transform3D(-0.445358, 0, 2.05223, 0, 2.1, 0, -2.05223, 0, -0.445358, -14.7556, -1.24022, 7.41802)
 
@@ -317,7 +320,22 @@ transform = Transform3D(0.580597, 0, 2.52409, 0, 2.59, 0, -2.52409, 0, 0.580597,
 transform = Transform3D(1.41002, 0, 6.12992, 0, 6.29, 0, -6.12992, 0, 1.41002, -61.7027, -5.87229, -1.63901)
 
 [node name="pile_c33" parent="trashes" instance=ExtResource("7_xvtxh")]
-transform = Transform3D(3.54635, 0, 15.4174, 0, 15.82, 0, -15.4174, 0, 3.54635, -37.5234, -11.1263, -28.6113)
+transform = Transform3D(2.07804, 0, 9.03408, 0, 9.27, 0, -9.03408, 0, 2.07804, -37.5234, -11.1263, -12.7273)
+
+[node name="pile_c39" parent="trashes" instance=ExtResource("7_xvtxh")]
+transform = Transform3D(-9.20909, 0, -1.06097, 0, 9.27, 0, 1.06097, 0, -9.20909, -20.4651, -11.1263, -12.7273)
+
+[node name="pile_c40" parent="trashes" instance=ExtResource("7_xvtxh")]
+transform = Transform3D(-9.20909, 0, -1.06097, 0, 9.27, 0, 1.06097, 0, -9.20909, -54.6186, -11.1263, -35.7004)
+
+[node name="pile_c41" parent="trashes" instance=ExtResource("7_xvtxh")]
+transform = Transform3D(-1.6196, 0, -9.12742, 0, 9.27, 0, 9.12742, 0, -1.6196, -54.6186, -11.1263, -62.0046)
+
+[node name="pile_c42" parent="trashes" instance=ExtResource("7_xvtxh")]
+transform = Transform3D(-1.6196, 0, -9.12742, 0, 9.27, 0, 9.12742, 0, -1.6196, -15.8064, -16.1676, -54.2061)
+
+[node name="pile_c43" parent="trashes" instance=ExtResource("7_xvtxh")]
+transform = Transform3D(8.76206, 0, -3.02643, 0, 9.27, 0, 3.02643, 0, 8.76206, -32.2391, -16.1676, -84.747)
 
 [node name="pile_c34" parent="trashes" instance=ExtResource("7_xvtxh")]
 transform = Transform3D(3.54635, 0, 15.4174, 0, 15.82, 0, -15.4174, 0, 3.54635, -36.6977, -15.8595, 39.6541)
@@ -933,3 +951,5 @@ transform = Transform3D(-0.210932, 0, -0.977501, 0, 1, 0, 0.977501, 0, -0.210932
 
 [node name="skybox_element_d" parent="skybox" instance=ExtResource("24_q6bru")]
 transform = Transform3D(0.886704, 0, -0.462337, 0, 1, 0, 0.462337, 0, 0.886704, -191.622, 0, -160.666)
+
+[node name="rigids" type="Node3D" parent="."]
