@@ -121,6 +121,7 @@ _run_speed = 25.0
 _walk_speed = 8.0
 
 [node name="FocusCamera" parent="." node_paths=PackedStringArray("_focus") instance=ExtResource("25_uam2e")]
+current = true
 _focus = NodePath("../Player")
 
 [node name="rigids" type="Node3D" parent="."]
