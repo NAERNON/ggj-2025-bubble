@@ -111,7 +111,7 @@ script = ExtResource("28_ayk87")
 _sun = NodePath("Sun")
 _moon = NodePath("Moon")
 _minute_duration = 121.0
-_start_time = 420.0
+_start_time = 840.0
 
 [node name="Sun" type="DirectionalLight3D" parent="LightAndTime"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 25.698, 73)
