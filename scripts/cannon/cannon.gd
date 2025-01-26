@@ -12,11 +12,18 @@ class_name Cannon extends Node3D
 @export var bubble_scene : PackedScene
 @export var blow_scene   : PackedScene
 
-
 var _can_blow : bool
 var _blow_time : float
 
-var _in_turret_mod : bool
+var _in_turret_mod : bool :
+	set(new_value) :
+		_in_turret_mod = new_value
+
+		if _in_turret_mod :
+			turret_mod_start.emit()
+		else :
+			turret_mod_end.emit()
+
 var _in_bubble_mod : bool :
 	set(new_value) :
 		_in_bubble_mod = new_value
@@ -25,10 +32,15 @@ var _in_bubble_mod : bool :
 
 var _current_expanding_bubble : Bubble
 
-var _focus_camera : Node3D
+var _focus_camera : FocusCamera
 var _robot : Robot
 
+var _bubble_apparition : bool
+
 signal bubble_released(bubble : Bubble, world_pos : Vector3)
+signal turret_mod_start()
+signal turret_mod_end()
+
 
 func _ready() -> void :
 	_can_blow = true
@@ -36,6 +48,11 @@ func _ready() -> void :
 
 	_in_turret_mod = false
 	_in_bubble_mod = false
+
+	_bubble_apparition = true
+
+	Wwise.register_game_obj(self, self.name)
+	Wwise.set_3d_position(self, get_parent().global_transform)
 
 func _physics_process(delta : float) -> void :
 	if blow_timer.is_stopped() :
@@ -49,7 +66,7 @@ func _physics_process(delta : float) -> void :
 	else :
 		_input_blowing_cannon()
 
-func set_attributes(camera : Node3D, robot : Robot) -> void :
+func set_attributes(camera : FocusCamera, robot : Robot) -> void :
 	_focus_camera = camera
 	_robot = robot
 
@@ -70,6 +87,9 @@ func _input_mods() :
 
 func _input_bubble_cannon(delta : float) :
 	if Input.is_action_pressed("blow_cannon") :
+		if _bubble_apparition :
+			Wwise.post_event_id(AK.EVENTS.BUBBLECREATE, self)
+			_bubble_apparition = false
 		var blowing_strengh : float = Input.get_action_strength("blow_cannon")
 		var blowing_power : float = max_blow_power * blowing_strengh
 
@@ -83,7 +103,7 @@ func _input_blowing_cannon() :
 		var blowing_direction : Vector3
 
 		if _in_turret_mod :
-			blowing_direction = -_focus_camera.global_transform.basis.z
+			blowing_direction = _robot.cannon_end.global_transform.basis.z
 
 		else :
 			blowing_direction = global_transform.basis.z
@@ -98,9 +118,11 @@ func _input_blowing_cannon() :
 			blow.apply_impulse(blowing_direction * blowing_power)
 
 func _on_current_expanding_bubble_pierced() :
+	Wwise.post_event_id(AK.EVENTS.BUBBLEEXPLODE, self)
 	self.remove_child(_current_expanding_bubble)
 	_current_expanding_bubble = null
 	_in_bubble_mod = false
+	_bubble_apparition = true
 
 func _try_release_bubble() -> void :
 	if _current_expanding_bubble != null and _current_expanding_bubble.get_size() > 0.0 :

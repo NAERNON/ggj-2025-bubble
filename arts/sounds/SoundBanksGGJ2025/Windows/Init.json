@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{12A6E749-F75D-9B77-3E00-9183826FE468}",
+    "Hash": "{A54D209C-651F-57DD-6856-7052630AA757}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -36,10 +36,46 @@
     },
     "Busses": [
      {
+      "Id": "647611012",
+      "Name": "Bin",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Bin",
+      "GUID": "{573A3FEF-DC28-4DC2-8CB4-D63C1D4045AE}"
+     },
+     {
+      "Id": "1069431850",
+      "Name": "Player",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Player",
+      "GUID": "{D62D94AF-81AA-4CE6-A741-5A285596E1E7}"
+     },
+     {
+      "Id": "2009665469",
+      "Name": "Pubs",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Pubs",
+      "GUID": "{DE1B9852-B167-428D-A2B9-4DD320269E1D}"
+     },
+     {
+      "Id": "2609808943",
+      "Name": "World",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\World",
+      "GUID": "{588FA91A-2ED6-41F6-8931-D15160FF0CC6}"
+     },
+     {
       "Id": "3803692087",
       "Name": "Master Audio Bus",
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
       "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     },
+     {
+      "Id": "3835649095",
+      "Name": "Bubble",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Bubble",
+      "GUID": "{5E28520A-3941-4036-AC26-AB0426ADFFBF}"
+     },
+     {
+      "Id": "3991942870",
+      "Name": "Music",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Music",
+      "GUID": "{62087F30-A95C-42E2-BFF0-0B12EE95D105}"
      }
     ],
     "GameParameters": [
@@ -48,38 +84,82 @@
       "Name": "Weather",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Weather",
       "GUID": "{3635BBE0-258A-4869-BC57-A8C6FF1E95E1}"
+     },
+     {
+      "Id": "996817425",
+      "Name": "VelocityBlower",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\VelocityBlower",
+      "GUID": "{6192644B-C681-4785-A430-8329D5CCAF1B}"
+     },
+     {
+      "Id": "2395301151",
+      "Name": "VelocityPlayer",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\VelocityPlayer",
+      "GUID": "{3E4426BB-A9F9-49A5-BA89-E54E4F0A1CA3}"
+     },
+     {
+      "Id": "4093488308",
+      "Name": "BubbleSize",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\BubbleSize",
+      "GUID": "{E2A726A1-14D6-4B43-9DA6-4C84B21AD0BB}"
      }
     ],
-    "SwitchGroups": [
+    "StateGroups": [
      {
-      "Id": "522057570",
-      "Name": "RobotState",
-      "ObjectPath": "\\Switches\\Default Work Unit\\RobotState",
-      "GUID": "{6F8A011D-2B22-4751-8C59-403B66F0D654}",
-      "Switches": [
+      "Id": "616433019",
+      "Name": "Casque",
+      "ObjectPath": "\\States\\Default Work Unit\\Casque",
+      "GUID": "{5A80CCD9-CA87-4C84-B3BD-BA92BD8FFD7D}",
+      "States": [
        {
-        "Id": "691006007",
-        "Name": "Loop",
-        "ObjectPath": "\\Switches\\Default Work Unit\\RobotState\\Loop",
-        "GUID": "{24640D21-6E87-43E1-AC29-839819BB03A5}"
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Casque\\None",
+        "GUID": "{AB9C63B5-DBC2-476C-AF3B-A71E507B3C86}"
        },
        {
-        "Id": "788884573",
-        "Name": "Stop",
-        "ObjectPath": "\\Switches\\Default Work Unit\\RobotState\\Stop",
-        "GUID": "{A2CB13D8-AF6F-4037-86DC-C34835CB2005}"
+        "Id": "930712164",
+        "Name": "Off",
+        "ObjectPath": "\\States\\Default Work Unit\\Casque\\Off",
+        "GUID": "{E3214486-D1F4-48E9-934A-30E7C13EA972}"
        },
        {
-        "Id": "1281810935",
-        "Name": "Start",
-        "ObjectPath": "\\Switches\\Default Work Unit\\RobotState\\Start",
-        "GUID": "{DFE59996-51D3-498E-9F47-265BD46487DF}"
+        "Id": "1651971902",
+        "Name": "On",
+        "ObjectPath": "\\States\\Default Work Unit\\Casque\\On",
+        "GUID": "{082BF2F8-551B-4698-9CFD-92D2584ACEE2}"
+       }
+      ]
+     },
+     {
+      "Id": "681545574",
+      "Name": "Reticule",
+      "ObjectPath": "\\States\\Default Work Unit\\Reticule",
+      "GUID": "{3F9FF17E-54FE-43CF-A2A1-CCB711607240}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Reticule\\None",
+        "GUID": "{505F4233-F4ED-4BCA-924A-105B11503BAF}"
+       },
+       {
+        "Id": "930712164",
+        "Name": "Off",
+        "ObjectPath": "\\States\\Default Work Unit\\Reticule\\Off",
+        "GUID": "{8D7D8D38-B400-4DC0-973B-84FFB13DB870}"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "On",
+        "ObjectPath": "\\States\\Default Work Unit\\Reticule\\On",
+        "GUID": "{81ACE67D-BC79-4230-AF5A-8B1766D4BEBE}"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{E64AD525-D097-4E46-3AD0-52CB0A5D0A91}"
+  "FileHash": "{46F25020-6F49-8AFF-BA28-D755D447E6DD}"
  }
 }

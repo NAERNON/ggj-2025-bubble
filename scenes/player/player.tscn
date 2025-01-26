@@ -7,7 +7,7 @@
 [sub_resource type="SphereShape3D" id="SphereShape3D_1wbdd"]
 radius = 1.0
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("robot")]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("robot", "turret_camera")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
 collision_layer = 8
 floor_max_angle = 1.0472
@@ -15,6 +15,7 @@ floor_snap_length = 1.0
 script = ExtResource("1_8afob")
 cannon_scene = ExtResource("2_yarxf")
 robot = NodePath("Robot")
+turret_camera = NodePath("Camera3D")
 ratio_speed_wheel = 0.4
 
 [node name="Robot" parent="." instance=ExtResource("2_ptm6j")]
@@ -23,3 +24,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("SphereShape3D_1wbdd")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.993762, 0, 0.111521, 0, 1, 0, -0.111521, 0, -0.993762, 0.968477, 0.700751, -1.09763)

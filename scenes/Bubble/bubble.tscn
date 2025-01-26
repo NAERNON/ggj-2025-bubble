@@ -18,7 +18,7 @@ mass = 0.001
 gravity_scale = 0.01
 linear_damp = 1.0
 script = ExtResource("1_u7q8j")
-max_size = 2.0
+max_size = 1.5
 mesh = NodePath("MeshInstance3D")
 collision = NodePath("CollisionShape3D")
 

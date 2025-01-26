@@ -1,4 +1,4 @@
-extends Camera3D
+class_name FocusCamera extends Camera3D
 
 #################################### CONSTANTES ####################################
 
@@ -133,3 +133,9 @@ func _update_focus_point(delta : float) -> void :
 	
 	else :
 		_focus_point = target_point
+
+func deactivate_camera() -> void :
+	self.current = false
+
+func activate_camera() -> void : 
+	self.current = true

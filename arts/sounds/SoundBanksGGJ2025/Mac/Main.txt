@@ -1,11 +1,65 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1014814365	WorldStart			\Default Work Unit\WorldStart	
-	4121426335	WorldStop			\Default Work Unit\WorldStop	
+	1014814365	WorldStart			\Default Work Unit\World\WorldStart	
+	1463759755	ItemBin			\Default Work Unit\Bin\ItemBin	
+	1493696592	ReticleON			\Default Work Unit\Robot\ReticleON	
+	2140703470	ReticleOFF			\Default Work Unit\Robot\ReticleOFF	
+	2204320079	BubbleCreate			\Default Work Unit\Bubble\BubbleCreate	
+	3536982242	BubbleExplode			\Default Work Unit\Bubble\BubbleExplode	
+	4237216439	BubbleTakeObject			\Default Work Unit\Bubble\BubbleTakeObject	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	616433019	Casque			\Default Work Unit\Casque	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Casque			
+	930712164	Off	Casque			
+	1651971902	On	Casque			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	317282339	Weather			\Default Work Unit\Weather	
+	996817425	VelocityBlower			\Default Work Unit\VelocityBlower	
+	2395301151	VelocityPlayer			\Default Work Unit\VelocityPlayer	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	486208026	WorldSun	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\BA\{BAABA024-F6DC-CEDF-FECD-97887FB53DB0}.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\WorldWeather\WorldSun		6144096
-	667213390	WorldRain	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\74\{746479C5-4F24-63BF-510A-77230CEEBDE9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\WorldWeather\WorldRain		6144096
+	33891405	Loop1	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\AB\{AB2E8E92-7DFD-5F1A-D30C-D5699B80A2B3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MusicLoop\Loop1		3510972
+	43111243	6	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\7D\{7DAC79A9-C06F-84D1-0B73-144160D9F056}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bin\BinTalk\6		71101
+	52652606	Loop	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\A3\{A3CEB8B8-5778-4906-A1F6-466F49277900}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Roll\Loop		6901
+	57357505	2	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\42\{4216712C-ABAE-10D2-7BD4-E35804742D9A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bin\BinTalk\2		100598
+	104302389	7	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\D4\{D4CB9A36-D803-B83A-8724-34C9CF60A8ED}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bin\BinTalk\7		67219
+	112580764	BinCans	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\94\{94A29CB5-354C-C173-682D-52DD33B6AD91}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bin\ItemsBin\BinCans		8450
+	130978057	8	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\BE\{BECF3731-A8A3-29B4-66DA-7C039581AC39}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bin\BinTalk\8		75802
+	146203362	9	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\58\{58062B90-6CFF-1667-72C9-831202E8FF5C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bin\BinTalk\9		76260
+	251965241	Bubbleexplode	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\DC\{DC21302A-831C-A116-6124-4148B7AC0524}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble\Bubbleexplode		3244
+	307128799	ReticleON	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\49\{490AFCB0-DC14-8429-7CBF-59F0C24F2596}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\ReticleON		13849
+	333633977	4	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\47\{47BE79CE-8FE8-6842-EB29-7912BDE48827}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bin\BinTalk\4		95660
+	352589035	3	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\66\{661F3B92-73D1-5A07-C80A-223E38EEB3D2}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bin\BinTalk\3		32036
+	355401909	RobotNoise3	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\75\{751CD123-288C-E3C1-B478-0ED622EEE112}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\RobotNoise\RobotNoise3		19288
+	357434521	Untitled2	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\E1\{E1D005BE-CA19-0C3B-8C20-7E9C8403BF75}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Pubs\Untitled2		2126532
+	379627300	ElevenLabs_2025-01-26T10_19_15_Alice_pre_s50_sb75_se0_b_m2	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\70\{70B1FC03-213D-D702-5C5E-4EEBA640F342}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Pubs\ElevenLabs_2025-01-26T10_19_15_Alice_pre_s50_sb75_se0_b_m2		496644
+	387444681	5	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\64\{64B3F051-CCEC-20FD-A94B-8585773B1865}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bin\BinTalk\5		97417
+	406821311	Untitled5	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\DC\{DC279DC5-DB91-8F8C-D051-D6E927E856CD}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Pubs\Untitled5		1486344
+	415369635	Untitled8	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\4B\{4BF1D430-D961-46F3-CD62-CF8D67ED2241}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Pubs\Untitled8		4424876
+	440001273	BubbleTake2	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\7B\{7B8BD538-A4CA-F776-9C90-79DD592D2ADE}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble\BubbleTakeObject\BubbleTake2		9063
+	456952165	BinGlass	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\21\{21411408-0CE5-F2B1-3D2C-DA00681807C7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bin\ItemsBin\BinGlass		13409
+	477311242	Untitled6	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\AF\{AF18F546-EFCF-4D85-BB73-1154944F006A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Pubs\Untitled6		3576572
+	486208026	WorldSun	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\25\{25A4EBC0-2C76-D517-7923-BFC8F3FD518C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\WorldWeather\WorldSun		6144112
+	501689556	BubbleCreate	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\05\{0565E621-5B5D-09E2-7856-8D080463D827}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble\BubbleCreate		4907
+	553322465	Loop3	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\C1\{C1EC49F1-C194-ECDF-0B45-5A2D5117D8DC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MusicLoop\Loop3		3510972
+	634656860	RobotNoise2	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\10\{10234038-AE03-1766-5279-91035ECDAED7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\RobotNoise\RobotNoise2		16031
+	667213390	WorldRain	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\07\{07B733F3-B837-2B13-F121-A0E0303C6A27}.wem		\Actor-Mixer Hierarchy\Default Work Unit\World\WorldWeather\WorldRain		6144112
+	669646756	RobotNoise4	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\A3\{A3B00BE2-D408-BA80-5F1E-B01A4FB4DB7D}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\RobotNoise\RobotNoise4		15288
+	714022981	1	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\AB\{AB661641-3860-49EC-09F0-C96BFAA5679E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bin\BinTalk\1		107890
+	792540006	ReticleOFF	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\82\{82B77BC9-2C23-AA0E-BA8A-67C9143296EE}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\ReticleOFF		12991
+	935093064	BlowerIdle	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\AA\{AAEA99DC-14E4-7BF7-9F7F-FA254E96FDD7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Blower\BlowerIdle		140870
+	941653990	10	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\E0\{E0F6734F-19FB-5D8A-8BE9-AE2AB6735A34}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bin\BinTalk\10		85918
+	959276678	Blower	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\C4\{C46A6444-E7D7-55B3-2E81-1B55363AD081}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Blower\Blower		65610
+	976031061	BinGarb	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\48\{48C0CC8B-AF88-C39A-B697-0A3E52F41412}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bin\ItemsBin\BinGarb		11216
+	979481561	BubbleTake1	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\6A\{6ADA28E4-8B9E-CA61-421F-D6CA4B5DE19A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble\BubbleTakeObject\BubbleTake1		5394
+	1014512871	Untitled4	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\CF\{CF960598-2E58-0B48-E471-5A23EEABBF3B}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Pubs\Untitled4		1823404
+	1020396926	Untitled	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\75\{7596680A-E526-A75E-7618-C536B35906C5}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Pubs\Untitled		1038440
+	1031213473	Untitled3	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\46\{463913F2-461E-E434-E843-77B1CCA12E33}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Pubs\Untitled3		1656004
+	1039928084	Untitled7	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\FA\{FA5A4BA0-7338-070E-7F21-D680D4EB7792}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Pubs\Untitled7		3868388
+	1043918219	Loop2	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\BE\{BE143252-46B3-BAC5-DF08-D6E30483ADA3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MusicLoop\Loop2		3510972
+	1056345895	11	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\F2\{F29DC1EE-FB47-5EB0-6DDD-5B629879597D}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bin\BinTalk\11		66918
+	1061071671	Loop5	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\91\{91123873-718C-6D28-94B4-0173F908F77A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MusicLoop\Loop5		3510972
 

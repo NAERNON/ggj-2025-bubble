@@ -1,0 +1,54 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2059172604",
+    "Type": "Event",
+    "GUID": "{DB77522F-BFE0-42D1-977F-D0FFC08EAEEF}",
+    "Language": "SFX",
+    "Hash": "{CF52181A-5C54-4216-7DDE-E5F30617D5F0}",
+    "ObjectPath": "Bubbleinflate",
+    "ShortName": "Bubbleinflate",
+    "Path": "Event/Bubbleinflate.bnk",
+    "Media": [
+     {
+      "Id": "797364968",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Balloon Inflate 30 Strain by Gniffelbaf Id-82159.wav",
+      "Path": "Media/797364968.wem",
+      "CachePath": "E2/{E2539821-4770-5D37-8B56-DEFB27E19F1A}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2059172604",
+      "Name": "Bubbleinflate",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bubble\\Bubbleinflate",
+      "GUID": "{DB77522F-BFE0-42D1-977F-D0FFC08EAEEF}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "797364968"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "4093488308",
+      "Name": "BubbleSize",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\BubbleSize",
+      "GUID": "{E2A726A1-14D6-4B43-9DA6-4C84B21AD0BB}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{8FD49DDB-56D0-2B33-865A-DEF9675CCBD9}"
+ }
+}
