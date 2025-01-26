@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	4121426335	WorldStop			\Default Work Unit\World\WorldStop	
-

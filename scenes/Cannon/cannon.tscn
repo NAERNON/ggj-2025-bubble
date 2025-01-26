@@ -1,14 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://bx6b3c6r31kdt"]
+[gd_scene load_steps=5 format=3 uid="uid://bx6b3c6r31kdt"]
 
 [ext_resource type="Script" path="res://scripts/cannon/cannon.gd" id="1_chpxo"]
 [ext_resource type="PackedScene" uid="uid://cyh7iqjkch80v" path="res://scenes/Cannon/blow.tscn" id="2_2opt3"]
 [ext_resource type="PackedScene" uid="uid://bv7whg7inf2nk" path="res://scenes/Bubble/bubble.tscn" id="2_e7yyt"]
+[ext_resource type="WwiseRTPC" uid="uid://de568nq0mvnd" path="res://Wwise/resources/Game Parameter/{6192644B-C681-4785-A430-8329D5CCAF1B}.tres" id="4_enear"]
 
 [node name="Cannon" type="Node3D" node_paths=PackedStringArray("blow_timer")]
 script = ExtResource("1_chpxo")
 blow_timer = NodePath("BlowTimer")
 bubble_scene = ExtResource("2_e7yyt")
 blow_scene = ExtResource("2_2opt3")
+rtpc_blower_velocity = ExtResource("4_enear")
 
 [node name="BlowTimer" type="Timer" parent="."]
 process_callback = 0

@@ -65,14 +65,19 @@ fog_height_density = -0.1
 
 [node name="Main" type="Node" node_paths=PackedStringArray("main_camera", "player", "environment", "_rain")]
 script = ExtResource("1_4q130")
-_weather_time_trans = 15.0
-_sunny_duration_random = Vector2(120, 180)
-_rainy_duration_random = Vector2(30, 60)
-rtpc_weather = ExtResource("2_ya4ey")
 main_camera = NodePath("FocusCamera")
 player = NodePath("Player")
 environment = NodePath("WorldEnvironment")
 _rain = NodePath("Player/Rain")
+_weather_time_trans = 15.0
+_sunny_duration_random = Vector2(120, 180)
+_rainy_duration_random = Vector2(30, 60)
+rtpc_weather = ExtResource("2_ya4ey")
+
+[node name="AkBank" type="AkBank" parent="."]
+bank = ExtResource("9_choun")
+load_on = 1
+unload_on = 3
 
 [node name="Player" parent="." node_paths=PackedStringArray("_main_camera") instance=ExtResource("1_s4h7g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.74029, 0)
@@ -120,14 +125,6 @@ layers = 3
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_isen5")
-
-[node name="AkBank" type="AkBank" parent="."]
-bank = ExtResource("9_choun")
-load_on = 1
-unload_on = 3
-
-[node name="AkListener3D" type="AkListener3D" parent="."]
-is_spatial = true
 
 [node name="AmbientSound" type="AkEvent3D" parent="."]
 event = ExtResource("9_85g3d")

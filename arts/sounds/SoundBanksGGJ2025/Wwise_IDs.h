@@ -16,8 +16,10 @@ namespace AK
         static const AkUniqueID BUBBLECREATE = 2204320079U;
         static const AkUniqueID BUBBLEEXPLODE = 3536982242U;
         static const AkUniqueID BUBBLEINFLATE = 2059172604U;
+        static const AkUniqueID BUBBLENOEXPLODE = 2617251637U;
         static const AkUniqueID BUBBLETAKEOBJECT = 4237216439U;
         static const AkUniqueID ITEMBIN = 1463759755U;
+        static const AkUniqueID PLAYERSTART = 3251679706U;
         static const AkUniqueID RETICLEOFF = 2140703470U;
         static const AkUniqueID RETICLEON = 1493696592U;
         static const AkUniqueID WORLDSTART = 1014814365U;
@@ -51,6 +53,19 @@ namespace AK
         } // namespace RETICULE
 
     } // namespace STATES
+
+    namespace SWITCHES
+    {
+        namespace NEW_SWITCH_GROUP
+        {
+            static const AkUniqueID GROUP = 2250165792U;
+
+            namespace SWITCH
+            {
+            } // namespace SWITCH
+        } // namespace NEW_SWITCH_GROUP
+
+    } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {

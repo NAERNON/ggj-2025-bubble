@@ -1,10 +1,14 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1014814365	WorldStart			\Default Work Unit\World\WorldStart	
 	1463759755	ItemBin			\Default Work Unit\Bin\ItemBin	
-	1493696592	ReticleON			\Default Work Unit\Robot\ReticleON	
-	2140703470	ReticleOFF			\Default Work Unit\Robot\ReticleOFF	
+	1493696592	ReticleON			\Default Work Unit\Player\ReticleON	
+	2059172604	Bubbleinflate			\Default Work Unit\Bubble\Bubbleinflate	
+	2140703470	ReticleOFF			\Default Work Unit\Player\ReticleOFF	
 	2204320079	BubbleCreate			\Default Work Unit\Bubble\BubbleCreate	
+	2617251637	BubbleNoExplode			\Default Work Unit\Bubble\BubbleNoExplode	
+	3251679706	PlayerStart			\Default Work Unit\Player\PlayerStart	
 	3536982242	BubbleExplode			\Default Work Unit\Bubble\BubbleExplode	
+	4121426335	WorldStop			\Default Work Unit\World\WorldStop	
 	4237216439	BubbleTakeObject			\Default Work Unit\Bubble\BubbleTakeObject	
 
 State Group	ID	Name			Wwise Object Path	Notes
@@ -19,6 +23,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	317282339	Weather			\Default Work Unit\Weather	
 	996817425	VelocityBlower			\Default Work Unit\VelocityBlower	
 	2395301151	VelocityPlayer			\Default Work Unit\VelocityPlayer	
+	4093488308	BubbleSize			\Default Work Unit\BubbleSize	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	33891405	Loop1	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\AB\{AB2E8E92-7DFD-5F1A-D30C-D5699B80A2B3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\MusicLoop\Loop1		3510972
@@ -50,6 +55,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	669646756	RobotNoise4	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\A3\{A3B00BE2-D408-BA80-5F1E-B01A4FB4DB7D}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\RobotNoise\RobotNoise4		15288
 	714022981	1	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\AB\{AB661641-3860-49EC-09F0-C96BFAA5679E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bin\BinTalk\1		107890
 	792540006	ReticleOFF	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\82\{82B77BC9-2C23-AA0E-BA8A-67C9143296EE}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\ReticleOFF		12991
+	797364968	BubbleInflate	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\E2\{E2539821-4770-5D37-8B56-DEFB27E19F1A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bubble\BubbleInflate		97727
 	935093064	BlowerIdle	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\AA\{AAEA99DC-14E4-7BF7-9F7F-FA254E96FDD7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Blower\BlowerIdle		140870
 	941653990	10	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\E0\{E0F6734F-19FB-5D8A-8BE9-AE2AB6735A34}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Bin\BinTalk\10		85918
 	959276678	Blower	C:\Users\nicol\Documents\WwiseProjects\GGJ_2025_Bubble\.cache\C4\{C46A6444-E7D7-55B3-2E81-1B55363AD081}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Blower\Blower		65610

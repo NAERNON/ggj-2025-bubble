@@ -157,9 +157,18 @@
        }
       ]
      }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "2250165792",
+      "Name": "New_Switch_Group",
+      "ObjectPath": "\\Switches\\Default Work Unit\\New_Switch_Group",
+      "GUID": "{B257541E-FADE-4BA7-B5C6-CD26BA97DE08}",
+      "Switches": []
+     }
     ]
    }
   ],
-  "FileHash": "{F251692B-E65C-C0A7-2968-6F1DBE155696}"
+  "FileHash": "{399BF2FD-E224-7456-2BBB-FFF44AA5AC7D}"
  }
 }

@@ -12,6 +12,9 @@ class_name Cannon extends Node3D
 @export var bubble_scene : PackedScene
 @export var blow_scene   : PackedScene
 
+@export var rtpc_blower_velocity : WwiseRTPC
+@export var rtpc_bubble_size     : WwiseRTPC
+
 var _can_blow : bool
 var _blow_time : float
 
@@ -37,6 +40,8 @@ var _robot : Robot
 
 var _bubble_apparition : bool
 
+var _player_event : AkEvent3D
+
 signal bubble_released(bubble : Bubble, world_pos : Vector3)
 signal turret_mod_start()
 signal turret_mod_end()
@@ -52,7 +57,6 @@ func _ready() -> void :
 	_bubble_apparition = true
 
 	Wwise.register_game_obj(self, self.name)
-	Wwise.set_3d_position(self, get_parent().global_transform)
 
 func _physics_process(delta : float) -> void :
 	if blow_timer.is_stopped() :
@@ -66,9 +70,10 @@ func _physics_process(delta : float) -> void :
 	else :
 		_input_blowing_cannon()
 
-func set_attributes(camera : FocusCamera, robot : Robot) -> void :
+func set_attributes(camera : FocusCamera, robot : Robot, player_event : AkEvent3D) -> void :
 	_focus_camera = camera
 	_robot = robot
+	_player_event = player_event
 
 func _input_mods() :
 	if Input.is_action_just_pressed("turret_mod") :
@@ -100,6 +105,8 @@ func _input_blowing_cannon() :
 		var blowing_strengh : float = Input.get_action_strength("blow_cannon")
 		var blowing_power : float = max_blow_power * blowing_strengh
 
+		rtpc_blower_velocity.set_value(_player_event, blowing_strengh*100.0)
+
 		var blowing_direction : Vector3
 
 		if _in_turret_mod :
@@ -118,7 +125,7 @@ func _input_blowing_cannon() :
 			blow.apply_impulse(blowing_direction * blowing_power)
 
 func _on_current_expanding_bubble_pierced() :
-	Wwise.post_event_id(AK.EVENTS.BUBBLEEXPLODE, self)
+	_current_expanding_bubble.explode()
 	self.remove_child(_current_expanding_bubble)
 	_current_expanding_bubble = null
 	_in_bubble_mod = false
@@ -130,4 +137,5 @@ func _try_release_bubble() -> void :
 		var bubble_position_in_world : Vector3 = _current_expanding_bubble.global_position
 		self.remove_child(_current_expanding_bubble)
 		bubble_released.emit(_current_expanding_bubble, bubble_position_in_world)
+		_current_expanding_bubble.release()
 		_current_expanding_bubble = null

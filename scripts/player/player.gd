@@ -8,6 +8,10 @@ const PI2 : float = PI / 2.0
 @export var robot : Robot
 @export var turret_camera : Camera3D
 
+@export var rtpc_player_velocity : WwiseRTPC
+
+@export var player_event : AkEvent3D
+
 @export_group("Camera")
 @export var _main_camera : FocusCamera
 
@@ -61,7 +65,7 @@ func _ready() -> void :
 	_in_turret_mod = false
 
 	var cannon : Cannon = cannon_scene.instantiate()
-	cannon.set_attributes(_main_camera, robot)
+	cannon.set_attributes(_main_camera, robot, player_event)
 	cannon.turret_mod_start.connect(_on_turret_mod_started)
 	cannon.turret_mod_end.connect(_on_turret_mod_ended)
 
@@ -115,6 +119,8 @@ func _physics_process(delta : float) -> void :
 
 	if _in_turret_mod :
 		_turret_inputs(delta)
+
+	rtpc_player_velocity.set_value(player_event, velocity.length()/15.0*100.0)
 
 func _turret_inputs(delta : float) -> void :
 	var current_cannon_angle : Vector2 = robot.blow_arm_rotation

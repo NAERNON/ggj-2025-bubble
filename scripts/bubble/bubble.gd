@@ -23,6 +23,8 @@ func _ready() -> void :
 
 	contact_monitor = true
 
+	Wwise.register_game_obj(self, self.name)
+
 func get_size() -> float :
 	return _size
 
@@ -38,6 +40,18 @@ func expand(volume_add : float, getting_away_from : Vector3) -> void :
 		_sphere_mesh.height = _size*2.0
 		_sphere_collisions.radius = _size
 		self.position = getting_away_from * _size
+
+func release() -> void :
+	Wwise.set_3d_position(self, self.global_transform)
+	Wwise.post_event_id(AK.EVENTS.BUBBLENOEXPLODE, self)
+
+func explode() -> void :
+	Wwise.set_3d_position(self, self.global_transform)
+	Wwise.post_event_id(AK.EVENTS.BUBBLEEXPLODE, self)
+
+func on_trash_start_recentring() -> void :
+	Wwise.set_3d_position(self, self.global_transform)
+	Wwise.post_event_id(AK.EVENTS.BUBBLETAKEOBJECT, self)
 
 func on_trash_end_recentring(trash : Trash) -> void :
 	if trash.size >= _size : 

@@ -1,0 +1,7 @@
+[gd_resource type="WwiseRTPC" format=3 uid="uid://de568nq0mvnd"]
+
+[resource]
+name = "VelocityBlower"
+id = 996817425
+guid = "{6192644B-C681-4785-A430-8329D5CCAF1B}"
+dummy = true

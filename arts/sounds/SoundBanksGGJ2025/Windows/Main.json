@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{169FCE51-14B2-45EC-9957-AAEA844C4D42}",
     "Language": "SFX",
-    "Hash": "{9A36568B-3BF1-68B6-1D46-65F33D5480DB}",
+    "Hash": "{0230DA7A-395D-9ED3-5198-AAC7D6918B62}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -248,6 +248,14 @@
       "CachePath": "82/{82B77BC9-2C23-AA0E-BA8A-67C9143296EE}.wem"
      },
      {
+      "Id": "797364968",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Balloon Inflate 30 Strain by Gniffelbaf Id-82159.wav",
+      "CachePath": "E2/{E2539821-4770-5D37-8B56-DEFB27E19F1A}.wem"
+     },
+     {
       "Id": "935093064",
       "Language": "SFX",
       "Streaming": "false",
@@ -350,12 +358,13 @@
       "Name": "BubbleCreate",
       "ObjectPath": "\\Events\\Default Work Unit\\Bubble\\BubbleCreate",
       "GUID": "{954D78DE-41FE-4A81-AA5D-7D9F6EF420A8}",
-      "DurationType": "OneShot",
-      "DurationMin": "0.22132336",
-      "DurationMax": "0.27884996",
+      "DurationType": "Infinite",
       "MediaRefs": [
        {
         "Id": "501689556"
+       },
+       {
+        "Id": "797364968"
        }
       ]
      },
@@ -370,6 +379,32 @@
       "MediaRefs": [
        {
         "Id": "251965241"
+       }
+      ]
+     },
+     {
+      "Id": "2059172604",
+      "Name": "Bubbleinflate",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bubble\\Bubbleinflate",
+      "GUID": "{DB77522F-BFE0-42D1-977F-D0FFC08EAEEF}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "797364968"
+       }
+      ]
+     },
+     {
+      "Id": "2617251637",
+      "Name": "BubbleNoExplode",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bubble\\BubbleNoExplode",
+      "GUID": "{5524C480-5596-43DF-9832-2AF1739022CA}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.22132336",
+      "DurationMax": "0.27884996",
+      "MediaRefs": [
+       {
+        "Id": "501689556"
        }
       ]
      },
@@ -445,9 +480,36 @@
       ]
      },
      {
+      "Id": "3251679706",
+      "Name": "PlayerStart",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\PlayerStart",
+      "GUID": "{F1263587-B0C2-412B-B2A0-FCE2A78CE0BC}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "52652606"
+       },
+       {
+        "Id": "355401909"
+       },
+       {
+        "Id": "634656860"
+       },
+       {
+        "Id": "669646756"
+       },
+       {
+        "Id": "935093064"
+       },
+       {
+        "Id": "959276678"
+       }
+      ]
+     },
+     {
       "Id": "2140703470",
       "Name": "ReticleOFF",
-      "ObjectPath": "\\Events\\Default Work Unit\\Robot\\ReticleOFF",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\ReticleOFF",
       "GUID": "{B7D315F8-9316-4549-80F4-6D2673945E91}",
       "DurationType": "OneShot",
       "DurationMin": "0.5171146",
@@ -461,7 +523,7 @@
      {
       "Id": "1493696592",
       "Name": "ReticleON",
-      "ObjectPath": "\\Events\\Default Work Unit\\Robot\\ReticleON",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\ReticleON",
       "GUID": "{F3011B30-442D-4B81-BD2D-3FDE98FBBD64}",
       "DurationType": "OneShot",
       "DurationMin": "0.5243646",
@@ -481,12 +543,6 @@
       "MediaRefs": [
        {
         "Id": "33891405"
-       },
-       {
-        "Id": "52652606"
-       },
-       {
-        "Id": "355401909"
        },
        {
         "Id": "357434521"
@@ -510,19 +566,7 @@
         "Id": "553322465"
        },
        {
-        "Id": "634656860"
-       },
-       {
         "Id": "667213390"
-       },
-       {
-        "Id": "669646756"
-       },
-       {
-        "Id": "935093064"
-       },
-       {
-        "Id": "959276678"
        },
        {
         "Id": "1014512871"
@@ -552,6 +596,16 @@
         "GUID": "{E3214486-D1F4-48E9-934A-30E7C13EA972}"
        }
       ]
+     },
+     {
+      "Id": "4121426335",
+      "Name": "WorldStop",
+      "ObjectPath": "\\Events\\Default Work Unit\\World\\WorldStop",
+      "GUID": "{7AAEB9B5-3DC8-4182-A9F1-7AAFCEBE1AC5}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ],
     "GameParameters": [
@@ -572,6 +626,12 @@
       "Name": "VelocityPlayer",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\VelocityPlayer",
       "GUID": "{3E4426BB-A9F9-49A5-BA89-E54E4F0A1CA3}"
+     },
+     {
+      "Id": "4093488308",
+      "Name": "BubbleSize",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\BubbleSize",
+      "GUID": "{E2A726A1-14D6-4B43-9DA6-4C84B21AD0BB}"
      }
     ],
     "StateGroups": [
@@ -630,6 +690,6 @@
     ]
    }
   ],
-  "FileHash": "{4DB460BD-C45E-D98D-C369-F6DF0970D5C3}"
+  "FileHash": "{BEF1456F-40BD-EE12-2FBE-BD1BCF1751D4}"
  }
 }

@@ -26,6 +26,7 @@ func _physics_process(delta : float) -> void :
 		bubble.add_child(self)
 		self.global_position = global_pos
 
+		bubble.on_trash_start_recentring()
 		end_recentring.connect(bubble.on_trash_end_recentring.bind(self))
 		bubble.has_pierced.connect(_on_bubble_pierced)
 

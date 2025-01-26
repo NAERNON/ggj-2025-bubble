@@ -10,7 +10,6 @@ extends Node
 
 @export var rtpc_weather : WwiseRTPC
 
-
 var _sky_material : ShaderMaterial
 
 var _sunny_clouds_cutoff : float = 0.45
