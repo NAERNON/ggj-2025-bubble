@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv06su607s4gr"]
+
+[ext_resource type="PackedScene" uid="uid://cnfg86ulyuhjc" path="res://assets/trashbags/parts_scenes/trashbag_small.tscn" id="1_xdd1t"]
+
+[node name="Trashbag" type="Node3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="trashbag_small" parent="." instance=ExtResource("1_xdd1t")]
