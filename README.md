@@ -6,7 +6,7 @@ made during the Global Game Jam 2025, at Rennes (organized by the [Indie Collect
 It was build using Godot 4.3.
 The version presented live is tagged `0.1.0`.
 
-You can download the game [here](), and find the jam project info [here](https://globalgamejam.org/games/2025/cyberpaic-recycle-survive-2).
+You can download the game [here](https://lackadaisically-lazy.itch.io/cyberpaic-recycle-to-survive), and find the jam project info [here](https://globalgamejam.org/games/2025/cyberpaic-recycle-survive-2).
 
 # Contributors
 
