@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnfg86ulyuhjc"]
+
+[ext_resource type="PackedScene" uid="uid://cloii8vdhkt5k" path="res://assets/trashbags/meshes/trashbag_small.gltf" id="1_bmjqv"]
+
+[node name="trashbag_small" instance=ExtResource("1_bmjqv")]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1we1so8cv71v"]
+
+[ext_resource type="PackedScene" uid="uid://dsscn13byc6th" path="res://assets/dumpster/meshes/dumpster_mouse.gltf" id="1_wfqqg"]
+[ext_resource type="Material" uid="uid://dkdxoxve62yay" path="res://assets/dumpster/materials/dp_mouse.tres" id="2_ammfs"]
+[ext_resource type="Material" uid="uid://b4p24gtg0wpx0" path="res://assets/dumpster/materials/dp_speaker_1.tres" id="3_p4htp"]
+[ext_resource type="Material" uid="uid://du112cprylwel" path="res://assets/dumpster/materials/dp_speaker_2.tres" id="4_gsqft"]
+
+[node name="dumpster_mouse" instance=ExtResource("1_wfqqg")]
+
+[node name="top" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_ammfs")
+
+[node name="speaker_1" parent="." index="1"]
+surface_material_override/0 = ExtResource("3_p4htp")
+
+[node name="speaker_3" parent="." index="2"]
+surface_material_override/0 = ExtResource("3_p4htp")
+
+[node name="speaker_2" parent="." index="3"]
+surface_material_override/0 = ExtResource("4_gsqft")

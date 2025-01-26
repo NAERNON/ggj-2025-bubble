@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bifmel5hptvxn"]
+
+[ext_resource type="PackedScene" uid="uid://ciil0sggls8fj" path="res://assets/dumpster/meshes/dumpster.gltf" id="1_m43ri"]
+[ext_resource type="Material" uid="uid://cg6hfcm1fceou" path="res://assets/dumpster/materials/dp_main.tres" id="2_qlsrg"]
+[ext_resource type="Material" uid="uid://dkdxoxve62yay" path="res://assets/dumpster/materials/dp_mouse.tres" id="3_bmodj"]
+
+[node name="dumpster" instance=ExtResource("1_m43ri")]
+
+[node name="main" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_qlsrg")
+
+[node name="wheels" parent="." index="1"]
+surface_material_override/0 = ExtResource("2_qlsrg")
+
+[node name="mouth_bottom" parent="." index="2"]
+surface_material_override/0 = ExtResource("3_bmodj")
+
+[node name="door_right" parent="." index="3"]
+surface_material_override/0 = ExtResource("2_qlsrg")
+
+[node name="door_left" parent="." index="4"]
+surface_material_override/0 = ExtResource("2_qlsrg")

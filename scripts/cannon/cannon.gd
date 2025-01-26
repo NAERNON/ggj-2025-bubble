@@ -12,15 +12,21 @@ class_name Cannon extends Node3D
 @export var bubble_scene : PackedScene
 @export var blow_scene   : PackedScene
 
-@export var focus_camera : Node3D
 
 var _can_blow : bool
 var _blow_time : float
 
 var _in_turret_mod : bool
-var _in_bubble_mod : bool
+var _in_bubble_mod : bool :
+	set(new_value) :
+		_in_bubble_mod = new_value
+
+		_robot.is_reticule_active = _in_bubble_mod
 
 var _current_expanding_bubble : Bubble
+
+var _focus_camera : Node3D
+var _robot : Robot
 
 signal bubble_released(bubble : Bubble, world_pos : Vector3)
 
@@ -42,6 +48,10 @@ func _physics_process(delta : float) -> void :
 
 	else :
 		_input_blowing_cannon()
+
+func set_attributes(camera : Node3D, robot : Robot) -> void :
+	_focus_camera = camera
+	_robot = robot
 
 func _input_mods() :
 	if Input.is_action_just_pressed("turret_mod") :
@@ -73,7 +83,7 @@ func _input_blowing_cannon() :
 		var blowing_direction : Vector3
 
 		if _in_turret_mod :
-			blowing_direction = -focus_camera.global_transform.basis.z
+			blowing_direction = -_focus_camera.global_transform.basis.z
 
 		else :
 			blowing_direction = global_transform.basis.z

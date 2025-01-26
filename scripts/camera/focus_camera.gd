@@ -67,8 +67,6 @@ func _physics_process(delta : float) -> void:
 	_constraint_angles()
 	
 	_update_position(delta)
-	_check_player_fading()
-
 
 #################################### POSITION (UPDATE / CONSTRAINT) METHODS #####################################
 	
@@ -103,6 +101,7 @@ func _update_position(delta : float) -> void :
 	_desired_distance = _distance
 
 	if _check_obstacle.is_colliding() :
+		print(_check_obstacle.get_collider(0))
 		_desired_distance = min(_check_obstacle.get_closest_collision_safe_fraction() * _distance, _max_distance)     
 
 
@@ -134,9 +133,3 @@ func _update_focus_point(delta : float) -> void :
 	
 	else :
 		_focus_point = target_point
-
-func _check_player_fading() -> void :
-	var distance_to_focus : float = global_position.distance_to(_focus.global_position)
-	var transparency: float = min(1, max(0, (distance_to_focus - _distance_focus_end_fading) / (_distance_focus_start_fading - _distance_focus_end_fading)))
-
-	_focus.set_transparency(1-transparency)

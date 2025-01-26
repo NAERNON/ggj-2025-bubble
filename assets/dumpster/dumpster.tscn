@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://bq7ge2ctyt56r"]
+
+[ext_resource type="Script" path="res://assets/dumpster/dumpster.gd" id="1_en36e"]
+[ext_resource type="PackedScene" uid="uid://bifmel5hptvxn" path="res://assets/dumpster/parts_scenes/dumpster_body.tscn" id="1_v72cq"]
+[ext_resource type="PackedScene" uid="uid://d1we1so8cv71v" path="res://assets/dumpster/parts_scenes/dumpster_mouse.tscn" id="2_2t1u7"]
+
+[sub_resource type="Animation" id="Animation_cxhg3"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("dumpster_mouse")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0)
+
+[sub_resource type="Animation" id="Animation_i70l7"]
+resource_name = "dumpster_mouse_speaking"
+length = 0.724
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("dumpster_mouse")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.233333, 1, 0, 0.3, 0, 0.433333, 1, 0, 0, 0, 0.6, 1, 0, 0.19, 0, 0.7, 1, 0, 0, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y3jjx"]
+_data = {
+"RESET": SubResource("Animation_cxhg3"),
+"dumpster_mouse_speaking": SubResource("Animation_i70l7")
+}
+
+[node name="Dumpster" type="Node3D" node_paths=PackedStringArray("animation_player")]
+script = ExtResource("1_en36e")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="dumpster" parent="." instance=ExtResource("1_v72cq")]
+
+[node name="dumpster_mouse" parent="." instance=ExtResource("2_2t1u7")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_y3jjx")
+}

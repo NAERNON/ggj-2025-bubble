@@ -1,57 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://bv7whg7inf2nk"]
+[gd_scene load_steps=5 format=3 uid="uid://bv7whg7inf2nk"]
 
-[ext_resource type="Shader" uid="uid://ba2mnfre4vlob" path="res://shaders/bubble.gdshader" id="1_75irp"]
-[ext_resource type="Script" uid="uid://dvmg2va0lomf5" path="res://scripts/bubble/bubble.gd" id="1_u7q8j"]
+[ext_resource type="Script" path="res://scripts/bubble/bubble.gd" id="1_u7q8j"]
+[ext_resource type="Material" uid="uid://4eyixlimxfxg" path="res://materials/bubble.tres" id="2_wtouf"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_u7q8j"]
 resource_local_to_scene = true
 radial_segments = 128
 rings = 64
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_l5cg0"]
-frequency = 0.001
-fractal_octaves = 3
-fractal_lacunarity = 3.32
-fractal_gain = 0.53
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_k7ne2"]
-seamless = true
-noise = SubResource("FastNoiseLite_l5cg0")
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_gnxxs"]
-frequency = 0.0027
-fractal_octaves = 3
-fractal_lacunarity = 1.79
-fractal_gain = 1.43
-fractal_weighted_strength = 0.04
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ukwfb"]
-seamless = true
-noise = SubResource("FastNoiseLite_gnxxs")
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_kxfs8"]
-seed = 1
-frequency = 0.004
-fractal_octaves = 3
-fractal_gain = 1.73
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_xktvc"]
-seamless = true
-noise = SubResource("FastNoiseLite_kxfs8")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_l2e8e"]
-resource_local_to_scene = true
-render_priority = 0
-shader = ExtResource("1_75irp")
-shader_parameter/distortionView = 0.055
-shader_parameter/speedView = 0.035
-shader_parameter/noiseViewX = SubResource("NoiseTexture2D_ukwfb")
-shader_parameter/noiseViewY = SubResource("NoiseTexture2D_xktvc")
-shader_parameter/tintColor = Color(0.20808, 0.214335, 0.354566, 1)
-shader_parameter/fesnelAmount = null
-shader_parameter/distortionVertex = 0.03
-shader_parameter/speedVertex = 0.1
-shader_parameter/noiseVertex = SubResource("NoiseTexture2D_k7ne2")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_u7q8j"]
 resource_local_to_scene = true
@@ -69,7 +24,7 @@ collision = NodePath("CollisionShape3D")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_u7q8j")
-surface_material_override/0 = SubResource("ShaderMaterial_l2e8e")
+surface_material_override/0 = ExtResource("2_wtouf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_u7q8j")
