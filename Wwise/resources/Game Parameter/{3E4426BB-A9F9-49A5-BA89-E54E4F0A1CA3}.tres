@@ -1,0 +1,7 @@
+[gd_resource type="WwiseRTPC" format=3 uid="uid://brmr8vvnl2k55"]
+
+[resource]
+name = "VelocityPlayer"
+id = 2395301151
+guid = "{3E4426BB-A9F9-49A5-BA89-E54E4F0A1CA3}"
+dummy = true

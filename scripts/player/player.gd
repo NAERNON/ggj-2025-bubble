@@ -1,14 +1,19 @@
 class_name Player extends CharacterBody3D
 
 const G_FORCE : float = 9.8
+const PI2 : float = PI / 2.0
 
 #################################### ATTRIBUTES ####################################
 @export var cannon_scene : PackedScene
-
 @export var robot : Robot
+@export var turret_camera : Camera3D
+
+@export var rtpc_player_velocity : WwiseRTPC
+
+@export var player_event : AkEvent3D
 
 @export_group("Camera")
-@export var _main_camera    : Node3D
+@export var _main_camera : FocusCamera
 
 var _desired_velocity      : Vector3
 
@@ -36,6 +41,14 @@ var _is_falling          : bool
 var _is_just_falling     : bool
 var _is_walking          : bool
 
+var _in_turret_mod : bool
+
+var _min_turret_angle : Vector2 = Vector2(-PI/6, -PI/4)
+var _max_turret_angle : Vector2 = Vector2(PI/6, PI/4)
+
+var _turret_speed : float = 3.0
+signal headset_state_changed(state: bool)
+
 #################################### PRIVATE METHODS ####################################
 
 func _ready() -> void :
@@ -50,8 +63,12 @@ func _ready() -> void :
 	_can_move = true
 	_is_just_falling = true
 
+	_in_turret_mod = false
+
 	var cannon : Cannon = cannon_scene.instantiate()
-	cannon.set_attributes(_main_camera, robot)
+	cannon.set_attributes(_main_camera, robot, player_event)
+	cannon.turret_mod_start.connect(_on_turret_mod_started)
+	cannon.turret_mod_end.connect(_on_turret_mod_ended)
 
 	robot.cannon_end.add_child(cannon)
 
@@ -75,6 +92,10 @@ func _physics_process(delta : float) -> void :
 
 	elif Input.is_action_just_released("turret_mod") :
 		_can_move = true
+        
+    if Input.is_action_just_pressed("headset_toggle") :
+        robot.is_headset_active = !robot.is_headset_active
+        headset_state_changed.emit(robot.is_headset_active)
 
 	if _process_inputs :
 		# Check for deplacements inputs in terms of player states (walking, falling, gliding)
@@ -101,7 +122,29 @@ func _physics_process(delta : float) -> void :
 		_desired_velocity.x = 0
 		_desired_velocity.z = 0
 
-	_update_robot_head()
+	if _in_turret_mod :
+		_turret_inputs(delta)
+
+	rtpc_player_velocity.set_value(player_event, velocity.length()/15.0*100.0)
+
+func _turret_inputs(delta : float) -> void :
+	var current_cannon_angle : Vector2 = robot.blow_arm_rotation
+
+	var input : Vector2 = Vector2.ZERO
+	input.x = -Input.get_axis("camera_down", "camera_up")
+	input.y = -Input.get_axis("camera_right", "camera_left")
+
+	var desired_cannon_angle : Vector2 = current_cannon_angle + input * _turret_speed * delta
+
+	if desired_cannon_angle.y < _min_turret_angle.y :
+		self.rotate_y(_min_turret_angle.y - desired_cannon_angle.y)
+	elif desired_cannon_angle.y > _max_turret_angle.y : 
+		self.rotate_y(_max_turret_angle.y - desired_cannon_angle.y)
+
+	desired_cannon_angle = desired_cannon_angle.clamp(_min_turret_angle, _max_turret_angle)
+
+	robot.blow_arm_rotation = desired_cannon_angle
+	robot.head_rotation = Vector2(desired_cannon_angle.x, -desired_cannon_angle.y)
 
 #################################### INPUTS MOVEMENT DEALING METHODS #####################################
 # All of this methods check for inputs in regards with the current player state (walking, falling, gliding, etc.)
@@ -115,6 +158,11 @@ func _walking_inputs(delta : float) -> void :
 	inputs.x = slide_inputs.x
 	inputs.z = slide_inputs.y
 	inputs.y = velocity.y
+
+	var prev_i2 = Vector2(_previous_inputs.x, _previous_inputs.z)
+	var i2 = Vector2(inputs.x, inputs.z)
+
+	var delta_wheel = min(max(prev_i2.angle_to(i2), -PI2), PI2)
 
 	var camera_look_at_forward : Vector3 = -_main_camera.basis.z
 	camera_look_at_forward.y = 0
@@ -155,14 +203,34 @@ func _walking_inputs(delta : float) -> void :
 	_desired_velocity.z = move_toward(velocity.z, to_velocity.z, max_speed_change)
 	_desired_velocity.y = to_velocity.y
 
-	robot.left_wheel_speed = _desired_velocity.length() * ratio_speed_wheel
-	robot.right_wheel_speed = _desired_velocity.length() * ratio_speed_wheel
+	var speed_wheel : float = _desired_velocity.length() * ratio_speed_wheel
 
-func _update_robot_head() -> void :
-	var euler_angles : Vector3 = _main_camera.global_basis.get_euler() - global_basis.get_euler()
-	var head_rotation : Vector2 = Vector2(euler_angles.x, euler_angles.y)
-	robot.head_rotation = head_rotation
+	if delta_wheel < 0 :
+		var dw = abs(delta_wheel)
+		robot.left_wheel_speed = speed_wheel * (1.0+dw)
+		robot.right_wheel_speed = speed_wheel * (1.0-dw)
+	elif delta_wheel > 0 :
+		robot.left_wheel_speed = speed_wheel * (1.0-delta_wheel)
+		robot.right_wheel_speed = speed_wheel * (1.0+delta_wheel)
+	else :
+		robot.left_wheel_speed  = _desired_velocity.length() * ratio_speed_wheel
+		robot.right_wheel_speed = _desired_velocity.length() * ratio_speed_wheel
 
+func _on_turret_mod_started() -> void :
+	_in_turret_mod = true
+	robot.left_wheel_speed = 0.0
+	robot.right_wheel_speed = 0.0
+
+func _on_turret_mod_ended() -> void :
+	_in_turret_mod = false
+	robot.head_rotation = Vector2.ZERO
+	robot.blow_arm_rotation = Vector2.ZERO
+
+func deactivate_turret_camera() -> void :
+	turret_camera.current = false
+
+func activate_turret_camera() -> void : 
+	turret_camera.current = true
 
 #################################### PUBLIC METHODS #####################################
 

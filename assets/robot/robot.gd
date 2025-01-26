@@ -11,7 +11,7 @@ var _reticule_angle: float = PI
 
 @export var blow_arm_rotation: Vector2
 
-@export var is_headset_active: bool = true
+@export var is_headset_active: bool = false
 @export var headset_speed: float = 1.0
 var _headset_angle: float = 0
 
@@ -76,7 +76,7 @@ func _rotate_headset(delta: float) -> void:
     var dest_angle: float = 0 if is_headset_active else PI/2
     _headset_angle = move_toward(_headset_angle, dest_angle, delta * headset_speed)
     left_headset.rotation.y = _headset_angle
-    right_headset.rotation.y = -PI - _headset_angle
+    right_headset.rotation.y = -_headset_angle
     
 func _rotate_blow_arm(delta: float) -> void:
     var i: int = _blower_armature.find_bone("Leaf")

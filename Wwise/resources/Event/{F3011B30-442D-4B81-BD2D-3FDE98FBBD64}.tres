@@ -1,0 +1,8 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://bw1fg2monj2na"]
+
+[resource]
+is_in_user_defined_sound_bank = true
+name = "ReticleON"
+id = 1493696592
+guid = "{F3011B30-442D-4B81-BD2D-3FDE98FBBD64}"
+dummy = true

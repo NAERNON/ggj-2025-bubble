@@ -1,5 +1,7 @@
 extends Node
 
+@export var main_camera : FocusCamera
+@export var player : Player
 @export var environment : WorldEnvironment
 @export var _rain : GPUParticles3D
 @export_range(1.0, 240.0, 0.1) var _weather_time_trans : float
@@ -7,7 +9,6 @@ extends Node
 @export var _rainy_duration_random : Vector2
 
 @export var rtpc_weather : WwiseRTPC
-
 
 var _sky_material : ShaderMaterial
 
@@ -47,6 +48,8 @@ func _ready() -> void :
 
 	var cannon : Cannon = get_node("Player/Robot/cannon_anchor/cannon_end/Cannon")
 	cannon.bubble_released.connect(_on_cannon_bubble_released)
+	cannon.turret_mod_start.connect(_on_turret_mod_started)
+	cannon.turret_mod_end.connect(_on_turret_mod_ended)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta : float) -> void :
@@ -109,3 +112,17 @@ func _set_clouds_params(cutoff : float, weight : float, raining_amount : float) 
 func _on_cannon_bubble_released(bubble : Bubble, world_position : Vector3) -> void :
 	self.add_child(bubble)
 	bubble.global_position = world_position
+
+func _on_turret_mod_started() :
+	main_camera.deactivate_camera()
+	player.activate_turret_camera()
+
+func _on_turret_mod_ended() :
+	player.deactivate_turret_camera()
+	main_camera.activate_camera()
+
+func _on_player_headset_state_changed(state: bool) -> void:
+    if state :
+        Wwise.set_state("CASQUE", "ON")
+    else :
+        Wwise.set_state("CASQUE", "OFF")

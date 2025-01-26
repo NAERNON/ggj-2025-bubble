@@ -1,0 +1,8 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://d02aij1p2oftw"]
+
+[resource]
+is_in_user_defined_sound_bank = true
+name = "PlayerStart"
+id = 3251679706
+guid = "{F1263587-B0C2-412B-B2A0-FCE2A78CE0BC}"
+dummy = true

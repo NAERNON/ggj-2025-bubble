@@ -90,8 +90,10 @@ radius = 4.20512
 [sub_resource type="BoxShape3D" id="BoxShape3D_f6g3t"]
 size = Vector3(0.511719, 1, 1.75488)
 
-[node name="Final" type="Node3D" node_paths=PackedStringArray("environment", "_rain")]
+[node name="Final" type="Node3D" node_paths=PackedStringArray("main_camera", "player", "environment", "_rain")]
 script = ExtResource("1_jr1nr")
+main_camera = NodePath("FocusCamera")
+player = NodePath("Player")
 environment = NodePath("WorldEnvironment")
 _rain = NodePath("Rain")
 _weather_time_trans = 15.0
@@ -121,6 +123,7 @@ _run_speed = 25.0
 _walk_speed = 8.0
 
 [node name="FocusCamera" parent="." node_paths=PackedStringArray("_focus") instance=ExtResource("25_uam2e")]
+current = true
 _focus = NodePath("../Player")
 
 [node name="rigids" type="Node3D" parent="."]
@@ -282,3 +285,5 @@ layers = 3
 event = ExtResource("31_nmpu5")
 trigger_on = 1
 stop_on = 3
+
+[connection signal="headset_state_changed" from="Player" to="." method="_on_player_headset_state_changed"]

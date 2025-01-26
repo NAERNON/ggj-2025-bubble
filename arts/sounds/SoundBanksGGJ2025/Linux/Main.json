@@ -10,18 +10,210 @@
     "Type": "User",
     "GUID": "{169FCE51-14B2-45EC-9957-AAEA844C4D42}",
     "Language": "SFX",
-    "Hash": "{8798D2CC-FF64-4407-AF00-824736EC8EAD}",
+    "Hash": "{C3BE47F6-F8B5-F1B0-5CC0-925FBADA5FAE}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
     "Media": [
+     {
+      "Id": "33891405",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Loop1.wav",
+      "CachePath": "AB/{AB2E8E92-7DFD-5F1A-D30C-D5699B80A2B3}.wem"
+     },
+     {
+      "Id": "43111243",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "6.wav",
+      "CachePath": "E5/{E5180F9F-37B2-1EF3-A185-F1FCB9D470C7}.wem"
+     },
+     {
+      "Id": "52652606",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MovementLoop.wav",
+      "CachePath": "A3/{A3CEB8B8-5778-4906-A1F6-466F49277900}.wem"
+     },
+     {
+      "Id": "57357505",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "2.wav",
+      "CachePath": "15/{15FEC9FD-A530-D96E-C310-2E0B60A3A023}.wem"
+     },
+     {
+      "Id": "104302389",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "7.wav",
+      "CachePath": "C0/{C0F3128B-24E0-99AA-0078-134FB6D1331D}.wem"
+     },
+     {
+      "Id": "112580764",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BinCans.wav",
+      "CachePath": "94/{94A29CB5-354C-C173-682D-52DD33B6AD91}.wem"
+     },
+     {
+      "Id": "130978057",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "8.wav",
+      "CachePath": "21/{213FD083-27D8-46EE-7A92-FE3D137233D8}.wem"
+     },
+     {
+      "Id": "146203362",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "9.wav",
+      "CachePath": "88/{88869C55-9E68-2AAA-15FA-46B7F21BBAC9}.wem"
+     },
+     {
+      "Id": "251965241",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Soundly Audio\\Designed, Synthetic, Bubble Effect 04 SND5640.wav",
+      "CachePath": "DC/{DC21302A-831C-A116-6124-4148B7AC0524}.wem"
+     },
+     {
+      "Id": "307128799",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GUNHndl_Modern Soldier Heavy-Impact 07 L2 Weapon_AKB00M_Human Movement.wav",
+      "CachePath": "49/{490AFCB0-DC14-8429-7CBF-59F0C24F2596}.wem"
+     },
+     {
+      "Id": "333633977",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "4.wav",
+      "CachePath": "05/{0578F73F-5F87-FD20-BCF2-1F48C16D52DC}.wem"
+     },
+     {
+      "Id": "352589035",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "3.wav",
+      "CachePath": "31/{315349D5-8CCC-C94C-90F9-9810BBA60362}.wem"
+     },
+     {
+      "Id": "355401909",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RobotNoise3.wav",
+      "CachePath": "75/{751CD123-288C-E3C1-B478-0ED622EEE112}.wem"
+     },
+     {
+      "Id": "357434521",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "New folder\\Untitled2.wav",
+      "CachePath": "6A/{6A2B6262-FA0E-8087-C1D1-F5A230CD8C04}.wem"
+     },
+     {
+      "Id": "379627300",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Freeze 4-ElevenLabs_2025-01-26T10_19_15_Alice_pre_s50_sb75_se0_b_m2 [2025-01-26 112557]-2.wav",
+      "CachePath": "E7/{E75B6D94-5578-8E35-61E1-DD3C673355EC}.wem"
+     },
+     {
+      "Id": "387444681",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "5.wav",
+      "CachePath": "64/{64B3F051-CCEC-20FD-A94B-8585773B1865}.wem"
+     },
+     {
+      "Id": "406821311",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "New folder\\Untitled5.wav",
+      "CachePath": "CA/{CA464407-5EF8-8306-02B8-0BA773F144EC}.wem"
+     },
+     {
+      "Id": "415369635",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "New folder\\Untitled8.wav",
+      "CachePath": "4B/{4B3A47E7-C6DD-2751-CFD9-3DE024191DCD}.wem"
+     },
+     {
+      "Id": "440001273",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "TakeObject.wav",
+      "CachePath": "7B/{7B8BD538-A4CA-F776-9C90-79DD592D2ADE}.wem"
+     },
+     {
+      "Id": "456952165",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BinGlass.wav",
+      "CachePath": "21/{21411408-0CE5-F2B1-3D2C-DA00681807C7}.wem"
+     },
+     {
+      "Id": "477311242",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "New folder\\Untitled6.wav",
+      "CachePath": "0C/{0CD8F0EE-85E7-6D20-4A76-8972E10421EE}.wem"
+     },
      {
       "Id": "486208026",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "WorldSun.wav",
-      "CachePath": "BA/{BAABA024-F6DC-CEDF-FECD-97887FB53DB0}.wem"
+      "CachePath": "25/{25A4EBC0-2C76-D517-7923-BFC8F3FD518C}.wem"
+     },
+     {
+      "Id": "501689556",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Air, Suction, Air Pump, Pull SND66813.wav",
+      "CachePath": "05/{0565E621-5B5D-09E2-7856-8D080463D827}.wem"
+     },
+     {
+      "Id": "553322465",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Loop3.wav",
+      "CachePath": "C1/{C1EC49F1-C194-ECDF-0B45-5A2D5117D8DC}.wem"
+     },
+     {
+      "Id": "634656860",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RobotNoise2.wav",
+      "CachePath": "10/{10234038-AE03-1766-5279-91035ECDAED7}.wem"
      },
      {
       "Id": "667213390",
@@ -29,29 +221,391 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "WorldRain.wav",
-      "CachePath": "74/{746479C5-4F24-63BF-510A-77230CEEBDE9}.wem"
+      "CachePath": "07/{07B733F3-B837-2B13-F121-A0E0303C6A27}.wem"
+     },
+     {
+      "Id": "669646756",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RobotNoise4.wav",
+      "CachePath": "A3/{A3B00BE2-D408-BA80-5F1E-B01A4FB4DB7D}.wem"
+     },
+     {
+      "Id": "714022981",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "1.wav",
+      "CachePath": "6D/{6D92595B-6582-FB5E-5383-009C3DCC767D}.wem"
+     },
+     {
+      "Id": "792540006",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "GUNHndl_Modern Soldier Heavy-Impact 08 L2 Weapon_AKB00M_Human Movement.wav",
+      "CachePath": "82/{82B77BC9-2C23-AA0E-BA8A-67C9143296EE}.wem"
+     },
+     {
+      "Id": "797364968",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Balloon Inflate 30 Strain by Gniffelbaf Id-82159.wav",
+      "CachePath": "6F/{6F3A6956-6BCA-0275-2A6B-B7DED6BFAE94}.wem"
+     },
+     {
+      "Id": "935093064",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Soundly Audio\\Two Stroke Saw Idling, Revving, Shutting Off by Mihacappy Id-753527.wav",
+      "CachePath": "AA/{AAEA99DC-14E4-7BF7-9F7F-FA254E96FDD7}.wem"
+     },
+     {
+      "Id": "941653990",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "10.wav",
+      "CachePath": "9B/{9BDB9AFC-A1E4-9D00-62AF-C3563395D7FD}.wem"
+     },
+     {
+      "Id": "959276678",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Blower.wav",
+      "CachePath": "C4/{C46A6444-E7D7-55B3-2E81-1B55363AD081}.wem"
+     },
+     {
+      "Id": "976031061",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "BinGarb.wav",
+      "CachePath": "48/{48C0CC8B-AF88-C39A-B697-0A3E52F41412}.wem"
+     },
+     {
+      "Id": "979481561",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Bubbles, Heavy, A by InspectorJ Id-271331 1.wav",
+      "CachePath": "6A/{6ADA28E4-8B9E-CA61-421F-D6CA4B5DE19A}.wem"
+     },
+     {
+      "Id": "1014512871",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "New folder\\Untitled4.wav",
+      "CachePath": "D7/{D7EC30DF-6BAF-6794-96A8-CE67AEE6FC08}.wem"
+     },
+     {
+      "Id": "1020396926",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "New folder\\Untitled.wav",
+      "CachePath": "04/{04531B1F-6AA3-16E0-2AD6-52C03775034C}.wem"
+     },
+     {
+      "Id": "1031213473",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "New folder\\Untitled3.wav",
+      "CachePath": "FE/{FE2B4F48-3434-BEAD-C5B5-ADDCC9FCD3C5}.wem"
+     },
+     {
+      "Id": "1039928084",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "New folder\\Untitled7.wav",
+      "CachePath": "5B/{5BC54557-A12C-7F69-537A-E52A071355F5}.wem"
+     },
+     {
+      "Id": "1043918219",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Loop2.wav",
+      "CachePath": "BE/{BE143252-46B3-BAC5-DF08-D6E30483ADA3}.wem"
+     },
+     {
+      "Id": "1056345895",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "11.wav",
+      "CachePath": "43/{43F37BCF-6DCE-724C-4027-7D4D4F703388}.wem"
+     },
+     {
+      "Id": "1061071671",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Loop5.wav",
+      "CachePath": "91/{91123873-718C-6D28-94B4-0173F908F77A}.wem"
      }
     ],
     "Events": [
      {
+      "Id": "2204320079",
+      "Name": "BubbleCreate",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bubble\\BubbleCreate",
+      "GUID": "{954D78DE-41FE-4A81-AA5D-7D9F6EF420A8}",
+      "MaxAttenuation": "105",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "501689556"
+       },
+       {
+        "Id": "797364968"
+       }
+      ]
+     },
+     {
+      "Id": "3536982242",
+      "Name": "BubbleExplode",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bubble\\BubbleExplode",
+      "GUID": "{0401B4C4-3EBC-43A7-8548-56A868649A27}",
+      "MaxAttenuation": "105",
+      "DurationType": "OneShot",
+      "DurationMin": "0.12629484",
+      "DurationMax": "0.17860785",
+      "MediaRefs": [
+       {
+        "Id": "251965241"
+       }
+      ]
+     },
+     {
+      "Id": "2059172604",
+      "Name": "Bubbleinflate",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bubble\\Bubbleinflate",
+      "GUID": "{DB77522F-BFE0-42D1-977F-D0FFC08EAEEF}",
+      "MaxAttenuation": "105",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "797364968"
+       }
+      ]
+     },
+     {
+      "Id": "2617251637",
+      "Name": "BubbleNoExplode",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bubble\\BubbleNoExplode",
+      "GUID": "{5524C480-5596-43DF-9832-2AF1739022CA}",
+      "MaxAttenuation": "105",
+      "DurationType": "OneShot",
+      "DurationMin": "0.22132336",
+      "DurationMax": "0.27884996",
+      "MediaRefs": [
+       {
+        "Id": "501689556"
+       }
+      ]
+     },
+     {
+      "Id": "4237216439",
+      "Name": "BubbleTakeObject",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bubble\\BubbleTakeObject",
+      "GUID": "{FE8D22B0-D256-4AE5-9BC3-DA6B8C8E20D6}",
+      "MaxAttenuation": "105",
+      "DurationType": "OneShot",
+      "DurationMin": "0.19752622",
+      "DurationMax": "0.59460354",
+      "MediaRefs": [
+       {
+        "Id": "440001273"
+       },
+       {
+        "Id": "979481561"
+       }
+      ]
+     },
+     {
+      "Id": "1463759755",
+      "Name": "ItemBin",
+      "ObjectPath": "\\Events\\Default Work Unit\\Bin\\ItemBin",
+      "GUID": "{AE28B16A-FA8C-4989-848F-A69379F7B39B}",
+      "MaxAttenuation": "105",
+      "DurationType": "OneShot",
+      "DurationMin": "2.4079528",
+      "DurationMax": "5.400589",
+      "MediaRefs": [
+       {
+        "Id": "43111243"
+       },
+       {
+        "Id": "57357505"
+       },
+       {
+        "Id": "104302389"
+       },
+       {
+        "Id": "112580764"
+       },
+       {
+        "Id": "130978057"
+       },
+       {
+        "Id": "146203362"
+       },
+       {
+        "Id": "333633977"
+       },
+       {
+        "Id": "352589035"
+       },
+       {
+        "Id": "387444681"
+       },
+       {
+        "Id": "456952165"
+       },
+       {
+        "Id": "714022981"
+       },
+       {
+        "Id": "941653990"
+       },
+       {
+        "Id": "976031061"
+       },
+       {
+        "Id": "1056345895"
+       }
+      ]
+     },
+     {
+      "Id": "3251679706",
+      "Name": "PlayerStart",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\PlayerStart",
+      "GUID": "{F1263587-B0C2-412B-B2A0-FCE2A78CE0BC}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "52652606"
+       },
+       {
+        "Id": "355401909"
+       },
+       {
+        "Id": "634656860"
+       },
+       {
+        "Id": "669646756"
+       },
+       {
+        "Id": "935093064"
+       },
+       {
+        "Id": "959276678"
+       }
+      ]
+     },
+     {
+      "Id": "2140703470",
+      "Name": "ReticleOFF",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\ReticleOFF",
+      "GUID": "{B7D315F8-9316-4549-80F4-6D2673945E91}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5171146",
+      "DurationMax": "0.5171146",
+      "MediaRefs": [
+       {
+        "Id": "792540006"
+       }
+      ]
+     },
+     {
+      "Id": "1493696592",
+      "Name": "ReticleON",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\ReticleON",
+      "GUID": "{F3011B30-442D-4B81-BD2D-3FDE98FBBD64}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5243646",
+      "DurationMax": "0.5243646",
+      "MediaRefs": [
+       {
+        "Id": "307128799"
+       }
+      ]
+     },
+     {
       "Id": "1014814365",
       "Name": "WorldStart",
-      "ObjectPath": "\\Events\\Default Work Unit\\WorldStart",
+      "ObjectPath": "\\Events\\Default Work Unit\\World\\WorldStart",
       "GUID": "{7E5B2808-0E1E-48F1-AF04-75DB67DB3FB0}",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
+        "Id": "33891405"
+       },
+       {
+        "Id": "357434521"
+       },
+       {
+        "Id": "379627300"
+       },
+       {
+        "Id": "406821311"
+       },
+       {
+        "Id": "415369635"
+       },
+       {
+        "Id": "477311242"
+       },
+       {
         "Id": "486208026"
        },
        {
+        "Id": "553322465"
+       },
+       {
         "Id": "667213390"
+       },
+       {
+        "Id": "1014512871"
+       },
+       {
+        "Id": "1020396926"
+       },
+       {
+        "Id": "1031213473"
+       },
+       {
+        "Id": "1039928084"
+       },
+       {
+        "Id": "1043918219"
+       },
+       {
+        "Id": "1061071671"
+       }
+      ],
+      "ActionSetState": [
+       {
+        "GroupId": "681545574",
+        "Id": "930712164",
+        "Name": "Off",
+        "ObjectPath": "\\States\\Default Work Unit\\Reticule\\Off",
+        "GUID": "{8D7D8D38-B400-4DC0-973B-84FFB13DB870}"
        }
       ]
      },
      {
       "Id": "4121426335",
       "Name": "WorldStop",
-      "ObjectPath": "\\Events\\Default Work Unit\\WorldStop",
+      "ObjectPath": "\\Events\\Default Work Unit\\World\\WorldStop",
       "GUID": "{7AAEB9B5-3DC8-4182-A9F1-7AAFCEBE1AC5}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
@@ -65,10 +619,76 @@
       "Name": "Weather",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Weather",
       "GUID": "{3635BBE0-258A-4869-BC57-A8C6FF1E95E1}"
+     },
+     {
+      "Id": "996817425",
+      "Name": "VelocityBlower",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\VelocityBlower",
+      "GUID": "{6192644B-C681-4785-A430-8329D5CCAF1B}"
+     },
+     {
+      "Id": "2395301151",
+      "Name": "VelocityPlayer",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\VelocityPlayer",
+      "GUID": "{3E4426BB-A9F9-49A5-BA89-E54E4F0A1CA3}"
+     },
+     {
+      "Id": "4093488308",
+      "Name": "BubbleSize",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\BubbleSize",
+      "GUID": "{E2A726A1-14D6-4B43-9DA6-4C84B21AD0BB}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "616433019",
+      "Name": "Casque",
+      "ObjectPath": "\\States\\Default Work Unit\\Casque",
+      "GUID": "{5A80CCD9-CA87-4C84-B3BD-BA92BD8FFD7D}",
+      "States": [
+       {
+        "Id": "930712164",
+        "Name": "Off",
+        "ObjectPath": "\\States\\Default Work Unit\\Casque\\Off",
+        "GUID": "{E3214486-D1F4-48E9-934A-30E7C13EA972}"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "On",
+        "ObjectPath": "\\States\\Default Work Unit\\Casque\\On",
+        "GUID": "{082BF2F8-551B-4698-9CFD-92D2584ACEE2}"
+       }
+      ]
+     },
+     {
+      "Id": "681545574",
+      "Name": "Reticule",
+      "ObjectPath": "\\States\\Default Work Unit\\Reticule",
+      "GUID": "{3F9FF17E-54FE-43CF-A2A1-CCB711607240}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Reticule\\None",
+        "GUID": "{505F4233-F4ED-4BCA-924A-105B11503BAF}"
+       },
+       {
+        "Id": "930712164",
+        "Name": "Off",
+        "ObjectPath": "\\States\\Default Work Unit\\Reticule\\Off",
+        "GUID": "{8D7D8D38-B400-4DC0-973B-84FFB13DB870}"
+       },
+       {
+        "Id": "1651971902",
+        "Name": "On",
+        "ObjectPath": "\\States\\Default Work Unit\\Reticule\\On",
+        "GUID": "{81ACE67D-BC79-4230-AF5A-8B1766D4BEBE}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{358A961A-899D-3A2C-CC3A-3EF5504C8E85}"
+  "FileHash": "{E2BFBE9C-9E8D-5F23-6E9A-854B61224C29}"
  }
 }

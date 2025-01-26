@@ -1,8 +1,34 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxkkookrnud7t"]
+[gd_scene load_steps=5 format=3 uid="uid://cxkkookrnud7t"]
 
 [ext_resource type="PackedScene" uid="uid://bg63bsknnouau" path="res://assets/trashbags/parts_scenes/trashbag_large.tscn" id="1_8k4x7"]
+[ext_resource type="Script" path="res://scripts/items/trash.gd" id="1_wv1tr"]
 
-[node name="Trashbag" type="Node3D"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_n0fkk"]
+radius = 0.580341
+height = 1.31161
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cwoqd"]
+radius = 0.58
+height = 1.312
+
+[node name="Trashbag" type="RigidBody3D" node_paths=PackedStringArray("bubble_detector")]
+collision_layer = 65
+script = ExtResource("1_wv1tr")
+bubble_detector = NodePath("BubbleDetector")
+size = 0.724
 
 [node name="trashbag_large" parent="." instance=ExtResource("1_8k4x7")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.368463, 0)
+shape = SubResource("CapsuleShape3D_n0fkk")
+
+[node name="BubbleDetector" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.315551, 0)
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BubbleDetector"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0509235, 0)
+shape = SubResource("CapsuleShape3D_cwoqd")

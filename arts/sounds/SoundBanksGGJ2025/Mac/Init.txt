@@ -1,5 +1,22 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	616433019	Casque			\Default Work Unit\Casque	
+	681545574	Reticule			\Default Work Unit\Reticule	
+
+State	ID	Name	State Group			Notes
+	930712164	Off	Casque			
+	1651971902	On	Casque			
+	748895195	None	Reticule			
+	930712164	Off	Reticule			
+	1651971902	On	Reticule			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	647611012	Bin			\Default Work Unit\Master Audio Bus\Bin	
+	1069431850	Player			\Default Work Unit\Master Audio Bus\Player	
+	2009665469	Pubs			\Default Work Unit\Master Audio Bus\Pubs	
+	2609808943	World			\Default Work Unit\Master Audio Bus\World	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3835649095	Bubble			\Default Work Unit\Master Audio Bus\Bubble	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

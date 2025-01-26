@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/cannon/blow.gd" id="1_bfn7c"]
 [ext_resource type="Shader" path="res://shaders/bubble.gdshader" id="2_nn6h7"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_12x7x"]
+[sub_resource type="CylinderMesh" id="CylinderMesh_bnnbr"]
 
 [sub_resource type="Gradient" id="Gradient_3o3ig"]
 
@@ -22,7 +22,7 @@ noise = SubResource("FastNoiseLite_o2jl2")
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nerku"]
 render_priority = 0
 shader = ExtResource("2_nn6h7")
-shader_parameter/distortionView = 0.01
+shader_parameter/distortionView = 0.09
 shader_parameter/speedView = 0.205
 shader_parameter/tintColor = Color(0, 0, 0, 1)
 shader_parameter/fesnelAmount = null
@@ -43,8 +43,9 @@ life_time = NodePath("LifeTime")
 collision = NodePath("Collision")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transparency = 0.5
-mesh = SubResource("SphereMesh_12x7x")
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+transparency = 0.9
+mesh = SubResource("CylinderMesh_bnnbr")
 surface_material_override/0 = SubResource("ShaderMaterial_nerku")
 
 [node name="Collision" type="CollisionShape3D" parent="."]

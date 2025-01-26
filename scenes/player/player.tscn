@@ -1,13 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://fb4nyujt4pf2"]
+[gd_scene load_steps=7 format=3 uid="uid://fb4nyujt4pf2"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_8afob"]
 [ext_resource type="PackedScene" uid="uid://6fg2vv2lc46i" path="res://assets/robot/robot.tscn" id="2_ptm6j"]
 [ext_resource type="PackedScene" uid="uid://bx6b3c6r31kdt" path="res://scenes/Cannon/cannon.tscn" id="2_yarxf"]
+[ext_resource type="WwiseRTPC" uid="uid://brmr8vvnl2k55" path="res://Wwise/resources/Game Parameter/{3E4426BB-A9F9-49A5-BA89-E54E4F0A1CA3}.tres" id="3_alsal"]
+[ext_resource type="WwiseEvent" uid="uid://d02aij1p2oftw" path="res://Wwise/resources/Event/{F1263587-B0C2-412B-B2A0-FCE2A78CE0BC}.tres" id="4_il4mp"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1wbdd"]
 radius = 1.0
 
-[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("robot")]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("robot", "turret_camera", "player_event")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
 collision_layer = 8
 floor_max_angle = 1.0472
@@ -15,7 +17,12 @@ floor_snap_length = 1.0
 script = ExtResource("1_8afob")
 cannon_scene = ExtResource("2_yarxf")
 robot = NodePath("Robot")
+turret_camera = NodePath("Camera3D")
+rtpc_player_velocity = ExtResource("3_alsal")
+player_event = NodePath("AkEvent3D")
 ratio_speed_wheel = 0.4
+
+[node name="AkListener3D" type="AkListener3D" parent="."]
 
 [node name="Robot" parent="." instance=ExtResource("2_ptm6j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0)
@@ -23,3 +30,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("SphereShape3D_1wbdd")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.993762, 0, 0.111521, 0, 1, 0, -0.111521, 0, -0.993762, 0.968477, 0.700751, -1.09763)
+
+[node name="AkEvent3D" type="AkEvent3D" parent="."]
+event = ExtResource("4_il4mp")
+trigger_on = 1
+stop_on = 3
