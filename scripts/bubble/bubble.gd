@@ -41,13 +41,11 @@ func expand(volume_add : float, getting_away_from : Vector3) -> void :
 		_sphere_collisions.radius = _size
 		self.position = getting_away_from * _size
 
-func release() -> void :
-	Wwise.set_3d_position(self, self.global_transform)
-	Wwise.post_event_id(AK.EVENTS.BUBBLENOEXPLODE, self)
-
 func explode() -> void :
 	Wwise.set_3d_position(self, self.global_transform)
 	Wwise.post_event_id(AK.EVENTS.BUBBLEEXPLODE, self)
+	has_pierced.emit()
+	queue_free()
 
 func on_trash_start_recentring() -> void :
 	Wwise.set_3d_position(self, self.global_transform)
@@ -55,5 +53,4 @@ func on_trash_start_recentring() -> void :
 
 func on_trash_end_recentring(trash : Trash) -> void :
 	if trash.size >= _size : 
-		has_pierced.emit()
-		queue_free()
+		explode()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bq7ge2ctyt56r"]
+[gd_scene load_steps=8 format=3 uid="uid://bq7ge2ctyt56r"]
 
 [ext_resource type="Script" path="res://assets/dumpster/dumpster.gd" id="1_en36e"]
 [ext_resource type="PackedScene" uid="uid://bifmel5hptvxn" path="res://assets/dumpster/parts_scenes/dumpster_body.tscn" id="1_v72cq"]
@@ -32,8 +32,12 @@ _data = {
 "dumpster_mouse_speaking": SubResource("Animation_i70l7")
 }
 
-[node name="Dumpster" type="Node3D" node_paths=PackedStringArray("animation_player")]
+[sub_resource type="BoxShape3D" id="BoxShape3D_utq2v"]
+size = Vector3(1.77661, 1.76672, 2.8067)
+
+[node name="Dumpster" type="Node3D" node_paths=PackedStringArray("trash_detector", "animation_player")]
 script = ExtResource("1_en36e")
+trash_detector = NodePath("TrashDetector")
 animation_player = NodePath("AnimationPlayer")
 
 [node name="dumpster" parent="." instance=ExtResource("1_v72cq")]
@@ -44,3 +48,11 @@ animation_player = NodePath("AnimationPlayer")
 libraries = {
 "": SubResource("AnimationLibrary_y3jjx")
 }
+
+[node name="TrashDetector" type="Area3D" parent="."]
+collision_layer = 128
+collision_mask = 80
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TrashDetector"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00012207, 1.02239, 0.310638)
+shape = SubResource("BoxShape3D_utq2v")
