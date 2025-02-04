@@ -18,6 +18,7 @@ func _ready() -> void :
 func _physics_process(delta : float) -> void :
 	if bubble_detector.monitoring and bubble_detector.has_overlapping_bodies() :
 		var bubble : Bubble = bubble_detector.get_overlapping_bodies()[0] as Bubble
+		
 		var parent : Node = get_parent()
 		
 		var global_pos : Vector3 = self.global_position
@@ -34,7 +35,6 @@ func _physics_process(delta : float) -> void :
 		_recentring = true
 		_recentring_timer = 0.0
 		_from_position = self.position
-		print("pouet")
 
 		bubble_detector.monitoring = false
 

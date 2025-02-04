@@ -5,7 +5,7 @@ const VOLUME_SPHERE : float = 4.0/3.0 * PI
 @export var mesh : MeshInstance3D
 @export var collision : CollisionShape3D
 
-var max_size : float = 1.75
+var _max_size : float = 1.75
 var _default_distorsion_vert : float = 0.03
 var _max_distorsion_vert : float = 0.2
 
@@ -17,6 +17,12 @@ var _sphere_mesh : SphereMesh
 var _sphere_collisions : SphereShape3D
 
 var _bubble_shader : ShaderMaterial
+
+var _lifetime : float = 10
+var _lifetimer : Timer
+var _is_floating : bool
+
+var has_trash : bool
 
 signal has_pierced_c()
 signal has_pierced_t(lin_vel : Vector3, ang_vel : Vector3)
@@ -35,6 +41,21 @@ func _ready() -> void :
 	Wwise.register_game_obj(self, self.name)
 
 	_bubble_shader = mesh.get_surface_override_material(0)
+	
+	_lifetimer = Timer.new()
+	add_child(_lifetimer)
+	_lifetimer.timeout.connect(explode)
+	_is_floating = false
+		
+func _physics_process(_delta : float) -> void :
+	if _is_floating :
+		var t : float = 1.0 / (1.0 + exp(_lifetime - 2.5 - (_lifetime - _lifetimer.time_left)))
+		
+		var dist_vert = lerp(_default_distorsion_vert, _max_distorsion_vert, t)
+		var speed_vert = lerp(_default_speed_vert, _max_speed_vert, t)
+
+		_bubble_shader.set_shader_parameter("distortionVertex", dist_vert)
+		_bubble_shader.set_shader_parameter("speedVertex", speed_vert)
 
 func get_size() -> float :
 	return _size
@@ -50,7 +71,7 @@ func expand(volume_add : float, getting_away_from : Vector3) -> void :
 	_bubble_shader.set_shader_parameter("distortionVertex", dist_vert)
 	_bubble_shader.set_shader_parameter("speedVertex", speed_vert)
 
-	if _size > max_size :
+	if _size > _max_size :
 		explode()
 
 	else :
@@ -77,3 +98,5 @@ func on_trash_end_recentring(trash : Trash) -> void :
 func on_released(_bubble : Bubble, _world_pos : Vector3) -> void :
 	_bubble_shader.set_shader_parameter("distortionVertex", _default_distorsion_vert)
 	_bubble_shader.set_shader_parameter("speedVertex", _default_speed_vert)
+	_lifetimer.start(_lifetime)
+	_is_floating = true

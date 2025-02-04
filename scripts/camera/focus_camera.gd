@@ -101,9 +101,7 @@ func _update_position(delta : float) -> void :
 	_desired_distance = _distance
 
 	if _check_obstacle.is_colliding() :
-		print(_check_obstacle.get_collider(0))
 		_desired_distance = min(_check_obstacle.get_closest_collision_safe_fraction() * _distance, _max_distance)     
-
 
 	if _desired_distance > _distance_from_obstacle :
 		_distance_from_obstacle = move_toward(_distance_from_obstacle, _desired_distance, _max_distance_changed)
