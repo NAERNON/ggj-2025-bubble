@@ -12,3 +12,6 @@ _max_vertical_angle = 50.0
 [node name="ShapeCast3D" type="ShapeCast3D" parent="."]
 top_level = true
 collision_mask = 2
+
+[node name="AkListener3D" type="AkListener3D" parent="."]
+is_spatial = true

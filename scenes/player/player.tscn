@@ -22,8 +22,6 @@ rtpc_player_velocity = ExtResource("3_alsal")
 player_event = NodePath("AkEvent3D")
 ratio_speed_wheel = 0.4
 
-[node name="AkListener3D" type="AkListener3D" parent="."]
-
 [node name="Robot" parent="." instance=ExtResource("2_ptm6j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.75, 0)
 

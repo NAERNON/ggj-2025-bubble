@@ -1,0 +1,8 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://bn6sb6dx4y0fa"]
+
+[resource]
+is_in_user_defined_sound_bank = true
+name = "ItemBin"
+id = 1463759755
+guid = "{AE28B16A-FA8C-4989-848F-A69379F7B39B}"
+dummy = true
