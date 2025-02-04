@@ -44,7 +44,6 @@ func trash_speaker_start() -> void :
 	trash_speaker.post_callback(self, AkUtils.AK_END_OF_EVENT, _on_trash_speaker_ended)
 				
 func _on_trash_speaker_ended(_data) -> void :
-	print("prout")
 	can_speak = true
 	is_speaking = false
 	trash_speaker = null

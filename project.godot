@@ -110,6 +110,7 @@ headset_toggle={
 3d_physics/layer_6="Blow"
 3d_physics/layer_7="Trash"
 3d_physics/layer_8="Dumpster"
+3d_physics/layer_9="ObstableForTrash"
 
 [wwise]
 

@@ -84,7 +84,8 @@ func _input_mods() :
 	if Input.is_action_just_pressed("bubble_mod") :
 		_in_bubble_mod = true
 		_current_expanding_bubble = bubble_scene.instantiate()
-		_current_expanding_bubble.has_pierced.connect(_on_current_expanding_bubble_pierced)
+		_current_expanding_bubble.has_pierced_c.connect(_on_current_expanding_bubble_pierced)
+		bubble_released.connect(_current_expanding_bubble.on_released)
 		self.add_child(_current_expanding_bubble)
 	elif Input.is_action_just_released("bubble_mod") :
 		_in_bubble_mod = false
@@ -128,14 +129,13 @@ func _input_blowing_cannon() :
 
 func _on_current_expanding_bubble_pierced() :
 	self.remove_child(_current_expanding_bubble)
-	_current_expanding_bubble.explode()
 	_current_expanding_bubble = null
 	_in_bubble_mod = false
 	_bubble_apparition = true
 
 func _try_release_bubble() -> void :
 	if _current_expanding_bubble != null and _current_expanding_bubble.get_size() > 0.0 :
-		_current_expanding_bubble.has_pierced.disconnect(_on_current_expanding_bubble_pierced)
+		_current_expanding_bubble.has_pierced_c.disconnect(_on_current_expanding_bubble_pierced)
 		var bubble_position_in_world : Vector3 = _current_expanding_bubble.global_position
 		self.remove_child(_current_expanding_bubble)
 		bubble_released.emit(_current_expanding_bubble, bubble_position_in_world)

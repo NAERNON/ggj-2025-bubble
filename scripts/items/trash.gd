@@ -27,7 +27,7 @@ func _physics_process(delta : float) -> void :
 
 		bubble.on_trash_start_recentring()
 		end_recentring.connect(bubble.on_trash_end_recentring.bind(self))
-		bubble.has_pierced.connect(_on_bubble_pierced)
+		bubble.has_pierced_t.connect(_on_bubble_pierced)
 
 		self.freeze = true
 
@@ -51,18 +51,23 @@ func _physics_process(delta : float) -> void :
 			self.position = Vector3.ZERO
 			end_recentring.emit()
 
-func _on_bubble_pierced() -> void :
+func _on_bubble_pierced(bubble_lin_vel : Vector3, bubble_ang_vel : Vector3) -> void :
 	var bubble : Bubble = get_parent()
-	var main : Node = bubble.get_parent()
+	var main : Node = get_node("/root/Main")
 
 	var global_pos : Vector3 = self.global_position
+	var global_bas : Basis = self.global_basis
 	bubble.remove_child(self)
 	main.add_child(self)
 	self.global_position = global_pos
+	self.global_basis = global_bas
+	self.linear_velocity = bubble_lin_vel
+	self.angular_velocity = bubble_ang_vel
 
 	bubble_detector.monitoring = true
 	self.freeze = false
+	_recentring = false
 
 func recycled() -> void :
 	self.collision_layer = 0
-	self.collision_mask = 1
+	self.collision_mask = 256
